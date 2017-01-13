@@ -5,12 +5,12 @@ Reproach
 
 Theme for the [Hugo](http://gohugo.io) static site generator.
 
-[Installation](#installation)
-[Features](#features)
-[Usage](#usage)
-[Configuration](#configuration)
-[Contact](#contact)
-[Licence](#licence)
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contact](#contact)
+- [Licence](#licence)
 
 ### Installation 
 
@@ -42,7 +42,7 @@ This theme expects a relatively standard Hugo blog/personal site layout:
     ├── post
     |   ├── post1.md
     |   └── post2.md
-    ├── license.md        // this is used in the sidebar footer link
+    ├── license.md        // For the love of reason, licence _your_ work!
     └── other_page.md
 ```
 

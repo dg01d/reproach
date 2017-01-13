@@ -1,7 +1,8 @@
 <html>
 <body>
-  {{- range (where .Data.Pages "Type" "in" (slice "article" "page")) }}
+  {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
     <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+    {{ .Content }}
   {{- end }}
 </body>
 </html>
