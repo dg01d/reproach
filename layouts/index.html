@@ -1,6 +1,7 @@
-<!DOCTYPE html>
 <html>
 <body>
-  <p>Hugo says hello!</p>
+  {{- range (where .Data.Pages "Type" "in" (slice "article" "page")) }}
+    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+  {{- end }}
 </body>
 </html>

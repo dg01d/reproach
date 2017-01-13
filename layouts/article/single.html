@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  <h1>{{ .Title }}</h1>
+  <h6>{{ .Date.Format "Mon, Jan 2, 2006" }}</h6>
+  {{ .Content }}
+  <h4><a href="{{ .Site.BaseURL }}">Home</a></h4>
+</body>
+</html>

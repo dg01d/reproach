@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Articles</h1>
+  {{- range first 10 .Data.Pages }}
+    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+  {{- end }}
+  <h4><a href="{{ .Site.BaseURL }}">Home</a></h4>
+</body>
+</html>
