@@ -1,5 +1,5 @@
-<html>
-<body>
+{{ partial "header.html" . }}
+
   {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
 	<pre> {{- printf "%#v" .Section }} </pre>
 	{{ if .Params.link }}
@@ -17,5 +17,5 @@
     <hr style="margin-left:calc(20%); margin-right:calc(20%); ">
     {{ end }}
   {{ end }}
-</body>
-</html>
+
+{{ partial "footer.html" . }}

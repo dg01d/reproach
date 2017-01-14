@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/reproach.css">
-<body>
+{{ partial "header.html" . }}
+
   <h1>Article</h1>
   {{- range where .Site.Pages "Section" "article" }}
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
@@ -11,5 +8,5 @@
     </div>
   {{- end }}
   <h4><a href="{{ .Site.BaseURL }}">Home</a></h4>
-</body>
-</html>
+
+{{ partial "footer.html" . }}
