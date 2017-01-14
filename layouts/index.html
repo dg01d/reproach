@@ -1,8 +1,21 @@
 <html>
 <body>
   {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
-    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-    {{ .Content }}
-  {{- end }}
+	<pre> {{- printf "%#v" .Section }} </pre>
+	{{ if .Params.link }}
+	<h3><a href={{ .Params.link }}>{{ .Title }}</a></h3>
+	<small>{{ .Date.Format "Mon 2 Jan, 2006" }} | <a href="{{ .Permalink }}">&#9830;</a> </small>
+	{{ else if not .Title }}
+	<hr style="margin-left:calc(20%); margin-right:calc(20%); ">
+	{{ else }}
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p><em>{{ .Date.Format "Mon 2 Jan, 2006" }}</em></p>
+	{{ end }}
+    {{- .Content }}
+    {{ if not .Title }}
+    <small><a href="{{ .Permalink }}">{{ .Date.Format "02/01/06 00:00" }}</a></small>
+    <hr style="margin-left:calc(20%); margin-right:calc(20%); ">
+    {{ end }}
+  {{ end }}
 </body>
 </html>
