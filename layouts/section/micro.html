@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+<div class="reproach-body">
+	<main class="reproach-content">
+
+  <h1>Microblog</h1>
+  {{- range where .Site.Pages "Section" "micro" }}
+	<pre> {{- printf "%#v" . }} </pre>
+    {{- .Content }}
+    <small><a href="{{ .Permalink }}">{{ .Date.Format "02/01/06 00:00" }}</a></small>
+  {{- end }}
+
+	</main>
+
+{{ partial "sidebar.html" . }}
+	
+</div>
+
+{{ partial "footer.html" . }}

@@ -1,9 +1,59 @@
-/*                                _        */
-/*    ___ ___ ___ ___ ___ ___ ___| |_      */
-/*   |  _| -_| . |  _| . | .'|  _|   |     */
-/*   |_| |___|  _|_| |___|__,|___|_|_|     */
-/*           |_|                           */
-/*                                         */
+/*
+                                _        
+    ___ ___ ___ ___ ___ ___ ___| |_      
+   |  _| -_| . |  _| . | .'|  _|   |     
+   |_| |___|  _|_| |___|__,|___|_|_|     
+           |_|                           
+                                         */
+
+.reproach {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.reproach-body {
+  display: flex;
+  flex: 1;
+}
+
+.reproach-content {
+  flex: 1;
+}
+
+.reproach-nav, .reproach-ads {
+  /* 12em is the width of the columns */
+  flex: 0 0 20%;
+}
+
+.reproach-nav {
+  /* put the nav on the left */
+  order: -1;
+}
+
+body {
+    font-family: "Libre Baskerville", Times, Georgia, serif;
+	font-size:18px;
+	line-height:1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #181818;
+	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+
+pre {
+	display: block;
+    font-family: menlo, monospace;
+    white-space: pre;
+    margin: 1em 0;
+}
 
 div.meta {
 	font-size: 75%;

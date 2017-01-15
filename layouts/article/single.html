@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+
+<div class="reproach-body">
+	<main class="reproach-content">
+
+  <h1>{{ .Title }}</h1>
+  {{ partial "metadata.html "}}
+  {{ .Content }}
+
+	</main>
+
+{{ partial "sidebar.html" . }}
+	
+</div>
+
+{{ partial "footer.html" . }}
