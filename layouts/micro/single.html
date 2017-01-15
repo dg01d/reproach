@@ -1,16 +1,13 @@
 {{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
 
-<div class="reproach-body">
-	<main class="reproach-content">
 
-    {{- .Content }}
-    <small><a href="{{ .Permalink }}">{{ .Date.Format "02/01/06 00:00" }}</a></small>
- 
-
+<div class="col-9">
+	<main>
+	    {{- .Content }}
+	    <small><a href="{{ .Permalink }}">{{ .Date.Format "02/01/06 00:00" }}</a></small>
 	</main>
 
-{{ partial "sidebar.html" . }}
-	
 </div>
 
 {{ partial "footer.html" . }} 

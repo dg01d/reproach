@@ -1,34 +1,30 @@
 {{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
 
-<div class="reproach-body">
+	<div class="column _75">
+		<main>
+		  {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
+			{{ if .Params.link }}
+				<h2><a href={{ .Params.link }}>{{ .Title }}</a></h2>
+			{{ else if not .Title }}
+				<hr />
+			{{ else }}
+		    	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+			{{ end }}
 
-	<main class="reproach-content">
-	  {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
-		<pre> {{- printf "%#v" .Section }} </pre>
-		{{ if .Params.link }}
-			<h2><a href={{ .Params.link }}>{{ .Title }}</a></h2>
-		{{ else if not .Title }}
-			<hr />
-		{{ else }}
-	    	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-		{{ end }}
+			{{ partial "metadata.html" . }}
 
-		{{ partial "metadata.html" . }}
+		    {{- .Content }}
 
-	    {{- .Content }}
+		    {{ if not .Title }}
+				{{ partial "micrometadata.html" . }}
+		    {{ end }}
 
-	    {{ if not .Title }}
-			{{ partial "micrometadata.html" . }}
-	    {{ end }}
+		  {{ end }}
 
-	  {{ end }}
+		</main>
 
-	</main>
+	</div>
 
-	<nav class="reproach-nav">
-	<h1>View from Ascraeus</h1>
-	</nav>
-
-</div>
 {{ partial "footer.html" . }}
 

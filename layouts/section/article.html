@@ -1,20 +1,17 @@
 {{ partial "header.html" . }}
-
-<div class="reproach-body">
-	<main class="reproach-content">
-
-
-  <h1>Article</h1>
-  {{- range where .Site.Pages "Section" "article" }}
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <div class="meta">
-    	<p>{{ .Date.Format "Mon Jan 2, 2006" }}&nbsp;&bull;~{{ .ReadingTime }} min read</p>
-    </div>
-  {{- end }}
-	</main>
-
 {{ partial "sidebar.html" . }}
-	
-</div>
 
+
+<div>
+
+	<main>
+	  <h1>Article</h1>
+	  {{- range where .Site.Pages "Section" "article" }}
+	    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+	    <div class="meta">
+	    	<p>{{ .Date.Format "Mon Jan 2, 2006" }}&nbsp;&bull;~{{ .ReadingTime }} min read</p>
+	    </div>
+	  {{- end }}
+	</main>
+</div>
 {{ partial "footer.html" . }}

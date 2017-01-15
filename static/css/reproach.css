@@ -5,30 +5,30 @@
    |_| |___|  _|_| |___|__,|___|_|_|     
            |_|                           
                                          */
-
-.reproach {
+.row {
   display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.reproach-body {
-  display: flex;
-  flex: 1;
+.column {
+  flex-basis: 100%;
 }
 
-.reproach-content {
-  flex: 1;
-}
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1;
+  }
 
-.reproach-nav, .reproach-ads {
-  /* 12em is the width of the columns */
-  flex: 0 0 20%;
-}
-
-.reproach-nav {
-  /* put the nav on the left */
-  order: -1;
+  ._25 {
+    flex: 2.5;
+  }
+  ._75 {
+    flex: 7.5;
+  }
+  ._20 {
+    flex: 2;
+  }
 }
 
 body {

@@ -2,7 +2,6 @@
 <div class="meta">
 	{{ if .Params.link }}
 		{{ .Date.Format "Mon 2 Jan, 2006" }} &bull; {{range .Params.tags}} <a href="/tags/{{.}}">{{.}}</a>{{ end }} | <a href="{{ .Permalink }}">&#9830;</a>
-
 	{{ else if not .Title }}
 	{{ else }}
 		{{ .Date.Format "Mon, Jan 2, 2006" }} &bull; 

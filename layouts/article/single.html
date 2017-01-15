@@ -1,16 +1,14 @@
 {{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
 
-<div class="reproach-body">
-	<main class="reproach-content">
 
-  <h1>{{ .Title }}</h1>
-  {{ partial "metadata.html "}}
-  {{ .Content }}
+<div class="col-9">
+	<main>
+	  <h1>{{ .Title }}</h1>
+	  {{ partial "metadata.html" . }}
+	  {{ .Content }}
 
 	</main>
-
-{{ partial "sidebar.html" . }}
-	
 </div>
 
 {{ partial "footer.html" . }}
