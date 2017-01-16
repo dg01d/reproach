@@ -1,14 +1,14 @@
 {{ partial "header.html" . }}
+
 {{ partial "sidebar.html" . }}
 
-
-<div class="col-9">
-	<main>
+	<content>
 	  <h1>{{ .Title }}</h1>
 	  {{ partial "metadata.html" . }}
 	  {{ .Content }}
 
-	</main>
-</div>
+<script id="webmention-hosted" src="https://webmention.herokuapp.com/api/embed?example"></script>
+
+	</content>
 
 {{ partial "footer.html" . }}

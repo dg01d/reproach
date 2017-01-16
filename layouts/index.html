@@ -7,7 +7,6 @@
 			{{ if .Params.link }}
 				<h2><a href={{ .Params.link }}>{{ .Title }}</a></h2>
 			{{ else if not .Title }}
-				<hr />
 			{{ else }}
 		    	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 			{{ end }}

@@ -2,9 +2,7 @@
 {{ partial "sidebar.html" . }}
 
 
-<div>
-
-	<main>
+	<content>
 	  <h1>Article</h1>
 	  {{- range where .Site.Pages "Section" "article" }}
 	    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
@@ -12,6 +10,6 @@
 	    	<p>{{ .Date.Format "Mon Jan 2, 2006" }}&nbsp;&bull;~{{ .ReadingTime }} min read</p>
 	    </div>
 	  {{- end }}
-	</main>
+	</content>
 </div>
 {{ partial "footer.html" . }}
