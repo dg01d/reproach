@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
 
-	<div class="column _75">
-		<main>
+	<content>
+		
 		  {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
 			{{ if .Params.link }}
 				<h2><a href={{ .Params.link }}>{{ .Title }}</a></h2>
@@ -22,9 +22,9 @@
 
 		  {{ end }}
 
-		</main>
+		
 
-	</div>
+	</content>
 
 {{ partial "footer.html" . }}
 

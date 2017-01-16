@@ -5,13 +5,19 @@
    |_| |___|  _|_| |___|__,|___|_|_|     
            |_|                           
                                          */
-.row {
+
+main {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.column {
+content, aside {
   flex-basis: 100%;
 }
 
@@ -20,33 +26,96 @@
     flex: 1;
   }
 
-  ._25 {
-    flex: 2.5;
+  aside {
+    flex: 3;
   }
-  ._75 {
-    flex: 7.5;
+  content {
+    flex: 7;
   }
-  ._20 {
-    flex: 2;
-  }
+}
+
+html {
+	font-size: 18px;
+  	line-height: 23px;
 }
 
 body {
     font-family: "Libre Baskerville", Times, Georgia, serif;
-	font-size:18px;
-	line-height:1.7;
+	font-size: 1em;
+  	line-height: 1.27777778em;
+ 	margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	color: #181818;
 	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
-	font-weight: 600;
 }
 
 h1 {
 	font-weight: 700;
+	font-size: 2.61111111em;
+	line-height: 1.46808511em;
+	margin-top: 0.4893617em;
+	margin-bottom: 0.4893617em;
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2.61111111em;
+  line-height: 1.46808511em;
+  margin-top: 0.4893617em;
+  margin-bottom: 0.4893617em;
+}
+h3, {
+  font-weight: 600;
+  font-size: 1.61111111em;
+  line-height: 1.5862069em;
+  margin-top: 0.79310345em;
+  margin-bottom: 0em;
+}
+h4 {
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.27777778em;
+  margin-top: 1.27777778em;
+  margin-bottom: 0em;
+}
+h5 {
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.27777778em;
+  margin-top: 1.27777778em;
+  margin-bottom: 0em;
+}
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.27777778em;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
 
 pre {
 	display: block;
