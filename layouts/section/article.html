@@ -1,15 +1,15 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
 
-
 	<content>
-	  <h1>Article</h1>
+	  <h1>Articles</h1>
 	  {{- range where .Site.Pages "Section" "article" }}
-	    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-	    <div class="meta">
-	    	<p>{{ .Date.Format "Mon Jan 2, 2006" }}&nbsp;&bull;~{{ .ReadingTime }} min read</p>
-	    </div>
-	  {{- end }}
+	  	<article>
+	    	<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3><div class="meta">
+	    		{{ .Date.Format "Mon Jan 2, 2006" }}&nbsp;&bull;~{{ .ReadingTime }} min read</p>
+	    	</div>
+		</article>
+	  	{{- end }}
 	</content>
 </div>
 {{ partial "footer.html" . }}

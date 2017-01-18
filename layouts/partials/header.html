@@ -18,14 +18,28 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- jquery and footnotes -->
+
+  <script type="text/javascript" src="{{ .Site.BaseURL }}js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}js/bigfoot.js"></script>
+  <script type="text/javascript">
+    $.bigfoot();
+  </script>
+
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.css"> -->
-  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Libre+Franklin:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i|Open+Sans:400,600,800" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/reproach.css">
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/bigfoot-default.css">
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/webmention.css">
+  {{ if isset . "email" }}
+  <link rel="me" href="mailto:{{ .email }}" />
+  {{ end }}
   <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
+
 </head>
-<body>
+<body class="Site">
 	<main>
 		<section>
 

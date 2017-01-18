@@ -3,11 +3,16 @@
 {{ partial "sidebar.html" . }}
 
 	<content>
-	  <h1>{{ .Title }}</h1>
-	  {{ partial "metadata.html" . }}
-	  {{ .Content }}
+		<article>
+		  <h1>{{ .Title }}</h1>
+		  {{ partial "metadata.html" . }}
+		  {{ .Content }}
 
-<script id="webmention-hosted" src="https://webmention.herokuapp.com/api/embed?example"></script>
+		</article>
+		
+{{ partial "articlepagination.html" . }}
+
+<script id="webmention-hosted" src="https://webmention.herokuapp.com/api/embed?example&format=html"></script>
 
 	</content>
 

@@ -1,0 +1,80 @@
+/* webmention css taken (literally) from https://webmention.herokuapp.com/ */
+
+.webmention-mention, .page-mentions .h-entry, .page-mentions .u-comment {
+  padding-left: 9%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.webmention-name, .webmention-summary,
+.page-mentions .h-entry .p-name, .page-mentions .h-entry .p-summary,
+.page-mentions .u-comment .p-name, .page-mentions .u-comment .p-summary {
+  margin: 10px 0;
+}
+.webmention-author, .webmention-summary, .page-mentions .h-card {
+  font-size: .9em;
+}
+.webmention-footer, .page-mentions .h-entry footer, .page-mentions .u-comment footer {
+  display: block;
+  font-size: .7em;
+  color: inherit;
+}
+.webmention-author img, .page-mentions .h-card img {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 7%;
+  border-radius: 240px;
+}
+.page-mentions .h-entry .u-comment {
+  margin-left: -9%;
+  padding-left: 13.5%;
+}
+.page-mentions .u-comment .h-card img {
+  left: 3.5%;
+}
+img.webmention-error {display: none;}
+.webmention-facepile {
+  margin-bottom: 25px;
+}
+.webmention-facepile > li {
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 5px 0;
+}
+.webmention-interaction-presentation:after {
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  padding: 4px;
+  width: 1em;
+  height: 1em;
+
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+
+  color: #000;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+.webmention-interaction-like .webmention-interaction-presentation:after {content: "♥"}
+.webmention-interaction-repost .webmention-interaction-presentation:after {content: "♺"}
+.webmention-interaction-presentation > span {
+  display: block;
+  text-indent: -5000em;
+  position: relative;
+  overflow: hidden;
+  width: 2em;
+  height: 2em;
+  border-radius: 240px;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+.webmention-interaction-presentation > span > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

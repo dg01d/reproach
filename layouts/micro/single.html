@@ -3,8 +3,16 @@
 
 
 	<content>
-	    {{- .Content }}
-	    <small><a href="{{ .Permalink }}">{{ .Date.Format "02/01/06 00:00" }}</a></small>
+		<article>
+			<h3><svg class="icon icon-power">
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power"></use>
+			</svg> Microentry</h3>
+		    {{- .Content }}
+			{{ partial "micrometadata.html" . }}
+	    </article>
+
+	{{ partial "articlepagination.html" . }}
+
 	</content>
 
 {{ partial "footer.html" . }} 

@@ -6,9 +6,16 @@
            |_|                           
                                          */
 
+.Site {
+	display: flex;
+ 	min-height: 100vh;
+  	flex-direction: column;
+}
+
 main {
 	max-width: 900px;
 	margin: 0 auto;
+	flex: 1;
 }
 
 section {
@@ -29,8 +36,8 @@ content, aside {
 
 	aside {
 	flex: 3;
-	height: 100%;
 	padding-right: 10px;
+
 	}
 
 	content {
@@ -38,13 +45,27 @@ content, aside {
 	height: 100%;
 	}
 
+	header {
+	flex: 0 0 100vh 100vw;
+	}
+
 	nav {
 	background-image: url("/images/asc3.jpg");
-	min-height: 100%;
 	background-position: top right;
 	background-repeat: no-repeat;
 	text-shadow: #fafafa 2px 0px 3px;
+	position: fixed;
+	top: 0;
 	}
+}
+
+/* Footer */
+
+footer {
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	font-size: 60%;
 }
 
 html {
@@ -54,19 +75,24 @@ html {
 }
 
 body {
-    font-family: "Libre Baskerville", Times, Georgia, serif;
+    font-family: "Gentium Basic", Times, Georgia, serif;
 	font-size: 1em;
   	line-height: 1.27777778em;
  	margin: auto;
+ 	color: #454552;
+}
+
+#sitetitle h1 {
+	line-height: 1.1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	color: #181818;
-	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 h1 {
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 2.61111111em;
 	line-height: 1.46808511em;
 	margin-top: 0.4893617em;
@@ -140,17 +166,31 @@ pre {
 
 div.meta {
 	font-size: 75%;
-	font-family: 'Libre Baskerville', Georgia, serif;
+	font-family: 'Gentium Basic', Georgia, serif;
 	font-style: italic;
 	color: #999;
 }
 
 /* SideBar */
 
-#sitetitle a{
+#sitetitle a {
 	color: #367588;
 }
 
+#sitetitle a .ochre {
+	color: #901717;
+	font-weight: 800;
+}
+
+nav li {
+	font-family: 'Gentium Basic', Georgia, serif;
+	font-style: italic;
+	color: #999;
+}
+
+nav ul {
+	padding: 5px;
+}
 nav a {
 	text-decoration: none!important;
 	color: #999;
@@ -180,23 +220,28 @@ nav h1 a {
 
 /* My tidy links */
 
-content a, content a:visited {
+article a, article a:visited {
 	text-decoration: none;
 	color: currentColor;
 	background: linear-gradient(whitesmoke,whitesmoke),linear-gradient(whitesmoke,whitesmoke),linear-gradient(#367588,#367588);
 	background-size: .05em 1px,.05em 1px,1px 1px;
 	background-repeat: no-repeat,no-repeat,repeat-x;
-	text-shadow: .03em 0 whitesmoke,-.03em 0 whitesmoke,0 .03em whitesmoke,0 -.03em whitesmoke,.06em 0 whitesmoke,-.06em 0 whitesmoke,.09em 0 whitesmoke,-.09em 0 whitesmoke,.12em 0 whitesmoke,-.12em 0 whitesmoke,.15em 0 whitesmoke,-.15em 0 whitesmoke;
+	text-shadow: .03em 0 whitesmoke,-.03em 0 whitesmoke,0 .03em whitesmoke,0 -.03em whitesmoke,.06em 0 whitesmoke,-.06em 0 whitesmoke,.09em 0 whitesmoke,-.09em 0 whitesmoke,.12em 0 whitesmoke,-.12em 0 whitesmoke,.15em 0 whitesmoke,-.15em 0 whitesmoke; 
 	background-position: 0 95%,100% 95%,0 95%;
 	transition: all 0.3s;
 }
 
-content a:hover, content a:active {
+article a:hover, article a:active {
 	color: #367588;
+	background: linear-gradient(whitesmoke,whitesmoke),linear-gradient(whitesmoke,whitesmoke),linear-gradient(#454552,#454552);
+	background-size: .05em 1px,.05em 1px,1px 1px;
+	background-repeat: no-repeat,no-repeat,repeat-x;
+	text-shadow: .03em 0 whitesmoke,-.03em 0 whitesmoke,0 .03em whitesmoke,0 -.03em whitesmoke,.06em 0 whitesmoke,-.06em 0 whitesmoke,.09em 0 whitesmoke,-.09em 0 whitesmoke,.12em 0 whitesmoke,-.12em 0 whitesmoke,.15em 0 whitesmoke,-.15em 0 whitesmoke; 
+	background-position: 0 95%,100% 95%,0 95%;
 	transition: all 0.3s;
 }
 
-content h2 a {
+article h2 a {
 	background: whitesmoke;
 }
 
@@ -204,7 +249,7 @@ p a, p a:visited {
 	line-height: inherit;
 }
 
-h1 a, h2 a, h3 a, h4 a, h6 a, a.pin-title, footer a, dt * a {
+h1 a, h2 a, h3 a, h4 a, h6 a, a.pin-title, dt * a {
 	text-decoration: none !important;
 	color: #367588;
 	border-bottom: none !important;
@@ -215,7 +260,7 @@ h1 a, h2 a, h3 a, h4 a, h6 a, a.pin-title, footer a, dt * a {
 }
 
 
-h1 a:hover, h3 a:hover, h4 a:hover, h6 a:hover, a.pin-title:hover, footer a:hover, dt *a:hover {
+h1 a:hover, h3 a:hover, h4 a:hover, h6 a:hover, a.pin-title:hover, dt *a:hover {
 	text-decoration: none !important;
 	color: #367588;
 	border-bottom: 1px solid #367588;
@@ -225,7 +270,7 @@ h1 a:hover, h3 a:hover, h4 a:hover, h6 a:hover, a.pin-title:hover, footer a:hove
 	text-shadow: #fafafa 2px 0px 3px;
 }
 
-h1 a:visited, h3 a:visited, h4 a:visited, h6 a:visited, a.pin-title:visited, footer a:visited, dt * a:visited {
+h1 a:visited, h3 a:visited, h4 a:visited, h6 a:visited, a.pin-title:visited, dt * a:visited {
 	text-decoration: none !important;
 	color: #367588;
 	border-bottom: 1px solid #367588;
@@ -235,7 +280,7 @@ h1 a:visited, h3 a:visited, h4 a:visited, h6 a:visited, a.pin-title:visited, foo
 	text-shadow: #fafafa 2px 0px 3px;
 }
 
-h1 a:visited:hover, h3 a:visited:hover, h4 a:visited:hover, h6 a:visited:hover, a.pin-title:visited:hover, footer a:visited:hover {
+h1 a:visited:hover, h3 a:visited:hover, h4 a:visited:hover, h6 a:visited:hover, a.pin-title:visited:hover, {
 	text-decoration: none!important;
 	color: #367588;
 	border-bottom: 1px solid #367588;
@@ -249,30 +294,35 @@ a.metatag {
 	text-decoration: none !important;
 	border-bottom: none !important;
 	color: #777;
+	background: whitesmoke;
 }
 
 a.metatag:link {
 	text-decoration: none !important;
 	border-bottom: none !important;
 	color: #777;
+	background: whitesmoke;
 }
 
 a.metatag:hover {
 	text-decoration: none !important;
 	border-bottom: none !important;
 	color: #367588;
+	background: whitesmoke;
 }
 
 a.metatag:visited {
 	text-decoration: none !important;
 	border-bottom: none !important;
 	color: #777;
+	background: whitesmoke;
 }
 
 a.metatag:visited:hover {
 	text-decoration: none !important;
 	border-bottom: none !important;
 	color: #367588;
+	background: whitesmoke;
 }
 
 /* the ddg form*/
@@ -304,4 +354,118 @@ a.metatag:visited:hover {
 	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 0 8px #4f4f4f;
 	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 0 8px #4f4f4f;
 	box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 0 12px #4f4f4f;
+}
+
+/* Pagination */
+
+.paginate {
+	display: flex;
+    justify-content: flex-end;
+    margin: 23px 0;
+    font-size: 75%;
+    background-color: #367588;
+    border-radius: 1em;
+    padding: 0.2em 0.5em 0.25em;
+}
+
+.paginate .pagprev {
+	margin-right: auto;
+}
+
+
+a[rel="next"], a[rel="prev"] {
+	text-decoration: none !important;
+	font-size: 88%;
+	font-family: 'Open Sans', sans-serif;
+	color: whitesmoke;
+	line-height: 0;
+	border-radius: 1em;
+	padding: 0.2em 0.5em 0.2em;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+a:hover[rel="next"], a:hover[rel="prev"] {
+	text-decoration: none !important;
+	font-size: 88%;
+	font-family: 'Open Sans', sans-serif;
+	color: #367588;
+	background-color: whitesmoke;
+	border-radius: 1em;
+	padding: 0.2em 0.5em 0.2em;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+/* SVG Icons
+------------------------------------------ */
+/* #SVG Icon Test
+================================================== */
+
+.icon, .icon-ascraeus, .icon-rss, .icon-drawer, .icon-link, .icon-twitter, .icon-book, .icon-google-plus, .icon-infinite, icon-telegram {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+
+.icon-ascraeus:hover {
+	fill: #367588;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-rss:hover {
+	fill: #e0812a;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-drawer:hover, .icon-link:hover, .icon-infinite:hover, .icon-power:hover {
+	fill: #901717;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-twitter:hover {
+	fill: #41b7d8;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-book:hover {
+	fill: #372214;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-google-plus:hover {
+	fill: #d64937;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-telegram:hover {
+	fill: #0088cc;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+
+.svg .icon {
+	height: 1em;
+	width: 1em;
 }

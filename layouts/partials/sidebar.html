@@ -4,14 +4,90 @@
 		<header>
 			<nav>
 				<div id="sitetitle">
-				<h1><a href="{{ .Site.BaseURL }}">View from Ascraeus</a></h1>
+				<h1><a href="{{ .Site.BaseURL }}">View from&nbsp;&nbsp;<br /><span class="ochre">Ascraeus</span></a></h1>
 				</div>
+				{{ if .Site.Author.name }}
 				<ul>
-					<li><a href="about">about</a></li>
-					<li><a href="micro">micro</a></li>
-					<li><a href="rss">rss</a></li>
-					<li><a href="twitter">twitter</a></li>
-					<li><a href="archives">archives</a></li>
+				{{ if .Site.Author.micro }}
+				<li><a href="{{ .Site.BaseURL }}micro" title="Micro Blog" class="metatag">
+					<svg class="icon icon-power">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power">
+                         </use>
+                     </svg> <span class="hidden">micro</span></a>
+                </li>
+				{{ end }}
+				{{ if .Site.Author.twitter }}
+				<li><a href="https://twitter.com/{{ .Site.Author.twitter }}" title="twitter" class="metatag">
+					<svg class="icon icon-twitter">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
+                         </use>
+                     </svg> <span class="hidden">{{ .Site.Author.twitter }}</span></a>
+                </li>
+				{{ end }}
+				{{ if .Site.Author.google_plus }}
+				<li><a href="https://google.com/+{{ .Site.Author.google_plus }}" title="google+" class="metatag">
+					<svg class="icon icon-google-plus">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus">
+                         </use>
+                     </svg> <span class="hidden">{{ .Site.Author.google_plus }}</span></a>
+                </li>
+				{{ end }}
+				{{ if .Site.Author.github }}
+				<li><a href="https://github.com/{{ .Site.Author.github }}" title="github" class="metatag">
+					<svg class="icon icon-github">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-github">
+                         </use>
+                     </svg> <span class="hidden">{{ .Site.Author.github }}</span></a>
+                </li>
+				{{ end }}
+				{{ if .Site.Author.instagram }}
+				<li><a href="https://instagram.com/{{ .Site.Author.instagram }}" title="instagram" class="metatag">
+					<svg class="icon icon-instagram">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
+                         </use>
+                     </svg> <span class="hidden">{{ .Site.Author.instagram }}</span></a>
+                </li>
+				{{ end }}
+				{{ if .Site.Author.facebook }}
+				<li><a href="https://facebook.com/{{ .Site.Author.facebook }}" title="facebook" class="metatag">
+					<svg class="icon icon-facebook">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-facebook">
+                         </use>
+                     </svg> <span class="hidden">{{ .Site.Author.facebook }}</span></a>
+                </li>
+				{{ end }}
+				{{ if .Site.Author.linkedin }}
+				<li><a href="https://linkedin.com/in/{{ .Site.Author.linkedin }}" title="linkedin" class="metatag">
+					<svg class="icon icon-linkedin">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-linkedin">
+                         </use>
+                     </svg> <span class="hidden">{{ .Site.Author.linkedin }}</span></a>
+                </li>
+				{{ end }}
+				{{ if .Site.Author.flickr }}
+				<li><a href="https://flickr.com/{{ .Site.Author.flickr}}" title="flickr" class="metatag">
+					<svg class="icon icon-flickr">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-flickr">
+                         </use>
+                     </svg> <span class="hidden">{{ .Site.Author.flickr }}</span></a>
+                </li>
+				{{ end }}
+				{{ if .Site.Author.tumblr }}
+				<li><a href="https://{{ .Site.Author.tumblr }}.tumblr.com" title="tumblr" class="metatag">
+					<svg class="icon icon-tumblr2">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-tumblr2">
+                         </use>
+                     </svg> <span class="hidden">tumblr</span></a>
+                </li>
+                {{ end }}
+                <li><a href="{{ .Site.BaseURL }}index.xml" title="rss feed" class="metatag">
+					<svg class="icon icon-rss">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-rss">
+                         </use>
+                     </svg> 				
+                rss feed</a></li>
+				</ul>
+				{{ end }}
 				</ul>			
                     <form method="get" id="search" action="https://duckduckgo.com/">
                         <input type="hidden" name="sites" value="ascraeus.org" />
