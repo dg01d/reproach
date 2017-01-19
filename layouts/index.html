@@ -6,18 +6,20 @@
 		  {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
 		  <article>
 			{{ if .Params.link }}
-				<h2><a href={{ .Params.link }}>{{ .Title }}</a></h2>
+				<h3><a href={{ .Params.link }}><svg class="icon icon-link">
+                            <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
+                            </use></svg>{{ .Title }}</a></h3>
 			{{ else if not .Title }}
+				<div class="indmicro">
 			{{ else }}
-		    	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		    	<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 			{{ end }}
-
 			{{ partial "metadata.html" . }}
-
 		    {{- .Content }}
 
 		    {{ if not .Title }}
 				{{ partial "micrometadata.html" . }}
+				</div>
 		    {{ end }}
 		</article>
 		  {{ end }}

@@ -1,18 +1,17 @@
 {{ partial "header.html" . }}
-
 {{ partial "sidebar.html" . }}
 
 	<content>
 		<article>
 		  <h1>{{ .Title }}</h1>
 		  {{ partial "metadata.html" . }}
+		  {{ if .Params.rating }}
+		  	{{ partial "star-rating.html" . }}
+		  {{ end }}
 		  {{ .Content }}
-
 		</article>
 		
 {{ partial "articlepagination.html" . }}
-
 {{ partial "webmention.html" }} 
 	</content>
-
 {{ partial "footer.html" . }}

@@ -29,9 +29,17 @@
 					<svg class="icon icon-google-plus">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus">
                          </use>
-                     </svg> <span class="hidden">{{ .Site.Author.google_plus }}</span></a>
+                     </svg> <span class="hidden">google+</span></a>
                 </li>
 				{{ end }}
+                {{ if .Site.Author.goodreads }}
+                <li><a href="https://goodreads.com/{{ .Site.Author.goodreads }}" title="goodreads" class="metatag">
+                    <svg class="icon icon-book">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-book">
+                         </use>
+                     </svg> <span class="hidden">goodreads</span></a>
+                </li>
+                {{ end }}                
 				{{ if .Site.Author.github }}
 				<li><a href="https://github.com/{{ .Site.Author.github }}" title="github" class="metatag">
 					<svg class="icon icon-github">

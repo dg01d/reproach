@@ -1,31 +1,20 @@
 {{"<!-- begin header partial //-->" | safeHTML}}
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
+<!DOCTYPE html><!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]--><!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]--><!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]--><!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
 <!--<![endif]-->
-
 <head>
-
-  <!-- Basic Page Needs
+<!-- Basic Page Needs
   ================================================== -->
-
   <title>{{ .Title }}</title>
-
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- jquery and footnotes -->
-
   <script type="text/javascript" src="{{ .Site.BaseURL }}js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="{{ .Site.BaseURL }}js/bigfoot.js"></script>
   <script type="text/javascript">
     $.bigfoot();
   </script>
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.css"> -->
@@ -37,7 +26,6 @@
   <link rel="me" href="mailto:{{ .email }}" />
   {{ end }}
   <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
-
 </head>
 <body class="Site">
 	<main>

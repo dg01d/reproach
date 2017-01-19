@@ -1,14 +1,27 @@
 {{"<!-- begin metadata partial //-->" | safeHTML}}
-<div class="meta">
+
+
 	{{ if .Params.link }}
-		{{ .Date.Format "Mon 2 Jan, 2006" }} &bull; {{range .Params.tags}} <a href="/tags/{{.}}" class="metatag">{{.}}</a>{{ end }} | <a href="{{ .Permalink }}" class="metatag">&#9830;</a>
+	<div class="meta">
+		{{ .Date.Format "Mon 2 Jan, 2006" }} &bull; {{range .Params.tags}} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{ end }}<a href="{{ .Permalink }}" class="metatag">
+			<svg class="icon">
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
+				</use> 
+			</svg>Permalink</a>
+	</div>
 	{{ else if not .Title }}
 	{{ else }}
+	<div class="meta">
 		{{ .Date.Format "Mon, Jan 2, 2006" }} &bull; 
 		{{range .Params.tags}} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;
-		{{end}}
+		{{end}}<a href="{{ .Permalink }}" class="metatag">
+			<svg class="icon">
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
+				</use> 
+			</svg>Permalink</a>&nbsp;&bull;&nbsp;
 		~{{ .ReadingTime }} min read
+	</div>
 	{{ end }}
-</div>
+	
 
 

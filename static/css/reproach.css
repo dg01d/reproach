@@ -82,7 +82,7 @@ body {
  	color: #454552;
 }
 
-#sitetitle h1 {
+#sitetitle h1, article h2 a {
 	line-height: 1.1em;
 }
 
@@ -106,7 +106,7 @@ h2 {
   margin-top: 0.4893617em;
   margin-bottom: 0.4893617em;
 }
-h3, {
+h3 {
   font-weight: 600;
   font-size: 1.61111111em;
   line-height: 1.5862069em;
@@ -131,6 +131,10 @@ h5 {
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;
   margin-bottom: 1.27777778em;
+}
+
+.indmicro p {
+	margin-bottom: 0em;
 }
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0em;
@@ -241,7 +245,8 @@ article a:hover, article a:active {
 	transition: all 0.3s;
 }
 
-article h2 a {
+article h3 a, article h3 a:visited, article h3 a:hover {
+	line-height: 1.1em;
 	background: whitesmoke;
 }
 
@@ -288,6 +293,10 @@ h1 a:visited:hover, h3 a:visited:hover, h4 a:visited:hover, h6 a:visited:hover, 
 	-moz-transition: all 0.5s ease-in;
 	transition: all 0.5s ease-in;
 	text-shadow: #fafafa 2px 0px 3px;
+}
+
+#revlist h3 {
+	display: inline-block;
 }
 
 a.metatag {
@@ -468,4 +477,36 @@ a:hover[rel="next"], a:hover[rel="prev"] {
 .svg .icon {
 	height: 1em;
 	width: 1em;
+}
+
+/* #Star Ratings
+================================================= */
+.star-ratings-css {
+	unicode-bidi: bidi-override;
+	color: #c5c5c5;
+	font-size: 25px;
+	height: 25px;
+	width: 125px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0;
+	text-shadow: 0 1px 0 #a2a2a2;
+}
+.star-ratings-css-top {
+	color: #e7711b;
+	padding: 0;
+	text-shadow: 0 1px 0 #ab5414;
+	position: absolute;
+	z-index: 1;
+	display: block;
+	left: 0px;
+	overflow: hidden;
+}
+.star-ratings-css-bottom {
+	z-index: 0;
+}
+
+.textwrap {
+	float: left;
+	margin-right: 12px;
 }
