@@ -2,20 +2,30 @@
 	<div class="paginate">
 		<div class="pagprev">
 			{{ if .Prev }}
-				{{ if not .Prev.Title }}
-					<a rel="prev" href="{{.Prev.Permalink}}"><strong>Prev Post</strong></a>
-				{{ else }}
-					<a rel="prev" href="{{.Prev.Permalink}}">{{- .Prev.Title }}</a>
-				{{ end }}
+					
+					<a rel="prev" href="{{.Prev.Permalink}}">&#8592;
+					{{ if not .Prev.Title }}
+						Prev Post
+					{{ else }}
+						{{- .Prev.Title }}
+					{{ end }}
+					</a>
+				
 			{{ end }}
 		</div>
 		<div class="pagnext">
+
 			{{ if .Next }}
-				{{ if not .Next.Title }}
-					<a rel="next" href="{{.Next.Permalink}}"><strong>Next Post</strong></a>
-				{{ else }}
-					<a rel="next" href="{{.Next.Permalink}}">{{- .Next.Title }}</a>
-				{{ end }}
+			
+					<a rel="next" href="{{.Next.Permalink}}">	
+					{{ if not .Next.Title }}
+						Next Post
+					{{ else }}
+						{{- .Next.Title }}
+					{{ end }}
+					&#8594;	
+					</a>
 			{{ end }}
+
 		</div>
 	</div>

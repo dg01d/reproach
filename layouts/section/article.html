@@ -1,15 +1,19 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
-
 	<content>
-	  <h1>Articles</h1>
-	  {{- range where .Site.Pages "Section" "article" }}
-	  	<article>
-	    	<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3><div class="meta">
-	    		{{ .Date.Format "Mon Jan 2, 2006" }}&nbsp;&bull;~{{ .ReadingTime }} min read</p>
-	    	</div>
-		</article>
+	  <h1><svg class="icon icon-ascraeus">
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus"></use>
+			</svg>blog posts</h1>
+			<div id="#revlist">
+	  	{{- range where .Site.Pages "Section" "article" }}
+			<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+		    {{- if .Params.summary }}
+		    {{- .Params.summary }}
+		    {{- else }}
+		    {{- .Summary}}
+		    {{- end }}
+		    {{ partial "metadata.html" . }}
 	  	{{- end }}
-	</content>
-</div>
+	  		</div>
+	</content>	
 {{ partial "footer.html" . }}

@@ -1,23 +1,21 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
-
 	<content>
-	  <h1><svg class="icon icon-power">
-				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power"></use>
+	  <h1><svg class="icon icon-star-half">
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-star-half"></use>
 			</svg>reviews</h1>
 			<div id="#revlist">
 	  {{- range where .Site.Pages "Section" "review" }}
 		  	<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-		  	{{ if .Params.rating }}
+		  	{{- if .Params.rating }}
 		  	{{ partial "star-rating.html" . }}
-		    {{ end }}
+		    {{- end }}
 		    {{ if .Params.summary }}
 		    {{- .Params.summary }}
-		    {{ end }}
+		    {{- end }}
 		    {{ partial "metadata.html" . }}
 	  {{- end }}
 	  		</div>
 	</content>
-	
 </div>
 {{ partial "footer.html" . }}

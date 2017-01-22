@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
-
 	<content>
 	  <h1><svg class="icon icon-power">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power"></use>
@@ -9,7 +8,6 @@
 	    {{- .Content }}
 	    <small><a href="{{ .Permalink }}">{{ .Date.Format "02/01/06 15:04" }}</a></small>
 	  {{- end }}
-	</content>
-	
+	</content>	
 </div>
 {{ partial "footer.html" . }}

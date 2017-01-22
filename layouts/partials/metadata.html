@@ -1,27 +1,26 @@
 {{"<!-- begin metadata partial //-->" | safeHTML}}
-
-
-	{{ if .Params.link }}
+	{{- if .Params.link }}
 	<div class="meta">
-		{{ .Date.Format "Mon 2 Jan, 2006" }} &bull; {{range .Params.tags}} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{ end }}<a href="{{ .Permalink }}" class="metatag">
+		{{ .Date.Format "Mon 2 Jan, 2006" }} &bull; {{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{- end }}<a href="{{ .Permalink }}" class="metatag">
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 				</use> 
 			</svg>Permalink</a>
 	</div>
-	{{ else if not .Title }}
-	{{ else }}
+	{{- else if not .Title }}
+	{{- else }}
 	<div class="meta">
 		{{ .Date.Format "Mon, Jan 2, 2006" }} &bull; 
-		{{range .Params.tags}} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;
-		{{end}}<a href="{{ .Permalink }}" class="metatag">
+		{{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;
+		{{-end}}
+		<a href="{{ .Permalink }}" class="metatag">
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 				</use> 
 			</svg>Permalink</a>&nbsp;&bull;&nbsp;
 		~{{ .ReadingTime }} min read
 	</div>
-	{{ end }}
+	{{- end }}
 	
 
 

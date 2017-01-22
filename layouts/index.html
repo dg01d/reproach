@@ -1,30 +1,26 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
-
-	<content>
-		
+	<content>		
 		  {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
 		  <article>
-			{{ if .Params.link }}
+			{{- if .Params.link }}
 				<h3><a href={{ .Params.link }}><svg class="icon icon-link">
                             <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
                             </use></svg>{{ .Title }}</a></h3>
-			{{ else if not .Title }}
+			{{- else if not .Title }}
 				<div class="indmicro">
-			{{ else }}
+			{{- else }}
 		    	<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-			{{ end }}
+			{{- end }}
 			{{ partial "metadata.html" . }}
 		    {{- .Content }}
 
-		    {{ if not .Title }}
+		    {{- if not .Title }}
 				{{ partial "micrometadata.html" . }}
 				</div>
-		    {{ end }}
+		    {{- end }}
 		</article>
-		  {{ end }}
-
+		  {{- end }}
 	</content>
-
 {{ partial "footer.html" . }}
 

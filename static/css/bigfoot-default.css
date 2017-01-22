@@ -29,7 +29,7 @@
 .bigfoot-footnote__button:hover,
 .bigfoot-footnote__button:focus {
   outline: none;
-  background-color: rgba(110, 110, 110, 0.5);
+  background-color: #367588;
 }
 
 .bigfoot-footnote__button:active {

@@ -5,13 +5,15 @@
 		<article>
 		  <h1>{{ .Title }}</h1>
 		  {{ partial "metadata.html" . }}
-		  {{ if .Params.rating }}
+		  {{- if .Params.rating }}
 		  	{{ partial "star-rating.html" . }}
-		  {{ end }}
+		  {{- end }}
 		  {{ .Content }}
 		</article>
 		
 {{ partial "articlepagination.html" . }}
-{{ partial "webmention.html" }} 
+{{- if .Params.mention }}
+	{{ partial "webmention.html" }}
+{{- end }} 
 	</content>
 {{ partial "footer.html" . }}

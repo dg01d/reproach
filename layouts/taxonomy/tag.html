@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+
+  <content>
+
+
+      <h1 id="title">{{ .Title }}</h1>
+
+<article>
+
+    {{ range .Data.Pages.GroupByDate "2006" }}
+
+    {{ range .Pages }}
+      <h4 hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></h4>
+        {{ if .Params.summary }}
+        {{- .Params.summary }}
+        {{ else }}
+        {{- .Summary}}
+        {{ end }}
+        {{ partial "metadata.html" . }}
+    {{ end }}
+    {{ end }}
+</article>
+
+  </content>  
+{{ partial "footer.html" . }}

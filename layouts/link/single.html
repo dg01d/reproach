@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+	<content>
+		<article>
+		{{ if .Params.link}}
+		  	<h3><a href={{ .Params.link }}><svg class="icon icon-link">
+                <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
+                </use></svg>{{ .Title }}</a></h3>
+        {{ else }}
+			<h3>{{ .Title }}</h3>
+		{{ end }}
+		  {{ partial "metadata.html" . }}
+		  {{ .Content }}
+		</article>
+{{ partial "articlepagination.html" . }}
+{{ if .Params.mention }}
+{{ partial "webmention.html" }}
+{{ end }}
+	</content>
+{{ partial "footer.html" . }}

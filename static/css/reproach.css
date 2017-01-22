@@ -370,11 +370,12 @@ a.metatag:visited:hover {
 .paginate {
 	display: flex;
     justify-content: flex-end;
-    margin: 23px 0;
+/*    margin: 23px 23px; */
     font-size: 75%;
     background-color: #367588;
-    border-radius: 1em;
-    padding: 0.2em 0.5em 0.25em;
+    margin-bottom: 23px
+/*    border-radius: 1em; */
+/*    padding: 0.2em 0.5em 0.25em; */
 }
 
 .paginate .pagprev {
@@ -384,28 +385,32 @@ a.metatag:visited:hover {
 
 a[rel="next"], a[rel="prev"] {
 	text-decoration: none !important;
-	font-size: 88%;
+	/*font-size: 88%; */
 	font-family: 'Open Sans', sans-serif;
 	color: whitesmoke;
-	line-height: 0;
-	border-radius: 1em;
+	line-height: 1;
+	/* border-radius: 1em; */
 	padding: 0.2em 0.5em 0.2em;
 	-webkit-transition: background-color 0.5s;
 	-moz-transition: background-color 0.5s;
 	transition: background-color 0.5s;
+	display: block;
+	height: 100%;
 }
 
 a:hover[rel="next"], a:hover[rel="prev"] {
 	text-decoration: none !important;
-	font-size: 88%;
+	/* font-size: 88%; */
 	font-family: 'Open Sans', sans-serif;
 	color: #367588;
 	background-color: whitesmoke;
-	border-radius: 1em;
+	/* border-radius: 1em; */
 	padding: 0.2em 0.5em 0.2em;
 	-webkit-transition: background-color 0.5s;
 	-moz-transition: background-color 0.5s;
 	transition: background-color 0.5s;
+	display: block;
+	height: 100%;
 }
 
 /* SVG Icons
@@ -438,7 +443,7 @@ a:hover[rel="next"], a:hover[rel="prev"] {
 	transition: all 0.5s;
 }
 
-.icon-drawer:hover, .icon-link:hover, .icon-infinite:hover, .icon-power:hover {
+.icon-drawer:hover, .icon-link:hover, .icon-infinite:hover, .icon-power:hover .icon-star-half:hover {
 	fill: #901717;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -510,3 +515,102 @@ a:hover[rel="next"], a:hover[rel="prev"] {
 	float: left;
 	margin-right: 12px;
 }
+
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 320px */
+
+@media only screen and (max-width: 797px) {
+	nav ul li {
+		list-style-type: none;
+		list-style: none;
+		display: inline;
+		font-size: 32px;
+	}
+
+	nav {
+		text-align: center;
+	}
+
+	.hidden {
+		display: none;
+		overflow: hidden;
+	}
+	aside h1 {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	nav a {
+		color: #444;
+		border-bottom: 5px solid #fafafa;
+		-webkit-transition: color 0.2s;
+		-moz-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+
+
+	nav a:hover {
+		color: #367588;
+		border-bottom: 5px solid #367588;
+		-webkit-transition: color 0.2s;
+		-moz-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+
+}
+
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 700px) {
+	content {
+		margin: auto;
+	}
+
+	nav {
+		text-align: center;
+	}
+
+	nav ul li {
+		list-style-type: none;
+		list-style: none;
+		display: inline;
+		font-size: 32px;
+	}
+	.hidden {
+		display: none;
+		overflow: hidden;
+	}
+
+
+	aside h1 {
+		text-align: center;
+	}
+	nav a {
+		color: #444;
+		border-bottom: 5px solid #fafafa;
+		-webkit-transition: color 0.2s;
+		-moz-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+
+
+	nav a:hover {
+		color: #367588;
+		border-bottom: 5px solid #367588;
+		-webkit-transition: color 0.2s;
+		-moz-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+

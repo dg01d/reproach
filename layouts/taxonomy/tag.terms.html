@@ -1,0 +1,27 @@
+
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+<content>
+
+      <h1 id="title">{{ .Title }}</h1>
+
+      <p> This is a list of all Tags on the site, with all articles featuring those tags linked to them. Each Tag cal also be followed to a more comprehensive listing of the content of the articles.</p>
+
+  <ul>
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
+        <ul>
+          {{ range $key, $value := $taxonomy }}
+          <li><a href="{{ "/tags/" | relLangURL}}{{ $key | urlize }}">{{ $key }}</a></li>
+                <ul>
+                {{ range $value.Pages }}
+                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                {{ end }}
+                </ul>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+  </ul>
+</content>
+  {{ partial "footer.html" . }}
