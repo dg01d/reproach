@@ -2,8 +2,8 @@
 {{ partial "sidebar.html" . }}
 
 	<content>
-		<article>
-		  <h1>{{ .Title }}</h1>
+		<article class="h-review">
+		  <h1 class="p-name">{{ .Title }}</h1>
 		  {{ partial "metadata.html" . }}
 		  {{- if .Params.rating }}
 		  	{{ partial "star-rating.html" . }}

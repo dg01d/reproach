@@ -1,7 +1,8 @@
 {{"<!-- begin micrometadata partial //-->" | safeHTML}}
 <div class="meta">
-		{{ .Date.Format "02/01/06 15:04" }}&nbsp;&bull;&nbsp;
-		<a href="{{ .Permalink }}" class="metatag">
+		<time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
+		{{ .Date.Format "02/01/06 15:04" }}</time>&nbsp;&bull;&nbsp;
+		<a href="{{ .Permalink }}" class="metatag u-url u-uid">
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 				</use> 

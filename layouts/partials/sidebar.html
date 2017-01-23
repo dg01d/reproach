@@ -29,7 +29,7 @@
                      </svg> <span class="hidden">reviews</span></a>
                 </li>
 				{{- if .Site.Author.twitter }}
-				<li><a href="https://twitter.com/{{ .Site.Author.twitter }}" title="twitter" class="metatag">
+				<li><a href="https://twitter.com/{{ .Site.Author.twitter }}" rel="me" title="twitter" class="metatag">
 					<svg class="icon icon-twitter">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
                          </use>
@@ -37,7 +37,7 @@
                 </li>
 				{{- end }}
 				{{- if .Site.Author.google_plus }}
-				<li><a href="https://google.com/+{{ .Site.Author.google_plus }}" title="google+" class="metatag">
+				<li><a href="https://google.com/+{{ .Site.Author.google_plus }}" rel="me" title="google+" class="metatag">
 					<svg class="icon icon-google-plus">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus">
                          </use>
@@ -45,7 +45,7 @@
                 </li>
 				{{- end }}
                 {{- if .Site.Author.goodreads }}
-                <li><a href="https://goodreads.com/{{ .Site.Author.goodreads }}" title="goodreads" class="metatag">
+                <li><a href="https://goodreads.com/{{ .Site.Author.goodreads }}" rel="me" title="goodreads" class="metatag">
                     <svg class="icon icon-book">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-book">
                          </use>
@@ -53,7 +53,7 @@
                 </li>
                 {{- end }}                
 				{{- if .Site.Author.github }}
-				<li><a href="https://github.com/{{ .Site.Author.github }}" title="github" class="metatag">
+				<li><a href="https://github.com/{{ .Site.Author.github }}" rel="me" title="github" class="metatag">
 					<svg class="icon icon-github">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-github">
                          </use>
@@ -61,7 +61,7 @@
                 </li>
 				{{- end }}
 				{{- if .Site.Author.instagram }}
-				<li><a href="https://instagram.com/{{ .Site.Author.instagram }}" title="instagram" class="metatag">
+				<li><a href="https://instagram.com/{{ .Site.Author.instagram }}" rel="me" title="instagram" class="metatag">
 					<svg class="icon icon-instagram">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
                          </use>
@@ -69,7 +69,7 @@
                 </li>
 				{{- end }}
 				{{- if .Site.Author.facebook }}
-				<li><a href="https://facebook.com/{{ .Site.Author.facebook }}" title="facebook" class="metatag">
+				<li><a href="https://facebook.com/{{ .Site.Author.facebook }}" rel="me" title="facebook" class="metatag">
 					<svg class="icon icon-facebook">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-facebook">
                          </use>
@@ -77,7 +77,7 @@
                 </li>
 				{{- end }}
 				{{- if .Site.Author.linkedin }}
-				<li><a href="https://linkedin.com/in/{{ .Site.Author.linkedin }}" title="linkedin" class="metatag">
+				<li><a href="https://linkedin.com/in/{{ .Site.Author.linkedin }}" rel="me" title="linkedin" class="metatag">
 					<svg class="icon icon-linkedin">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-linkedin">
                          </use>
@@ -85,7 +85,7 @@
                 </li>
 				{{- end }}
 				{{- if .Site.Author.flickr }}
-				<li><a href="https://flickr.com/{{ .Site.Author.flickr}}" title="flickr" class="metatag">
+				<li><a href="https://flickr.com/{{ .Site.Author.flickr}}" rel="me" title="flickr" class="metatag">
 					<svg class="icon icon-flickr">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-flickr">
                          </use>
@@ -93,7 +93,7 @@
                 </li>
 				{{- end }}
 				{{- if .Site.Author.tumblr }}
-				<li><a href="https://{{ .Site.Author.tumblr }}.tumblr.com" title="tumblr" class="metatag">
+				<li><a href="https://{{ .Site.Author.tumblr }}.tumblr.com" rel="me" title="tumblr" class="metatag">
 					<svg class="icon icon-tumblr2">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-tumblr2">
                          </use>

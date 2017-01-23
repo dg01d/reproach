@@ -2,19 +2,27 @@
 {{ partial "sidebar.html" . }}
 	<content>		
 		  {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
-		  <article>
+		  <article class="h-entry hentry">
 			{{- if .Params.link }}
-				<h3><a href={{ .Params.link }}><svg class="icon icon-link">
+				<h3 class="p-name entry-title">
+					<a href={{ .Params.link }} class="u-bookmark-of">
+						<svg class="icon icon-link">
                             <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
-                            </use></svg>{{ .Title }}</a></h3>
+                            </use>
+                        </svg>{{ .Title }}</a></h3>
 			{{- else if not .Title }}
 				<div class="indmicro">
 			{{- else }}
-		    	<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+		    	<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 			{{- end }}
 			{{ partial "metadata.html" . }}
+			{{- if not .Title }}
+				<div class="e-content p-title">
+			{{- else }}
+				<div class="e-content">
+			{{ end }}
 		    {{- .Content }}
-
+		    	</div>
 		    {{- if not .Title }}
 				{{ partial "micrometadata.html" . }}
 				</div>

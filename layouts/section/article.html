@@ -6,12 +6,14 @@
 			</svg>blog posts</h1>
 			<div id="#revlist">
 	  	{{- range where .Site.Pages "Section" "article" }}
-			<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+			<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+		    <div class="p-summary">
 		    {{- if .Params.summary }}
 		    {{- .Params.summary }}
 		    {{- else }}
 		    {{- .Summary}}
 		    {{- end }}
+		    </div>
 		    {{ partial "metadata.html" . }}
 	  	{{- end }}
 	  		</div>

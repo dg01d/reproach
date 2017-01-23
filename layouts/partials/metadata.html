@@ -1,7 +1,7 @@
 {{"<!-- begin metadata partial //-->" | safeHTML}}
 	{{- if .Params.link }}
 	<div class="meta">
-		{{ .Date.Format "Mon 2 Jan, 2006" }} &bull; {{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{- end }}<a href="{{ .Permalink }}" class="metatag">
+		<time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">{{ .Date.Format "Mon 2 Jan, 2006" }}</time> &bull; {{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{- end }}<a href="{{ .Permalink }}" class="metatag u-url u-uid">
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 				</use> 
@@ -10,10 +10,13 @@
 	{{- else if not .Title }}
 	{{- else }}
 	<div class="meta">
-		{{ .Date.Format "Mon, Jan 2, 2006" }} &bull; 
-		{{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;
-		{{-end}}
-		<a href="{{ .Permalink }}" class="metatag">
+		<time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05"}}">
+		{{ .Date.Format "Mon, Jan 2, 2006" }}</time> &bull; 
+		
+		{{ range .Params.tags }} 
+			<a href="/tags/{{.}}" class="metatag p-category">{{.}}</a>&nbsp;&bull;&nbsp;
+		{{- end}}
+		<a href="{{ .Permalink }}" class="metatag u-url u-uid">
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 				</use> 

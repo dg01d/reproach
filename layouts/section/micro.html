@@ -5,8 +5,10 @@
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power"></use>
 			</svg>microblog</h1>
 	  {{- range where .Site.Pages "Section" "micro" }}
+	  <div class="e-content p-title">
 	    {{- .Content }}
-	    <small><a href="{{ .Permalink }}">{{ .Date.Format "02/01/06 15:04" }}</a></small>
+	  </div>
+	    {{- partial "micrometadata.html" . }}
 	  {{- end }}
 	</content>	
 </div>

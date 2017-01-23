@@ -7,17 +7,25 @@
 			<div id="#revlist">
 	  	{{- range where .Site.Pages "Section" "link" }}
 	  		{{- if .Params.link}}
-		  	<h3><a href={{ .Params.link }}><svg class="icon icon-link">
+		  	<h3 class="p-name"><a href={{ .Params.link }} class="u-bookmark-of"><svg class="icon icon-link">
                 <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
-                </use></svg>{{ .Title }}</a></h3>
+                </use></svg>{{ .Title }}
+				{{- if .Params.gplus }}
+					<svg class="icon icon-google-plus">
+					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#google-plus">
+                </use></svg>
+                {{- end }}
+                </a></h3>
         {{- else }}
 			<h3>{{ .Title }}</h3>
 		{{- end }}
+			<div class="p-summary">
 		    {{- if .Params.summary }}
 		    {{- .Params.summary }}
 		    {{- else }}
 		    {{- .Summary}}
 		    {{- end }}
+		    </div>
 		    {{ partial "metadata.html" . }}
 	  	{{- end }}
 	  		</div>

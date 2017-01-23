@@ -3,16 +3,18 @@
 
 
 	<content>
-		<article>
+		<article class="h-entry">
 			<h3><svg class="icon icon-power">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power"></use>
 			</svg> Microentry</h3>
-		    {{- .Content }}
+		    <div class="e-content">{{- .Content }}</div>
 			{{ partial "micrometadata.html" . }}
 	    </article>
 
 	{{ partial "articlepagination.html" . }}
-
+	{{- if .Params.mention }}
+		{{- partial "webmention.html" }}
+	{{- end }} 
 	</content>
 
 {{ partial "footer.html" . }} 

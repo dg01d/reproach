@@ -6,13 +6,17 @@
 			</svg>reviews</h1>
 			<div id="#revlist">
 	  {{- range where .Site.Pages "Section" "review" }}
-		  	<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-		  	{{- if .Params.rating }}
-		  	{{ partial "star-rating.html" . }}
-		    {{- end }}
-		    {{ if .Params.summary }}
-		    {{- .Params.summary }}
-		    {{- end }}
+		  	<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+			  	{{- if .Params.rating }}
+			  	{{ partial "star-rating.html" . }}
+			    {{- end }}
+		    <div class="p-summary">
+			    {{- if .Params.summary }}
+			    {{- .Params.summary }}
+			    {{- else }}
+			    {{- .Summary }}
+			    {{- end }}
+			</div>
 		    {{ partial "metadata.html" . }}
 	  {{- end }}
 	  		</div>
