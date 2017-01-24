@@ -1,13 +1,13 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
 	<content>
-	  <h1><svg class="icon icon-ascraeus">
-				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus"></use>
+	  <h1><svg class="icon icon-blog">
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-blog"></use>
 			</svg>blog posts</h1>
 			<div id="#revlist">
 	  {{- range (.Paginate (where .Site.Pages "Section" "article")).Pages }}
 			<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-		    <div class="p-summary">
+		    <div>
 		    {{- if .Params.summary }}
 		    {{- .Params.summary }}
 		    {{- else }}

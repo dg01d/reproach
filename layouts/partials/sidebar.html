@@ -22,17 +22,23 @@
                      </svg> <span class="hidden">micro</span></a>
                 </li>
 				{{- end }}
-                <li><a href="{{ .Site.BaseURL }}pages/infinite-tbr" title="the infinite tbr" class="metatag">
-                    <svg class="icon icon-infinite">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-infinite">
+                <li><a href="{{ .Site.BaseURL }}article" title="reviews" class="metatag">
+                    <svg class="icon icon-blog">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-blog">
                          </use>
-                     </svg> <span class="hidden">tbr</span></a>
+                     </svg> <span class="hidden">posts</span></a>
                 </li>
                 <li><a href="{{ .Site.BaseURL }}review" title="reviews" class="metatag">
                     <svg class="icon icon-star-half">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-star-half">
                          </use>
                      </svg> <span class="hidden">reviews</span></a>
+                </li>
+                <li><a href="{{ .Site.BaseURL }}link" title="reviews" class="metatag">
+                    <svg class="icon icon-link">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
+                         </use>
+                     </svg> <span class="hidden">link posts</span></a>
                 </li>
 				{{- if .Site.Author.twitter }}
 				<li><a href="https://twitter.com/{{ .Site.Author.twitter }}" rel="me" title="twitter" class="metatag">

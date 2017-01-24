@@ -8,7 +8,7 @@
 			<article class="h-entry">
 	  {{- range where .Site.Pages "Section" "review" }}
 		  	<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-		    <div class="p-summary">
+		    <div>
 			    {{- if .Params.summary }}
 			    {{- .Params.summary }}
 			    {{- else }}
