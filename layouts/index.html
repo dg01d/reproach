@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
 	<content>		
-		  {{- range (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
+		  {{- range first 20 (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
 		  <article class="h-entry hentry">
 			{{- if .Params.link }}
 				<h3 class="p-name entry-title">
@@ -28,6 +28,7 @@
 				</div>
 		    {{- end }}
 		</article>
+		<hr />
 		  {{- end }}
 	</content>
 {{ partial "footer.html" . }}

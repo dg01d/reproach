@@ -15,6 +15,9 @@
   <script type="text/javascript">
     $.bigfoot();
   </script>
+  {{- if .Params.sorttable }}
+  <script type="text/javascript" src="{{ .Site.BaseURL }}js/sorttable.js"></script>
+  {{- end }}
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.css"> -->

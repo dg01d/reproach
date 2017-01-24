@@ -5,8 +5,8 @@
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-tag"></use>
 			</svg>tags</h1>
 			<div id="#revlist">
-	  	{{- range where .Site.Pages "Section" "link" }}
-	  		{{- if .Params.link}}
+	  {{- range (.Paginate (where .Site.Pages "Section" "link")).Pages }}
+	  		{{- if .Params.link }}
 		  	<h3 class="p-name"><a href={{ .Params.link }} class="u-bookmark-of"><svg class="icon icon-link">
                 <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
                 </use></svg>{{ .Title }}
@@ -29,6 +29,7 @@
 		    {{ partial "metadata.html" . }}
 	  	{{- end }}
 	  		</div>
+	  	{{- partial "pagination.html" . }}
 	</content>
 </div>
 {{ partial "footer.html" . }}

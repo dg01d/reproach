@@ -6,8 +6,14 @@
 		<article class="h-entry">
 		  <h1 class="p-name">{{ .Title }}</h1>
 		  {{ partial "metadata.html" . }}
-		  <div class="e-content"
+		  {{- if .Params.summary }}
+		  <div class="floatright p-summary">
+		  {{ .Params.summary }}
+		  </div>
+		  {{- end }}
+		  <div class="e-content">
 		  {{ .Content }}
+		  </div>
 		</article>
 		
 {{ partial "articlepagination.html" . }}

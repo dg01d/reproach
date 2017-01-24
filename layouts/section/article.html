@@ -5,7 +5,7 @@
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus"></use>
 			</svg>blog posts</h1>
 			<div id="#revlist">
-	  	{{- range where .Site.Pages "Section" "article" }}
+	  {{- range (.Paginate (where .Site.Pages "Section" "article")).Pages }}
 			<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 		    <div class="p-summary">
 		    {{- if .Params.summary }}
@@ -17,5 +17,6 @@
 		    {{ partial "metadata.html" . }}
 	  	{{- end }}
 	  		</div>
+	  	{{- partial "pagination.html" .}}
 	</content>	
 {{ partial "footer.html" . }}

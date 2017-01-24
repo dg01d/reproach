@@ -4,11 +4,11 @@
 		<header>
 			<nav>
 				<div id="sitetitle">
-				<h1><a href="{{ .Site.BaseURL }}">View from<span class="hidden">&nbsp;&nbsp;<br /></span> <span class="ochre">Ascraeus</span></a></h1>
+				<h1><a href="{{ .Site.BaseURL }}">View&nbsp;from<span class="hidden">&nbsp;&nbsp;<br /></span> <span class="ochre">Ascraeus</span></a></h1>
 				</div>
 				{{- if .Site.Author.name }}
 				<ul>
-                <li><a href="{{ .Site.BaseURL }}about" title="About" class="metatag">
+                <li><a href="{{ .Site.BaseURL }}page/about" title="About" class="metatag">
                     <svg class="icon icon-ascraeus">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
                          </use>
@@ -22,6 +22,12 @@
                      </svg> <span class="hidden">micro</span></a>
                 </li>
 				{{- end }}
+                <li><a href="{{ .Site.BaseURL }}pages/infinite-tbr" title="the infinite tbr" class="metatag">
+                    <svg class="icon icon-infinite">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-infinite">
+                         </use>
+                     </svg> <span class="hidden">tbr</span></a>
+                </li>
                 <li><a href="{{ .Site.BaseURL }}review" title="reviews" class="metatag">
                     <svg class="icon icon-star-half">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-star-half">

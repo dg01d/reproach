@@ -2,18 +2,25 @@
 {{ partial "sidebar.html" . }}
 
 	<content>
-		<article class="h-review">
+		<article class="h-entry">
 		  <h1 class="p-name">{{ .Title }}</h1>
 		  {{ partial "metadata.html" . }}
-		  {{- if .Params.rating }}
-		  	{{ partial "star-rating.html" . }}
+		  {{- if .Params.summary }}
+		  <div class="floatright">
+			  <div class="p-summary">
+			  {{ .Params.summary }}
+			  </div>
+			  {{- if .Params.rating }}
+			  	{{ partial "star-rating.html" . }}
+			  {{- end }}
+		  </div>
 		  {{- end }}
+		  <div class="e-content">
 		  {{ .Content }}
+		  </div>
 		</article>
 		
-{{ partial "articlepagination.html" . }}
-{{- if .Params.mention }}
+	{{ partial "articlepagination.html" . }}
 	{{ partial "webmention.html" }}
-{{- end }} 
 	</content>
 {{ partial "footer.html" . }}

@@ -5,7 +5,7 @@
    |_| |___|  _|_| |___|__,|___|_|_|     
            |_|                           
                                          */
-
+/*
 .Site {
 	display: flex;
  	min-height: 100vh;
@@ -25,7 +25,7 @@ section {
 }
 
 content, aside {
-  flex-basis: 100%;
+  flex-basis: auto;
 }
 
 
@@ -54,9 +54,75 @@ content, aside {
 	background-position: top right;
 	background-repeat: no-repeat;
 	text-shadow: #fafafa 2px 0px 3px;
-	position: fixed;
-	top: 0;
 	}
+}
+*/
+
+main {
+	display: flex;
+ 	min-height: 100vh;
+  	flex-direction: column;
+  	max-width: 1000px;
+  	margin: 0 auto;
+	flex: 1;
+}
+
+content {
+	margin-left: 1em;
+}
+
+@media screen and (min-width: 800px) {
+	section {
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+	}
+
+	aside {
+	-webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+	}
+
+	content {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+   }
+
+	nav {
+	background-image: url("/images/asc3.jpg");
+	background-position: top right;
+	background-repeat: no-repeat;
+	text-shadow: #fafafa 2px 0px 3px;
+	}   
 }
 
 /* Footer */
@@ -136,6 +202,11 @@ p, ul, ol, pre, table, blockquote {
 .indmicro p {
 	margin-bottom: 0em;
 }
+
+.indmicro {
+	padding: 0.5em;
+
+}
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0em;
   margin-bottom: 0em;
@@ -173,6 +244,29 @@ div.meta {
 	font-family: 'Gentium Basic', Georgia, serif;
 	font-style: italic;
 	color: #999;
+}
+
+div.floatright {
+	display: block;
+	float: right;
+	width: 10em;
+	padding: 1em;
+	margin: .5em;
+	box-shadow: 5px 5px 10px #367588;
+}
+
+div.p-summary {
+	font-style: italic;
+	color: #367588;
+
+}
+
+blockquote {
+	margin-top: .5em;
+  	margin-bottom: .5em;
+  	margin-left: 0;
+  	padding-left: 1em;
+  	border-left: .5em solid #901717;
 }
 
 /* SideBar */
@@ -382,14 +476,51 @@ a.metatag:visited:hover {
 	margin-right: auto;
 }
 
+.lipag {
+	margin: auto;
+	text-align: center;
+    font-size: 75%;
+    background-color: #367588;
+    margin-bottom: 23px
+	}
+
+.lipag ul li {
+		list-style-type: none;
+		list-style: none;
+		display: inline;
+		color: white;
+	}
+
+.lipag a {
+	text-decoration: none !important;
+	font-family: 'Open Sans', sans-serif;
+	color: whitesmoke;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+	padding: 0.2em 0.5em 0.2em;
+}
+
+.lipag a:hover {
+	text-decoration: none !important;
+	font-family: 'Open Sans', sans-serif;
+	color: #367588;
+	background-color: whitesmoke;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+	padding: 0.2em 0.5em 0.2em;		
+}
+
+li.active a {
+	font-weight: bold;
+}
 
 a[rel="next"], a[rel="prev"] {
 	text-decoration: none !important;
-	/*font-size: 88%; */
 	font-family: 'Open Sans', sans-serif;
 	color: whitesmoke;
 	line-height: 1;
-	/* border-radius: 1em; */
 	padding: 0.2em 0.5em 0.2em;
 	-webkit-transition: background-color 0.5s;
 	-moz-transition: background-color 0.5s;
@@ -400,11 +531,9 @@ a[rel="next"], a[rel="prev"] {
 
 a:hover[rel="next"], a:hover[rel="prev"] {
 	text-decoration: none !important;
-	/* font-size: 88%; */
 	font-family: 'Open Sans', sans-serif;
 	color: #367588;
 	background-color: whitesmoke;
-	/* border-radius: 1em; */
 	padding: 0.2em 0.5em 0.2em;
 	-webkit-transition: background-color 0.5s;
 	-moz-transition: background-color 0.5s;
@@ -413,10 +542,18 @@ a:hover[rel="next"], a:hover[rel="prev"] {
 	height: 100%;
 }
 
+/* Tables */
+
+th, tfoot {
+	color: #e1e3e4;
+	font-weight: bold;
+	background-color: #367588;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
 /* SVG Icons
 ------------------------------------------ */
-/* #SVG Icon Test
-================================================== */
 
 .icon, .icon-ascraeus, .icon-rss, .icon-drawer, .icon-link, .icon-twitter, .icon-book, .icon-google-plus, .icon-infinite, icon-telegram {
 	display: inline-block;
@@ -610,7 +747,6 @@ a:hover[rel="next"], a:hover[rel="prev"] {
 
 }
 
-@media only screen and (max-width: 600px) {
-
+hr { border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #367588, rgba(0, 0, 0, 0)); }
 
 
