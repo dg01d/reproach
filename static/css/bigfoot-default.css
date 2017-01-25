@@ -33,11 +33,11 @@
 }
 
 .bigfoot-footnote__button:active {
-  background-color: rgba(110, 110, 110, 0.5);
+  background-color: #901717;
 }
 
 .bigfoot-footnote__button.is-active {
-  background-color: #6e6e6e;
+  background-color: #901717;
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
