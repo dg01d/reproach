@@ -20,8 +20,8 @@
 				<div class="e-content p-title">
 			{{- else }}
 				<div class="e-content">
-			{{ end }}
-		    {{- .Content }}
+			{{- end }}
+		    {{ .Content }}
 		    	</div>
 		    {{- if not .Title }}
 				{{ partial "micrometadata.html" . }}
