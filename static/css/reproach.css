@@ -237,6 +237,7 @@ pre {
     font-family: menlo, monospace;
     white-space: pre;
     margin: 1em 0;
+    font-size: 75%;
 }
 
 div.meta {
