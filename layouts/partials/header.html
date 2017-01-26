@@ -33,17 +33,22 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.css"> -->
-  <link href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i|Open+Sans:400,600,800" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/reproach.css">
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/bigfoot-default.css">
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/webmention.css">
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i|Open+Sans:400,600,800" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/reproach.css" />
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/bigfoot-default.css" />
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/webmention.css" />
   {{- if .Site.Author.email }}
   <link rel="me" href="mailto:{{ .Site.Author.email }}" />
   {{- end }}
   <!-- indieweb components 
   ------------------------------------------------- -->
-  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
   <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
+
+  <!-- Metadata for Twitter and OpenGraph -->
+  {{- if .Params.summary }}
+  {{ partial "twittergraph.html" . }}
+  {{- end }}
 </head>
 <body class="Site">
 	<main>

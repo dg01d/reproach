@@ -5,22 +5,41 @@
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 				</use> 
-			</svg>Permalink</a>
+			</svg> Permalink</a>
 	</div>
 	{{- else if not .Title }}
 	{{- else }}
 	<div class="meta">
 		<time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05"}}">
-		{{ .Date.Format "Mon, Jan 2, 2006" }}</time> &bull; 
-		
+		{{ .Date.Format "Mon, Jan 2, 2006" }}</time> &bull; 	
 		{{ range .Params.tags }} 
 			<a href="/tags/{{.}}" class="metatag p-category">{{.}}</a>&nbsp;&bull;&nbsp;
 		{{- end}}
-		<a href="{{ .Permalink }}" class="metatag u-url u-uid">Permalink</a>
-		<span rel="author" class="p-author h-card"><a href="{{ .Site.BaseURL }}page/about" class="metatag" title="Daniel Goldsmith"><svg class="icon">
-				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
-				</use> 
-			</svg></a></span>&nbsp;&bull;&nbsp;
+			<a href="{{ .Permalink }}" class="metatag u-url u-uid">Permalink
+			</a>&nbsp;&bull;&nbsp;
+			<span rel="author" class="p-author h-card">
+				<a href="{{ .Site.BaseURL }}page/about" class="metatag" title="Daniel Goldsmith">	<svg class="icon">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
+						</use> 
+					</svg>
+				</a>
+			</span>&nbsp;&bull;&nbsp;
+			{{- if .Params.twit }}
+				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication title="this post was syndicated to twitter">
+					<svg class="icon icon-twitter">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{- end }}
+			{{- if .Params.plus }}
+				<a href="{{ .Params.plus }}" class="metatag u-syndication" rel="syndication title="this post was syndicated to googleplus">
+					<svg class="icon icon-google-plus2">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus2">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{- end }}
 		~{{ .ReadingTime }} min read
 	</div>
 	{{- end }}

@@ -1,0 +1,23 @@
+
+   <!-- Twittercard Metadata
+    ================================================== -->
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:description" content="{{ .Params.summary }}" />
+    <meta name="twitter:site" content="@AscraeusOrg" />
+    <meta name="twitter:creator" content="@_dgoldsmith" />
+    {{- if .Params.image }}
+      <meta name="twitter:image" content="{{ .Params.image}}" />
+    {{- end }}
+
+   <!-- Open Graph Metadata
+    ================================================== -->
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="{{ .Params.summary }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    {{- if .Params.image }}
+    <meta property="og:image" content="{{ .Params.image }}" />
+    {{- end }}
