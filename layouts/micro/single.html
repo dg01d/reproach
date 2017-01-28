@@ -12,9 +12,7 @@
 	    </article>
 
 	{{ partial "articlepagination.html" . }}
-	{{- if .Params.mention }}
-		{{- partial "webmention.html" }}
-	{{- end }} 
+	{{- partial "webmention.html" }}
 	</content>
 
 {{ partial "footer.html" . }} 
