@@ -1,15 +1,12 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
-	<content>
+	<content>{{"<!-- from section.micro.html //-->" | safeHTML}}
 	  <h1><svg class="icon icon-power">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power"></use>
 			</svg>microblog</h1>
 
 	  {{- range (.Paginate (where .Site.Pages "Section" "micro")).Pages }}
-	  <article class="h-entry">
-		  <div class="e-content p-title">
-		    {{- .Content }}
-		  </div>
+		{{ partial "p_microentry.html" . }}
 	    {{- partial "micrometadata.html" . }}	  
 	  </article>
 	  {{- end }}

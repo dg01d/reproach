@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
 
-	<content>
+	<content>{{"<!-- from page.single //-->" | safeHTML}}
 		<article class="h-entry">
 		  <h1 class="p-name">{{ .Title }}</h1>
 		  <div class="e-content">

@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
 
-	<content>
+	<content>{{"<!-- from review.single //-->" | safeHTML}}
 		<article class="h-entry">
 		  <h1 class="p-name">{{ .Title }}</h1>
 		  {{ partial "metadata.html" . }}

@@ -1,9 +1,10 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
-	<content>		
+	<content>{{"<!-- from index.html //-->" | safeHTML}}	
 		  {{- range first 20 (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
-		  <article class="h-entry hentry">
+
 			{{- if .Params.link }}
+			<article class="h-entry hentry">
 				<h3 class="p-name entry-title">
 					<a href={{ .Params.link }} class="u-bookmark-of">
 						<svg class="icon icon-link">
@@ -13,16 +14,22 @@
 			{{- else if not .Title }}
 				<div class="indmicro">
 			{{- else }}
+			<article class="h-entry hentry">
 		    	<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 			{{- end }}
 			{{ partial "metadata.html" . }}
 			{{- if not .Title }}
-				<div class="e-content p-title">
+				
 			{{- else }}
 				<div class="e-content">
 			{{- end }}
+			{{ if not .Title }}
+			{{ partial "p_microentry.html" . }}
+			{{ else }}
 		    {{ .Content }}
 		    	</div>
+		    	</article>
+		    {{ end }}
 		    {{- if not .Title }}
 				{{ partial "micrometadata.html" . }}
 				</div>

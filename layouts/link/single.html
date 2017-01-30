@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
-	<content>
+	<content>{{"<!-- from link.single //-->" | safeHTML}}
 		<article class="h-entry">
 		{{ if .Params.link}}
 		  	<h3 class="p-name"><a href={{ .Params.link }} class="u-bookmark-of"><svg class="icon icon-link">

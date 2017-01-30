@@ -5,8 +5,16 @@
 		<a href="{{ .Permalink }}" class="metatag u-url u-uid">
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
-				</use> 
-			</svg>Permalink</a>
+				</use>
+			</svg>Permalink</a>&nbsp;&bull;&nbsp;
+			{{ if isset .Params "mf-syndication" }}
+				<a href={{ index .Params "mf-syndication" }} class="metatag" title="syndicated to instagram">
+					<svg class="icon icon-instagram">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
+						</use>
+					</svg>
+				</a>
+			{{ end }}
 </div>
 
 

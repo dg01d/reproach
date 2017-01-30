@@ -2,7 +2,7 @@
 
 {{ partial "sidebar.html" . }}
 
-	<content>
+	<content>{{"<!-- from article.single //-->" | safeHTML}}
 		<article class="h-entry">
 		  <h1 class="p-name">{{ .Title }}</h1>
 		  {{ partial "metadata.html" . }}
