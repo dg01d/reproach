@@ -18,8 +18,7 @@
 		    	<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 			{{- end }}
 			{{ partial "metadata.html" . }}
-			{{- if not .Title }}
-				
+			{{- if not .Title }}	
 			{{- else }}
 				<div class="e-content">
 			{{- end }}
