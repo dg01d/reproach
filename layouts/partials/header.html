@@ -9,7 +9,7 @@
   <meta charset="utf-8" />
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- jquery and footnotes -->
   <script type="text/javascript" src="{{ .Site.BaseURL }}js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="{{ .Site.BaseURL }}js/bigfoot.js"></script>
@@ -21,12 +21,12 @@
   {{- end }}
   <!-- Favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/ascraeus_icon.svg" color="#367588">
-    <link rel="me" href="mailto:dgold@ascraeus.org">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/ascraeus_icon.svg" color="#367588" />
+    <link rel="me" href="mailto:dgold@ascraeus.org" />
     <link rel="author" href="/pages/about/" title="About the author" />
     <meta name="theme-color" content="#ffffff">
 
@@ -44,9 +44,14 @@
   ------------------------------------------------- -->
   <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
   <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
-  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-  <link rel="micropub" href="https://micropubascraeus.herokuapp.com/micropub/main">
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+  <link rel="micropub" href="https://micropubascraeus.herokuapp.com/micropub/main" />
   
+  <!-- rss feeds -->
+  <link rel="alternate" type="application/rss+xml" title="Ascraeus Main Feed" href="{{ .Site.BaseURL }}index.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Ascraeus Micropost Feed" href="{{ .Site.BaseURL }}micro/index.xml" />
+  <link rel="self" href="{{ .Site.BaseURL }}" />
+  <link rel="hub" href="http://pubsubhubbub.superfeedr.com/" />
 
   <!-- Metadata for Twitter and OpenGraph -->
   {{- if .Params.summary }}
