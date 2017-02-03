@@ -30,7 +30,7 @@
       <guid>{{ .Permalink }}</guid>
       <description>
           {{ if isset .Params "mf-photo" }}
-              <img src='{{ delimit (index .Params "mf-photo") ""}}' class='u-photo' width='200' height='200'>
+              <img src='{{ delimit (index .Params "mf-photo") ""}}' class='u-photo' width='200' height='200'></img>
         {{ end }}{{ .Content | html }}</description>
       {{ end }}
     </item>
