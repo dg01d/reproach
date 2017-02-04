@@ -623,6 +623,13 @@ th, tfoot {
 	transition: all 0.5s;
 }
 
+.icon-github:hover {
+	fill: #6e5494;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
 .svg .icon {
 	height: 1em;
 	width: 1em;
