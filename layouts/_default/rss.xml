@@ -30,7 +30,7 @@
       <guid>{{ .Permalink }}</guid>
       <description>
           {{ if isset .Params "mf-photo" }}
-              <![CDATA[ <img src='{{ delimit (index .Params "mf-photo") ""}}' class='u-photo' width='200' height='200'></img>{{ .Content | html }} ]]>
+              <img src='{{ delimit (index .Params "mf-photo") ""}}' class='u-photo' width='200' height='200'></img>{{ .Content }}
           {{ else }}
         {{ .Content | html }}
         {{ end }}
