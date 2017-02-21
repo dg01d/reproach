@@ -20,7 +20,8 @@
 		  {{ .Content }}
 		  </div>
 		</article>
-{{ partial "articlepagination.html" . }}
-{{ partial "webmention.html" }}
+	{{ partial "articlepagination.html" . }}
+	{{ partial "mention.html" . }}
+	{{ partial "webmention.html" }}
 	</content>
 {{ partial "footer.html" . }}
