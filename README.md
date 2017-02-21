@@ -62,7 +62,17 @@ Just run `hugo --theme=reproach` to generate your site!
 
 ### Configuration
 
-TODO
+The `config.toml` should be set up with the users social media accounts, e.g.
+
+```
+[author]
+    name = "Zaphod Beeblebrox"
+    nick = "zaphod"
+    email = "zaphod@beeblebr.ox"
+    google_plus = "ZaphodBeeblebrox"
+    twitter = "hoopyfrood"
+    github = "hoopyfrood"
+```
 
 ### Contact
 

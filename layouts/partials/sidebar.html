@@ -112,6 +112,14 @@
                      </svg> <span class="hidden">tumblr</span></a>
                 </li>
                 {{- end }}
+                {{- if .Site.Author.keybase }}
+                <li><a href="https://keybas.io/{{ .Site.Author.keybase}}" rel="me" title="keybase" class="metatag">
+                    <svg class="icon icon-key">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-key">
+                         </use>
+                     </svg> <span class="hidden">{{ .Site.Author.keybase }}</span></a>
+                </li>
+                {{- end }}
                 <li><a href="{{ .Site.BaseURL }}index.xml" title="rss feed" class="metatag">
 					<svg class="icon icon-rss">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-rss">

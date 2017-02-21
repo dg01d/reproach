@@ -5,8 +5,33 @@
 		<a href="{{ .Permalink }}" class="metatag u-url u-uid">
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
-				</use> 
-			</svg>Permalink</a>
+				</use>
+			</svg>Permalink</a>&nbsp;&bull;&nbsp;
+			{{ if isset .Params "mf-syndication" }}
+				<a href={{ index .Params "mf-syndication" }} class="metatag" title="syndicated to instagram">
+					<svg class="icon icon-instagram">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{ end }}
+			{{- if .Params.twit }}
+				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
+					<svg class="icon icon-twitter">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{- end }}
+			{{- if .Params.plus }}
+				<a href="{{ .Params.plus }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to googleplus">
+					<svg class="icon icon-google-plus">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus2">
+						</use>
+					</svg>
+				</a>
+			{{- end }}
+			<a href="https://brid.gy/publish/twitter"></a>
 </div>
 
 

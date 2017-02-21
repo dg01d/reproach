@@ -5,7 +5,24 @@
 			<svg class="icon">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 				</use> 
-			</svg> Permalink</a>
+			</svg> Permalink</a>&nbsp;&bull;&nbsp;
+			{{- if .Params.twit }}
+				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
+					<svg class="icon icon-twitter">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{- end }}
+			{{- if .Params.plus }}
+				<a href="{{ .Params.plus }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to googleplus">
+					<svg class="icon icon-google-plus">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus2">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{- end }}
+			<a href="https://brid.gy/publish/twitter"></a>
 	</div>
 	{{- else if not .Title }}
 	{{- else }}
@@ -41,6 +58,7 @@
 				</a>&nbsp;&bull;&nbsp;
 			{{- end }}
 		~{{ .ReadingTime }} min read
+		<a href="https://brid.gy/publish/twitter"></a>
 	</div>
 	{{- end }}
 	
