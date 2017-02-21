@@ -1,0 +1,8 @@
+<div>
+	Have you written a <a href="https://indieweb.org/responses">response</a> to this? Let me know the <abbr title="Uniform Resource Locator">URL</abbr>
+	<form action="https://webmention.herokuapp.com/api/webmention" method="post">
+		<input name="source" placeholder="http://example.com/my-awesome-response" type="url">
+		<input name="target" value="{{ .Permalink }}" type="hidden">
+		<input value="Send Webmention" type="submit">
+	</form>
+</div>
