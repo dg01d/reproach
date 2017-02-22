@@ -319,7 +319,7 @@ nav h1 a {
 
 /* My tidy links */
 
-article a, article a:visited {
+article a, article a:visited, .mention a {
 	text-decoration: none;
 	color: currentColor;
 	background: linear-gradient(whitesmoke,whitesmoke),linear-gradient(whitesmoke,whitesmoke),linear-gradient(#367588,#367588);
@@ -330,7 +330,7 @@ article a, article a:visited {
 	transition: all 0.3s;
 }
 
-article a:hover, article a:active {
+article a:hover, article a:active, .mention a:active {
 	color: #367588;
 	background: linear-gradient(whitesmoke,whitesmoke),linear-gradient(whitesmoke,whitesmoke),linear-gradient(#454552,#454552);
 	background-size: .05em 1px,.05em 1px,1px 1px;
@@ -763,4 +763,83 @@ th, tfoot {
 
 hr { border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #367588, rgba(0, 0, 0, 0)); }
 
+/* #Forms
+================================================== */
+
+form {
+	margin-bottom: 20px;
+}
+fieldset {
+	margin-bottom: 20px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+select {
+	padding: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[name="url"]:focus,
+textarea:focus {
+	-moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+textarea {
+	min-height: 60px;
+}
+
+input[type="url"] {
+	width: 40%;
+}
+label,
+legend {
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+}
+select {
+	width: 220px;
+}
+input[type="checkbox"] {
+	display: inline;
+}
+label span,
+legend span {
+	font-weight: normal;
+	font-size: 13px;
+	color: #444;
+}
+
+input[type=submit], input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+input[type=submit]:hover, input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
 
