@@ -262,12 +262,90 @@ div.p-summary {
 
 }
 
+#current {
+	background-color: rgba(54, 117, 136, 0.1)
+}
+
 blockquote {
 	margin-top: .5em;
   	margin-bottom: .5em;
   	margin-left: 0;
   	padding-left: 1em;
   	border-left: .5em solid #901717;
+}
+
+img.links {
+	float: left;
+	border: 1px dotted black;
+    margin: 0px 10px 0px 0px;
+}
+
+div.curr-cont {
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 120px;
+}
+
+div.curr-img {
+	height: 100%;
+	width: 80px;
+}
+
+div.curr-prog {
+	width: 100%;
+}
+
+/* -----------------------------------------------------
+   CSS Progress Bars
+-------------------------------------------------------- */
+.cssProgress {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.cssProgress .progress1,
+.cssProgress .progress2,
+.cssProgress .progress3 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+.cssProgress .cssProgress-bar {
+  display: block;
+  float: left;
+  width: 0%;
+  height: 100%;
+  background: #367588;
+  box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: width 0.8s ease-in-out;
+          transition: width 0.8s ease-in-out;
+}
+.cssProgress .cssProgress-label {
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  right: 0px;
+  color: whitesmoke;
+  font-size: 0.7em;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(54, 117, 136, 1);
+}
+
+.progress2 {
+  background-color: #EEE;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.progress2 .cssProgress-bar {
+  height: 18px;
+}
+.progress2 .cssProgress-label {
+  line-height: 18px;
+}
+
+.centre {
+	text-align: center;
+	padding: 5px;
 }
 
 /* SideBar */

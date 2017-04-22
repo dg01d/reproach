@@ -1,0 +1,43 @@
+{
+  "progress": {
+      "read": 20
+    },
+  "books": [
+    {
+      "author": "Indra Das",
+      "title": "The Devourers",
+      "abstract": "Utterly gripping and wholly original, it reinvents the literary fantasy novel for India, imbuing it with depth, emotion and richness.",
+      "numPages": 308,
+      "id": "j4FcDAAAQBAJ",
+      "isbn": 1,
+      "amReading": true
+    },
+    {
+      "author": "Bradley Beaulieu",
+      "title": "Twelve Kings in Sharakai",
+      "abstract": "In the cramped west end of Sharakhai, the Amber Jewel of the Desert, Çeda fights in the pits to scrape a living. She, like so many in the city, pray for the downfall of the cruel, immortal Kings of Sharakhai",
+      "numPages": 602,
+      "id": "Uc1oCAAAQBAJ",
+      "isbn": 2,
+      "amReading": false
+    },
+    {
+      "author": "Stella Gemmell",
+      "title": "The Immortal Throne",
+      "numPages": 736,
+      "id": "8LPoBgAAQBAJ",
+      "abstract": "With this new novel, Stella Gemmell brings the astonishing story of the City to a spectacular climax and confirms her place as a master of the genre.",
+      "isbn": 3,
+      "amReading": false
+    },
+    {
+      "author": "Daniel O'Malley",
+      "title": "Stiletto",
+      "abstract": "In this spirited sequel, The Rook returns to clinch an alliance between deadly rivals and avert epic—and slimy—supernatural war.",
+      "numPages": 538,
+      "id": "o6hljwEACAAJ",
+      "isbn": 4,
+      "amReading": false
+    }
+  ]
+}

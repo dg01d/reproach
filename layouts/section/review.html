@@ -4,6 +4,7 @@
 	  <h1><svg class="icon icon-star-half">
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-star-half"></use>
 			</svg>reviews</h1>
+			<div id="current"></div>
 			<div id="#revlist">
 			<article class="h-entry">
 	  {{- range where .Site.Pages "Section" "review" }}
