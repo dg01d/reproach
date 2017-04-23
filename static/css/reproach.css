@@ -296,6 +296,27 @@ div.curr-prog {
 	width: 100%;
 }
 
+div.booklist {
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+div.tbr-entry {
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+div.tbr-img {
+	height: 100%;
+	width: 80px;
+}
+
+div.tbr-item {
+	width: 90%;
+}
+
 /* -----------------------------------------------------
    CSS Progress Bars
 -------------------------------------------------------- */

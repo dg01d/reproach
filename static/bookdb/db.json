@@ -19,7 +19,8 @@
       "numPages": 602,
       "id": "Uc1oCAAAQBAJ",
       "isbn": 2,
-      "amReading": false
+      "amReading": false,
+      "myDate": " "
     },
     {
       "author": "Stella Gemmell",
@@ -28,7 +29,8 @@
       "id": "8LPoBgAAQBAJ",
       "abstract": "With this new novel, Stella Gemmell brings the astonishing story of the City to a spectacular climax and confirms her place as a master of the genre.",
       "isbn": 3,
-      "amReading": false
+      "amReading": false,
+      "myDate": " "
     },
     {
       "author": "Daniel O'Malley",
@@ -37,7 +39,8 @@
       "numPages": 538,
       "id": "o6hljwEACAAJ",
       "isbn": 4,
-      "amReading": false
+      "amReading": false,
+      "myDate": " "
     }
   ]
 }
