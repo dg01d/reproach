@@ -34,6 +34,12 @@
                          </use>
                      </svg> <span class="hidden">reviews</span></a>
                 </li>
+                <li><a href="{{ .Site.BaseURL }}page/tbr-list" title="tbr-list" class="metatag">
+                    <svg class="icon icon-book">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-book">
+                         </use>
+                     </svg> <span class="hidden">tbr-list</span></a>
+                </li>
                 <li><a href="{{ .Site.BaseURL }}link" title="links" class="metatag">
                     <svg class="icon icon-link">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
@@ -55,15 +61,7 @@
                          </use>
                      </svg> <span class="hidden">google+</span></a>
                 </li>
-				{{- end }}
-                {{- if .Site.Author.goodreads }}
-                <li><a href="https://goodreads.com/{{ .Site.Author.goodreads }}" rel="me" title="goodreads" class="metatag">
-                    <svg class="icon icon-book">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-book">
-                         </use>
-                     </svg> <span class="hidden">goodreads</span></a>
-                </li>
-                {{- end }}                
+				{{- end }}         
 				{{- if .Site.Author.github }}
 				<li><a href="https://github.com/{{ .Site.Author.github }}" rel="me" title="github" class="metatag">
 					<svg class="icon icon-github">
