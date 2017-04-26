@@ -4,8 +4,8 @@
 	<content>{{"<!-- from tbr.single //-->" | safeHTML}}
 		<article>
 		  <h1>
-		  	<svg class="icon icon-infinite">
-          		<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-infinite">
+		  	<svg class="icon icon-book">
+          		<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-book">
                 </use>
 			</svg> {{ .Title }}</h1>
 		  <div>
@@ -25,6 +25,6 @@
 		<p class="feet h-card vcard">{{ .Site.Title }} &copy; <a href={{ .Site.BaseURL }} class="p-name u-url url author metatag" rel="me">{{ .Site.Author.name }}</a><img src="{{ .Site.BaseURL }}pictures/marvin.png" class="u-photo" style="display: none"> <a class="p-nickname u-email email metatag" rel="me" href="mailto:dgold@ascraeus.org">{{ .Site.Author.nick }}</a> 2011-{{ .Now.Format "2006" }} &bull; Licenced under <a href="{{ .Site.BaseURL }}page/licence" class="metatag">CC-BY-NC-SA</a> </p>
 	</footer>
  	<script type="text/javascript" src="{{ .Site.BaseURL }}js/bookcurrent.js"></script>
-    <script type="text/javascript" src="{{ .Site.BaseURL }}js/booklist.js"></script>
+    <script type="text/javascript" src="{{ .Site.BaseURL }}js/booklistread.js"></script>
 </body>
 </html>
