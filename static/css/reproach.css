@@ -284,8 +284,7 @@ div.curr-cont {
 	display: -webkit-flex;
     display: flex;
     width: 100%;
-    height: 120px;
-}
+    }
 
 div.curr-img {
 	height: 100%;
