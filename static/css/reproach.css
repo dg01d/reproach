@@ -141,7 +141,7 @@ html {
 }
 
 body {
-    font-family: "Gentium Basic", Times, Georgia, serif;
+    font-family: "Cormorant Garamond", Times, Georgia, serif;
 	font-size: 1em;
   	line-height: 1.27777778em;
  	margin: auto;
@@ -242,7 +242,7 @@ pre {
 
 div.meta {
 	font-size: 75%;
-	font-family: 'Gentium Basic', Georgia, serif;
+	font-family: 'Cormorant Garamond', Georgia, serif;
 	font-style: italic;
 	color: #999;
 }
@@ -380,7 +380,7 @@ div.tbr-item {
 }
 
 nav li {
-	font-family: 'Gentium Basic', Georgia, serif;
+	font-family: 'Cormorant Garamond', Georgia, serif;
 	font-style: italic;
 	color: #999;
 }
