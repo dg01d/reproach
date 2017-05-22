@@ -5,58 +5,6 @@
    |_| |___|  _|_| |___|__,|___|_|_|     
            |_|                           
                                          */
-/*
-.Site {
-	display: flex;
- 	min-height: 100vh;
-  	flex-direction: column;
-}
-
-main {
-	max-width: 900px;
-	margin: 0 auto;
-	flex: 1;
-}
-
-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-content, aside {
-  flex-basis: auto;
-}
-
-
-@media screen and (min-width: 800px) {
-	.column {
-	flex: 1;
-	}
-
-	aside {
-	flex: 3;
-	padding-right: 10px;
-
-	}
-
-	content {
-	flex: 7;
-	height: 100%;
-	}
-
-	header {
-	flex: 0 0 100vh 100vw;
-	}
-
-	nav {
-	background-image: url("/images/asc3.jpg");
-	background-position: top right;
-	background-repeat: no-repeat;
-	text-shadow: #fafafa 2px 0px 3px;
-	}
-}
-*/
 
 main {
 	display: flex;
@@ -129,6 +77,7 @@ content {
 
 footer {
 	display: flex;
+	flex-direction: column;
   	align-items: center;
   	justify-content: center;
   	font-size: 60%;
@@ -413,6 +362,20 @@ nav li {
 
 nav h1 a {
 	color: #367588;
+}
+
+.footernav {
+		text-align: center;
+		padding-top: 28px;
+
+}
+
+.footernav ul li {
+		list-style-type: none;
+		list-style: none;
+		display: inline;
+		font-size: 32px;
+	
 }
 
 /* My tidy links */
