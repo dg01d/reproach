@@ -23,7 +23,7 @@
                 "url": "{{ .Permalink }}",
                 "id": "{{ .Permalink }}",
                 "summary": {{ .Summary | jsonify }},
-                "content_html": "{{ .Content | html }}"
+                "content_html": {{ .Content | jsonify }}
             }
         {{- end }}
     ]
