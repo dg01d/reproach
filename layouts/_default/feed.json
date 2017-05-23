@@ -22,7 +22,7 @@
                 {{- end }}
                 "url": "{{ .Permalink }}",
                 "id": "{{ .Permalink }}",
-                "content_text": {{ .Summary | jsonify }},
+                "content_text": {{ .Summary | jsonify }}
             }
         {{- end }}
     ]
