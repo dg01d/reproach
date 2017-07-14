@@ -46,7 +46,7 @@
   <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
   <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
-  <link rel="micropub" href="https://micropubascraeus.herokuapp.com/micropub/main" />
+  <link rel="micropub" href="https://ascraeus.org/micropub.php" />
   
   <!-- rss feeds -->
   <link rel="alternate" type="application/rss+xml" title="Ascraeus Main Feed" href="{{ .Site.BaseURL }}index.xml" />
@@ -55,9 +55,8 @@
   <link rel="hub" href="http://ascraeus.superfeedr.com/" />
 
   <!-- Metadata for Twitter and OpenGraph -->
-  {{- if .Params.summary }}
   {{ partial "twittergraph.html" . }}
-  {{- end }}
+
 </head>
 <body class="Site">
 	<main>
