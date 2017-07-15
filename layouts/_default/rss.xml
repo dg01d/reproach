@@ -4,7 +4,7 @@
       {{ if eq .Title .Site.Title }}{{ .Title }}{{ else }} {{ .Site.Title }} - {{ .Title | singularize }} Feed{{ end }}
     </title>
     <link>{{ .Permalink }}</link>
-    <description>Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}</description>
+    <description>{{ if eq .Title .Site.Title }}Views and Reviews from the slopes of Ascraeus Mons{{ else }}Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}</description>
     <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
     <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
     <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
