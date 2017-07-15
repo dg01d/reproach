@@ -16,15 +16,20 @@
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus">
                          </use>
                      </svg></a>
-                
-				{{- end }}         
+				{{- end }}
+				{{- if .Site.Author.mastodon }}
+				<a href="{{ .Site.Author.mastodon }}" rel="me" title="mastodon" class="metatag">
+					<svg class="icon icon-masto">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
+                         </use>
+                     </svg></a>
+				{{- end }}
 				{{- if .Site.Author.github }}
 				<a href="https://github.com/{{ .Site.Author.github }}" rel="me" title="github" class="metatag">
 					<svg class="icon icon-github">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-github">
                          </use>
                      </svg></a>
-                
 				{{- end }}
 				{{- if .Site.Author.instagram }}
 				<a href="https://instagram.com/{{ .Site.Author.instagram }}" rel="me" title="instagram" class="metatag">
@@ -32,7 +37,6 @@
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
                          </use>
                      </svg></a>
-                
 				{{- end }}
 				{{- if .Site.Author.facebook }}
 				<a href="https://facebook.com/{{ .Site.Author.facebook }}" rel="me" title="facebook" class="metatag">

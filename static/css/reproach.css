@@ -684,6 +684,20 @@ th, tfoot {
 	transition: all 0.5s;
 }
 
+.icon-masto:hover {
+	fill: #1c87d3;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-jsonfeed:hover {
+	fill: #497614;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
 .svg .icon {
 	height: 1em;
 	width: 1em;
