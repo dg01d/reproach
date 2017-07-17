@@ -1,7 +1,7 @@
 {{"<!-- begin micrometadata partial //-->" | safeHTML}}
 <div class="meta">
 		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
-		{{ .Date.Format "02/01/06 15:04" }}</time></a>&nbsp;&bull;&nbsp;
+		{{- .Date.Format "02/01/06 15:04" }}</time></a>&nbsp;&bull;&nbsp;
 			<span rel="author" class="p-author h-card">
 				<a href="{{ .Site.BaseURL }}page/about" class="metatag" title="Daniel Goldsmith">	<svg class="icon">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
@@ -9,14 +9,14 @@
 					</svg>
 				</a>
 			</span>&nbsp;&bull;&nbsp;
-			{{ if isset .Params "mf-syndication" }}
+			{{- if isset .Params "mf-syndication" }}
 				<a href={{ index .Params "mf-syndication" }} class="metatag" title="syndicated to instagram">
 					<svg class="icon icon-instagram">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
 						</use>
 					</svg>
 				</a>&nbsp;&bull;&nbsp;
-			{{ end }}
+			{{- end }}
 			{{- if .Params.twit }}
 				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
 					<svg class="icon icon-twitter">

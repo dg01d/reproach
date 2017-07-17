@@ -1,10 +1,8 @@
-			<article class="h-entry">
-			    <div class="e-content">
-				{{ if isset .Params "mf-photo" }}
-					<a href={{ delimit (index .Params "mf-photo") ""}} >
-						<img src={{ delimit (index .Params "mf-photo") ""}} class="u-photo" width="200" height="200">
-					</a>	
-				{{ end }}
-			    {{- .Content }}
-			    </div>
- 			</article>
+		    <div class="e-content">
+			{{ if isset .Params "mf-photo" }}
+				<a href={{ delimit (index .Params "mf-photo") ""}} >
+					<img src={{ delimit (index .Params "mf-photo") ""}} class="u-photo" width="200" height="200">
+				</a>	
+			{{ end }}
+		    {{- .Content }}
+		    </div>
