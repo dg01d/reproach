@@ -635,7 +635,7 @@ th, tfoot {
 	transition: all 0.5s;
 }
 
-.icon-drawer:hover, .icon-link:hover, .icon-infinite:hover, .icon-power:hover .icon-star-half:hover {
+.icon-drawer:hover, .icon-link:hover, .icon-infinite:hover, .icon-power:hover, .icon-star-half:hover, .icon-talk:hover {
 	fill: #901717;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -701,6 +701,10 @@ th, tfoot {
 .svg .icon {
 	height: 1em;
 	width: 1em;
+}
+
+.icon-talk {
+  width: 1.125em;
 }
 
 /* #Star Ratings
