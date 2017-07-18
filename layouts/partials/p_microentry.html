@@ -1,3 +1,8 @@
+		    {{- if .Params.replyto }}
+			<small><svg class="icon icon-talk">
+					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-talk"></use>
+				</svg> replying to a post on <a href="{{ .Params.replyto }}" class="u-in-reply-to">{{ .Params.replysite }}</a></small>
+			{{- end }}
 		    <div class="e-content">
 			{{ if isset .Params "mf-photo" }}
 				<a href={{ delimit (index .Params "mf-photo") ""}} >

@@ -8,11 +8,6 @@
 				</svg> Microentry
 			</h3>
 			<article class="h-entry hentry">
-			{{- if .Params.replyto }}
-			<small><svg class="icon icon-talk">
-					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-talk"></use>
-				</svg> replying to a post on <a href="{{ .Params.replyto }}" class="u-in-reply-to">{{ .Params.replysite }}</a></small>
-			{{- end }}
 			{{ partial "p_microentry.html" . }}
 			{{ partial "micrometadata.html" . }}
 			</article>
