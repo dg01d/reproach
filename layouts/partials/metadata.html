@@ -65,6 +65,14 @@
 					</svg>
 				</a>&nbsp;&bull;&nbsp;
 			{{- end }}
+			{{- if .Params.masto }}
+				<a href="{{ .Params.masto }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
+					<svg class="icon icon-masto">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{- end }}			
 		~{{ .ReadingTime }} min read
 		<a href="https://brid.gy/publish/twitter"></a>
 	</div>
