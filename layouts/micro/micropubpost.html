@@ -2,15 +2,18 @@
 {{ partial "sidebar.html" . }}
 
 	<content>{{"<!-- from micro.single //-->" | safeHTML}}
-			<h3><svg class="icon icon-power">
-				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power"></use>
-			</svg> Microentry</h3>
+			<h3>
+				<svg class="icon icon-power">
+					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-power"></use>
+				</svg> Microentry
+			</h3>
+			<article class="h-entry hentry">
 			{{ partial "p_microentry.html" . }}
 			{{ partial "micrometadata.html" . }}
-
-	{{ partial "articlepagination.html" . }}
-	{{ partial "mention.html" . }}
-	{{ partial "webmention.html" }}
+			</article>
+			{{ partial "articlepagination.html" . }}
+			{{ partial "mention.html" . }}
+			{{ partial "webmention.html" }}
 	</content>
 
 {{ partial "footer.html" . }} 

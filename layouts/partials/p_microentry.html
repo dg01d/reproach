@@ -4,10 +4,10 @@
 				</svg> replying to a post on <a href="{{ .Params.replyto }}" class="u-in-reply-to">{{ .Params.replysite }}</a></small>
 			{{- end }}
 		    <div class="e-content">
-			{{ if isset .Params "mf-photo" }}
-				<a href={{ delimit (index .Params "mf-photo") ""}} >
-					<img src={{ delimit (index .Params "mf-photo") ""}} class="u-photo" width="200" height="200">
-				</a>	
-			{{ end }}
+			{{- if isset .Params "photo" }}
+				<a href={{ delimit (index .Params "photo") ""}} >
+					<img src={{ delimit (index .Params "photo") ""}} class="u-photo" width="200" height="200">
+				</a>
+			{{- end }}
 		    {{- .Content }}
 		    </div>
