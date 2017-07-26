@@ -9,8 +9,8 @@
 					</svg>
 				</a>
 			</span>&nbsp;&bull;&nbsp;
-			{{- if isset .Params.instagram }}
-				<a href={{ .Params.instagram }} class="metatag" title="syndicated to instagram">
+			{{- if .Params.instagram }}
+				<a href="{{ .Params.instagram }}" class="metatag" title="syndicated to instagram">
 					<svg class="icon icon-instagram">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
 						</use>
