@@ -373,7 +373,7 @@ nav h1 a {
 
 /* My tidy links */
 
-article a, article a:visited, .mention a {
+article a, article a:visited, .webmention-mention a, .webmention-mention a:visited, .e-content a, .econtent a:visited {
 	text-decoration: none;
 	color: currentColor;
 	background: linear-gradient(whitesmoke,whitesmoke),linear-gradient(whitesmoke,whitesmoke),linear-gradient(#367588,#367588);
@@ -384,7 +384,7 @@ article a, article a:visited, .mention a {
 	transition: all 0.3s;
 }
 
-article a:hover, article a:active, .mention a:active {
+article a:hover, article a:active, .webmention-mention a:active, .e-content a:active, .e-content a:hover {
 	color: #367588;
 	background: linear-gradient(whitesmoke,whitesmoke),linear-gradient(whitesmoke,whitesmoke),linear-gradient(#454552,#454552);
 	background-size: .05em 1px,.05em 1px,1px 1px;
