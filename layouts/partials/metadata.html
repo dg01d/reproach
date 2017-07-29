@@ -1,11 +1,7 @@
 {{"<!-- begin metadata partial //-->" | safeHTML}}
 	{{- if .Params.link }}
 	<div class="meta">
-		<time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">{{ .Date.Format "Mon 2 Jan, 2006" }}</time> &bull; {{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{- end }}<a href="{{ .Permalink }}" class="metatag u-url u-uid">
-			<svg class="icon">
-				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
-				</use> 
-			</svg> Permalink</a>&nbsp;&bull;&nbsp;
+		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">{{ .Date.Format "Mon 2 Jan, 2006" }}</time></a> &bull; {{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{- end }}
 			{{- if .Params.twit }}
 				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
 					<svg class="icon icon-twitter">
@@ -22,20 +18,32 @@
 					</svg>
 				</a>&nbsp;&bull;&nbsp;
 			{{- end }}
+			{{- if .Params.masto }}
+				<a href="{{ .Params.masto }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
+					<svg class="icon icon-masto">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{- end }}
+				<span rel="author" class="p-author h-card">
+				<a href="{{ .Site.BaseURL }}page/about" class="metatag" title="Daniel Goldsmith">	<svg class="icon">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
+						</use> 
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
 			<a href="https://brid.gy/publish/twitter"></a>
 	</div>
 	{{- else if not .Title }}
 	{{- else }}
 	<div class="meta">
-		<time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05"}}">
-		{{ .Date.Format "Mon, Jan 2, 2006" }}</time> &bull; 	
+		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05"}}">
+		{{ .Date.Format "Mon, Jan 2, 2006" }}</time></a> &bull; 	
 		{{ range .Params.tags }} 
 			<a href="/tags/{{.}}" class="metatag p-category">{{.}}</a>&nbsp;&bull;&nbsp;
 		{{- end}}
-			<a href="{{ .Permalink }}" class="metatag u-url u-uid">Permalink
-			</a>&nbsp;&bull;&nbsp;
 			<span rel="author" class="p-author h-card">
-				<a href="{{ .Site.BaseURL }}page/about" class="metatag" title="Daniel Goldsmith">	<svg class="icon">
+				<a href="{{ .Site.BaseURL }}" class="metatag" title="Daniel Goldsmith">	<svg class="icon"><title class="name">Daniel Goldsmith</title>
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 						</use> 
 					</svg>
@@ -57,6 +65,14 @@
 					</svg>
 				</a>&nbsp;&bull;&nbsp;
 			{{- end }}
+			{{- if .Params.masto }}
+				<a href="{{ .Params.masto }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
+					<svg class="icon icon-masto">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
+			{{- end }}			
 		~{{ .ReadingTime }} min read
 		<a href="https://brid.gy/publish/twitter"></a>
 	</div>

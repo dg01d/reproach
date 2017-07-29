@@ -5,58 +5,6 @@
    |_| |___|  _|_| |___|__,|___|_|_|     
            |_|                           
                                          */
-/*
-.Site {
-	display: flex;
- 	min-height: 100vh;
-  	flex-direction: column;
-}
-
-main {
-	max-width: 900px;
-	margin: 0 auto;
-	flex: 1;
-}
-
-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-content, aside {
-  flex-basis: auto;
-}
-
-
-@media screen and (min-width: 800px) {
-	.column {
-	flex: 1;
-	}
-
-	aside {
-	flex: 3;
-	padding-right: 10px;
-
-	}
-
-	content {
-	flex: 7;
-	height: 100%;
-	}
-
-	header {
-	flex: 0 0 100vh 100vw;
-	}
-
-	nav {
-	background-image: url("/images/asc3.jpg");
-	background-position: top right;
-	background-repeat: no-repeat;
-	text-shadow: #fafafa 2px 0px 3px;
-	}
-}
-*/
 
 main {
 	display: flex;
@@ -129,6 +77,7 @@ content {
 
 footer {
 	display: flex;
+	flex-direction: column;
   	align-items: center;
   	justify-content: center;
   	font-size: 60%;
@@ -136,16 +85,16 @@ footer {
 
 html {
 	font-size: 18px;
-  	line-height: 23px;
+  	line-height: 29px;
   	background-color: whitesmoke;
 }
 
 body {
-    font-family: "Gentium Basic", Times, Georgia, serif;
+    font-family: 'Lora', Times, Georgia, serif;
 	font-size: 1em;
-  	line-height: 1.27777778em;
+  	line-height: 1.6111em;
  	margin: auto;
- 	color: #454552;
+ 	color: #16161d;
 }
 
 #sitetitle h1, article h2 a {
@@ -154,7 +103,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #181818;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -242,7 +191,7 @@ pre {
 
 div.meta {
 	font-size: 75%;
-	font-family: 'Gentium Basic', Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
 	font-style: italic;
 	color: #999;
 }
@@ -262,12 +211,110 @@ div.p-summary {
 
 }
 
+#current {
+	background-color: rgba(54, 117, 136, 0.1)
+}
+
 blockquote {
 	margin-top: .5em;
   	margin-bottom: .5em;
   	margin-left: 0;
   	padding-left: 1em;
   	border-left: .5em solid #901717;
+}
+
+img.links {
+	float: left;
+	border: 1px dotted black;
+    margin: 0px 10px 0px 0px;
+}
+
+div.curr-cont {
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    }
+
+div.curr-img {
+	height: 100%;
+	width: 80px;
+}
+
+div.curr-prog {
+	width: 100%;
+}
+
+div.booklist {
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+div.tbr-entry {
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+div.tbr-img {
+	height: 100%;
+	width: 80px;
+}
+
+div.tbr-item {
+	width: 90%;
+}
+
+/* -----------------------------------------------------
+   CSS Progress Bars
+-------------------------------------------------------- */
+.cssProgress {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.cssProgress .progress1,
+.cssProgress .progress2,
+.cssProgress .progress3 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  font-family: "Libre Franklin", sans-serif;
+}
+.cssProgress .cssProgress-bar {
+  display: block;
+  float: left;
+  width: 0%;
+  height: 100%;
+  background: #367588;
+  box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: width 0.8s ease-in-out;
+          transition: width 0.8s ease-in-out;
+}
+.cssProgress .cssProgress-label {
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  right: 0px;
+  color: whitesmoke;
+  font-size: 0.7em;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(54, 117, 136, 1);
+}
+
+.progress2 {
+  background-color: #EEE;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.progress2 .cssProgress-bar {
+  height: 18px;
+}
+.progress2 .cssProgress-label {
+  line-height: 18px;
+}
+
+.centre {
+	text-align: center;
+	padding: 5px;
 }
 
 /* SideBar */
@@ -282,7 +329,7 @@ blockquote {
 }
 
 nav li {
-	font-family: 'Gentium Basic', Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
 	font-style: italic;
 	color: #999;
 }
@@ -317,9 +364,16 @@ nav h1 a {
 	color: #367588;
 }
 
+.footernav {
+		text-align: center;
+		padding-top: 28px;
+		font-size: 32px;
+}
+
+
 /* My tidy links */
 
-article a, article a:visited {
+article a, article a:visited, .webmention-author a, .webmention-author a:visited {
 	text-decoration: none;
 	color: currentColor;
 	background: linear-gradient(whitesmoke,whitesmoke),linear-gradient(whitesmoke,whitesmoke),linear-gradient(#367588,#367588);
@@ -330,7 +384,7 @@ article a, article a:visited {
 	transition: all 0.3s;
 }
 
-article a:hover, article a:active {
+article a:hover, article a:active, .webmention-author a:active, .webmention-author a:hover {
 	color: #367588;
 	background: linear-gradient(whitesmoke,whitesmoke),linear-gradient(whitesmoke,whitesmoke),linear-gradient(#454552,#454552);
 	background-size: .05em 1px,.05em 1px,1px 1px;
@@ -494,7 +548,7 @@ a.metatag:visited:hover {
 
 .lipag a {
 	text-decoration: none !important;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Libre Franklin', sans-serif;
 	color: whitesmoke;
 	-webkit-transition: background-color 0.5s;
 	-moz-transition: background-color 0.5s;
@@ -504,7 +558,7 @@ a.metatag:visited:hover {
 
 .lipag a:hover {
 	text-decoration: none !important;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Libre Franklin', sans-serif;
 	color: #367588;
 	background-color: whitesmoke;
 	-webkit-transition: background-color 0.5s;
@@ -519,7 +573,7 @@ li.active a {
 
 a[rel="next"], a[rel="prev"] {
 	text-decoration: none !important;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Libre Franklin', sans-serif;
 	color: whitesmoke;
 	line-height: 1;
 	padding: 0.2em 0.5em 0.2em;
@@ -532,7 +586,7 @@ a[rel="next"], a[rel="prev"] {
 
 a:hover[rel="next"], a:hover[rel="prev"] {
 	text-decoration: none !important;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Libre Franklin', sans-serif;
 	color: #367588;
 	background-color: whitesmoke;
 	padding: 0.2em 0.5em 0.2em;
@@ -581,7 +635,7 @@ th, tfoot {
 	transition: all 0.5s;
 }
 
-.icon-drawer:hover, .icon-link:hover, .icon-infinite:hover, .icon-power:hover .icon-star-half:hover {
+.icon-drawer:hover, .icon-link:hover, .icon-infinite:hover, .icon-power:hover, .icon-star-half:hover, .icon-talk:hover {
 	fill: #901717;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -630,9 +684,27 @@ th, tfoot {
 	transition: all 0.5s;
 }
 
+.icon-masto:hover {
+	fill: #1c87d3;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-jsonfeed:hover {
+	fill: #497614;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
 .svg .icon {
 	height: 1em;
 	width: 1em;
+}
+
+.icon-talk {
+  width: 1.125em;
 }
 
 /* #Star Ratings
@@ -750,6 +822,10 @@ th, tfoot {
 		transition: color 0.2s;
 	}
 
+	article {
+		padding: 1em;
+	}
+
 
 	nav a:hover {
 		color: #367588;
@@ -763,4 +839,83 @@ th, tfoot {
 
 hr { border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #367588, rgba(0, 0, 0, 0)); }
 
+/* #Forms
+================================================== */
+
+form {
+	margin-bottom: 20px;
+}
+fieldset {
+	margin-bottom: 20px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+select {
+	padding: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[name="url"]:focus,
+textarea:focus {
+	-moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+textarea {
+	min-height: 60px;
+}
+
+input[type="url"] {
+	width: 40%;
+}
+label,
+legend {
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+}
+select {
+	width: 220px;
+}
+input[type="checkbox"] {
+	display: inline;
+}
+label span,
+legend span {
+	font-weight: normal;
+	font-size: 13px;
+	color: #444;
+}
+
+input[type=submit], input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+input[type=submit]:hover, input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
 

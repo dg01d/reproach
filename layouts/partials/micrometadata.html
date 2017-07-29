@@ -1,20 +1,22 @@
 {{"<!-- begin micrometadata partial //-->" | safeHTML}}
 <div class="meta">
-		<time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
-		{{ .Date.Format "02/01/06 15:04" }}</time>&nbsp;&bull;&nbsp;
-		<a href="{{ .Permalink }}" class="metatag u-url u-uid">
-			<svg class="icon">
-				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
-				</use>
-			</svg>Permalink</a>&nbsp;&bull;&nbsp;
-			{{ if isset .Params "mf-syndication" }}
-				<a href={{ index .Params "mf-syndication" }} class="metatag" title="syndicated to instagram">
+		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
+		{{- .Date.Format "02/01/06 15:04" }}</time></a>&nbsp;&bull;&nbsp;
+			<span rel="author" class="p-author h-card">
+				<a href="{{ .Site.BaseURL }}" class="metatag" title="Daniel Goldsmith"><title class="name">Daniel Goldsmith</title><svg class="icon">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
+						</use> 
+					</svg>
+				</a>
+			</span>&nbsp;&bull;&nbsp;
+			{{- if .Params.instagram }}
+				<a href="{{ .Params.instagram }}" class="metatag" title="syndicated to instagram">
 					<svg class="icon icon-instagram">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
 						</use>
 					</svg>
 				</a>&nbsp;&bull;&nbsp;
-			{{ end }}
+			{{- end }}
 			{{- if .Params.twit }}
 				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
 					<svg class="icon icon-twitter">
@@ -30,6 +32,14 @@
 						</use>
 					</svg>
 				</a>
+			{{- end }}
+			{{- if .Params.masto }}
+				<a href="{{ .Params.masto }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
+					<svg class="icon icon-masto">
+						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
+						</use>
+					</svg>
+				</a>&nbsp;&bull;&nbsp;
 			{{- end }}
 			<a href="https://brid.gy/publish/twitter"></a>
 </div>

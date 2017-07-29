@@ -14,6 +14,7 @@
                          </use>
                      </svg> <span class="hidden">about</span></a>
                 </li>
+                {{- end }}
 				{{- if .Site.Author.micro }}
 				<li><a href="{{ .Site.BaseURL }}micro" title="Micro Blog" class="metatag">
 					<svg class="icon icon-power">
@@ -22,7 +23,7 @@
                      </svg> <span class="hidden">micro</span></a>
                 </li>
 				{{- end }}
-                <li><a href="{{ .Site.BaseURL }}article" title="reviews" class="metatag">
+                <li><a href="{{ .Site.BaseURL }}article" title="articles" class="metatag">
                     <svg class="icon icon-blog">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-blog">
                          </use>
@@ -34,100 +35,36 @@
                          </use>
                      </svg> <span class="hidden">reviews</span></a>
                 </li>
-                <li><a href="{{ .Site.BaseURL }}link" title="reviews" class="metatag">
+                <li><a href="{{ .Site.BaseURL }}page/tbr" title="tbr" class="metatag">
+                    <svg class="icon icon-infinite">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-infinite">
+                         </use>
+                     </svg> <span class="hidden">tbr</span></a>
+                </li>
+                <li><a href="{{ .Site.BaseURL }}page/reading" title="reading" class="metatag">
+                    <svg class="icon icon-book">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-book">
+                         </use>
+                     </svg> <span class="hidden">reading</span></a>
+                </li>
+                <li><a href="{{ .Site.BaseURL }}link" title="links" class="metatag">
                     <svg class="icon icon-link">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
                          </use>
                      </svg> <span class="hidden">link posts</span></a>
                 </li>
-				{{- if .Site.Author.twitter }}
-				<li><a href="https://twitter.com/{{ .Site.Author.twitter }}" rel="me" title="twitter" class="metatag">
-					<svg class="icon icon-twitter">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
-                         </use>
-                     </svg> <span class="hidden">{{ .Site.Author.twitter }}</span></a>
-                </li>
-				{{- end }}
-				{{- if .Site.Author.google_plus }}
-				<li><a href="https://google.com/+{{ .Site.Author.google_plus }}" rel="me" title="google+" class="metatag">
-					<svg class="icon icon-google-plus">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus">
-                         </use>
-                     </svg> <span class="hidden">google+</span></a>
-                </li>
-				{{- end }}
-                {{- if .Site.Author.goodreads }}
-                <li><a href="https://goodreads.com/{{ .Site.Author.goodreads }}" rel="me" title="goodreads" class="metatag">
-                    <svg class="icon icon-book">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-book">
-                         </use>
-                     </svg> <span class="hidden">goodreads</span></a>
-                </li>
-                {{- end }}                
-				{{- if .Site.Author.github }}
-				<li><a href="https://github.com/{{ .Site.Author.github }}" rel="me" title="github" class="metatag">
-					<svg class="icon icon-github">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-github">
-                         </use>
-                     </svg> <span class="hidden">{{ .Site.Author.github }}</span></a>
-                </li>
-				{{- end }}
-				{{- if .Site.Author.instagram }}
-				<li><a href="https://instagram.com/{{ .Site.Author.instagram }}" rel="me" title="instagram" class="metatag">
-					<svg class="icon icon-instagram">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
-                         </use>
-                     </svg> <span class="hidden">{{ .Site.Author.instagram }}</span></a>
-                </li>
-				{{- end }}
-				{{- if .Site.Author.facebook }}
-				<li><a href="https://facebook.com/{{ .Site.Author.facebook }}" rel="me" title="facebook" class="metatag">
-					<svg class="icon icon-facebook">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-facebook">
-                         </use>
-                     </svg> <span class="hidden">{{ .Site.Author.facebook }}</span></a>
-                </li>
-				{{- end }}
-				{{- if .Site.Author.linkedin }}
-				<li><a href="https://linkedin.com/in/{{ .Site.Author.linkedin }}" rel="me" title="linkedin" class="metatag">
-					<svg class="icon icon-linkedin">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-linkedin">
-                         </use>
-                     </svg> <span class="hidden">{{ .Site.Author.linkedin }}</span></a>
-                </li>
-				{{- end }}
-				{{- if .Site.Author.flickr }}
-				<li><a href="https://flickr.com/{{ .Site.Author.flickr}}" rel="me" title="flickr" class="metatag">
-					<svg class="icon icon-flickr">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-flickr">
-                         </use>
-                     </svg> <span class="hidden">{{ .Site.Author.flickr }}</span></a>
-                </li>
-				{{- end }}
-				{{- if .Site.Author.tumblr }}
-				<li><a href="https://{{ .Site.Author.tumblr }}.tumblr.com" rel="me" title="tumblr" class="metatag">
-					<svg class="icon icon-tumblr2">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-tumblr2">
-                         </use>
-                     </svg> <span class="hidden">tumblr</span></a>
-                </li>
-                {{- end }}
-                {{- if .Site.Author.keybase }}
-                <li><a href="https://keybas.io/{{ .Site.Author.keybase}}" rel="me" title="keybase" class="metatag">
-                    <svg class="icon icon-key">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-key">
-                         </use>
-                     </svg> <span class="hidden">{{ .Site.Author.keybase }}</span></a>
-                </li>
-                {{- end }}
                 <li><a href="{{ .Site.BaseURL }}index.xml" title="rss feed" class="metatag">
 					<svg class="icon icon-rss">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-rss">
                          </use>
                      </svg> 				
                 <span class="hidden"> rss feed</a></li>
-				</ul>
-				{{- end }}
+                <li><a href="{{ .Site.BaseURL }}jsonfeed/index.json" title="jsonfeed" class="metatag">
+                    <svg class="icon icon-jsonfeed">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-jsonfeed">
+                         </use>
+                     </svg>
+                <span class="hidden"> jsonfeed</a></li>
 				</ul>			
                     <form method="get" class="hidden" id="search" action="https://duckduckgo.com/">
                         <input type="hidden" name="sites" value="ascraeus.org" />

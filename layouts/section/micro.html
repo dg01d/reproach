@@ -6,9 +6,11 @@
 			</svg>microblog</h1>
 
 	  {{- range (.Paginate (where .Site.Pages "Section" "micro")).Pages }}
-		<div class="indmicro">	
+		<div class="indmicro">
+			<article class="h-entry hentry">	
 		{{ partial "p_microentry.html" . }}
-	    {{- partial "micrometadata.html" . }}	  
+	    {{ partial "micrometadata.html" . }}
+	    	</article>  
 	  	</div>
 	  {{- end }}
 	  {{ partial "pagination.html" . }}

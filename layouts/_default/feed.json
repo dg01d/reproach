@@ -1,0 +1,29 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ .Site.Title }}",
+    "home_page_url": "{{ .Site.BaseURL }}",
+    "feed_url": "{{ .Permalink }}",
+    "icon": "{{ .Site.BaseURL }}icon440.png",
+    "favicon": "{{ .Site.BaseURL }}icon72.png",
+    {{- if isset .Site.Params "description" }}
+    "description": "{{ .Site.Params.description }}",
+    {{- end }}
+    {{- if isset .Site.Params "author" }}
+    "author": { "name": "{{ .Site.Params.author }}" },
+    {{- end }}
+    "items": [
+    {{- range $i, $e := first 10 .Site.Pages }}
+        {{- if $i }}, {{ end }}
+            {
+                "title": "{{ .Title }}",
+                "date_published": "{{ .Date }}",
+                {{- if isset .Params "link" }}
+                "external-link": "{{ .Params.link }}",
+                {{- end }}
+                "url": "{{ .Permalink }}",
+                "id": "{{ .Permalink }}",
+                "content_text": {{ .Summary | jsonify }}
+            }
+        {{- end }}
+    ]
+}
