@@ -643,7 +643,7 @@ th, tfoot {
 }
 
 .icon-twitter:hover {
-	fill: #41b7d8;
+	fill: #1DA1F2;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
@@ -657,14 +657,14 @@ th, tfoot {
 }
 
 .icon-google-plus:hover {
-	fill: #d64937;
+	fill: #DC4E41;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
 }
 
 .icon-telegram:hover {
-	fill: #0088cc;
+	fill: #2CA5E0;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
@@ -685,7 +685,7 @@ th, tfoot {
 }
 
 .icon-masto:hover {
-	fill: #1c87d3;
+	fill: #189efc;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
