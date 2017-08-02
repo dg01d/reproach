@@ -12,12 +12,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- jquery and footnotes -->
   <script type="text/javascript" src="{{ .Site.BaseURL }}js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="{{ .Site.BaseURL }}js/bigfoot.js"></script>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}js/bigfoot.min.js"></script>
   <script type="text/javascript">
     $.bigfoot();
   </script>
   {{- if .Params.sorttable }}
-  <script type="text/javascript" src="{{ .Site.BaseURL }}js/sorttable.js"></script>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}js/sorttable.min.js"></script>
   {{- end }}
   <!-- Favicons
     ================================================== -->
@@ -35,8 +35,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Libre+Franklin:400,600,800" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/reproach.css" />
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/bigfoot-default.css" />
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/reproach.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/bigfoot-default.min.css" />
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/webmention.css" />
   {{- if .Site.Author.email }}
   <link rel="me" href="mailto:{{ .Site.Author.email }}" />
@@ -47,10 +47,11 @@
   <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
   <link rel="micropub" href="https://ascraeus.org/micropub.php" />
-  
+    
   <!-- rss feeds -->
   <link rel="alternate" type="application/rss+xml" title="Ascraeus Main Feed" href="{{ .Site.BaseURL }}index.xml" />
   <link rel="alternate" type="application/rss+xml" title="Ascraeus Micropost Feed" href="{{ .Site.BaseURL }}micro/index.xml" />
+  <link rel="alternate" type="application/json" title="Ascraeus JSON feed" href="{{ .Site.BaseURL}}jsonfeed/index.json" />
   <link rel="self" href="{{ .Site.BaseURL }}" />
   <link rel="hub" href="http://ascraeus.superfeedr.com/" />
 
