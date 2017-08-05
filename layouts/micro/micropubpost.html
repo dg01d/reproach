@@ -9,6 +9,9 @@
 			</h3>
 			<article class="h-entry hentry">
 			{{ partial "p_microentry.html" . }}
+		    {{- if .Params.checkin }}
+		    	<img src="/{{ .Params.map }}" class="map-image" height="240" width="600">
+		    {{- end }}
 			{{ partial "micrometadata.html" . }}
 			</article>
 			{{ partial "articlepagination.html" . }}
