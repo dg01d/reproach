@@ -90,7 +90,7 @@ html {
 }
 
 body {
-    font-family: 'Lora', Times, Georgia, serif;
+    font-family: Georgia, serif;
 	font-size: 1em;
   	line-height: 1.6111em;
  	margin: auto;
@@ -103,7 +103,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #181818;
-	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -191,7 +191,7 @@ pre {
 
 div.meta {
 	font-size: 75%;
-	font-family: 'Lora', Georgia, serif;
+	font-family: Georgia, serif;
 	font-style: italic;
 	color: #999;
 }
@@ -278,7 +278,7 @@ div.tbr-item {
   position: relative;
   overflow: hidden;
   width: 100%;
-  font-family: "Libre Franklin", sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 .cssProgress .cssProgress-bar {
   display: block;
@@ -329,7 +329,7 @@ div.tbr-item {
 }
 
 nav li {
-	font-family: 'Lora', Georgia, serif;
+	font-family: Georgia, serif;
 	font-style: italic;
 	color: #999;
 }
@@ -548,7 +548,7 @@ a.metatag:visited:hover {
 
 .lipag a {
 	text-decoration: none !important;
-	font-family: 'Libre Franklin', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	color: whitesmoke;
 	-webkit-transition: background-color 0.5s;
 	-moz-transition: background-color 0.5s;
@@ -558,7 +558,7 @@ a.metatag:visited:hover {
 
 .lipag a:hover {
 	text-decoration: none !important;
-	font-family: 'Libre Franklin', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	color: #367588;
 	background-color: whitesmoke;
 	-webkit-transition: background-color 0.5s;
@@ -573,7 +573,7 @@ li.active a {
 
 a[rel="next"], a[rel="prev"] {
 	text-decoration: none !important;
-	font-family: 'Libre Franklin', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	color: whitesmoke;
 	line-height: 1;
 	padding: 0.2em 0.5em 0.2em;
@@ -586,7 +586,7 @@ a[rel="next"], a[rel="prev"] {
 
 a:hover[rel="next"], a:hover[rel="prev"] {
 	text-decoration: none !important;
-	font-family: 'Libre Franklin', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	color: #367588;
 	background-color: whitesmoke;
 	padding: 0.2em 0.5em 0.2em;
