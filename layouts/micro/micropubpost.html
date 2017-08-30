@@ -10,7 +10,15 @@
 			<article class="h-entry hentry">
 			{{ partial "p_microentry.html" . }}
 		    {{- if .Params.checkin }}
-		    	<img src="/{{ .Params.map }}" class="map-image" height="240" width="600">
+		    	<div style="z-index:0;position:relative;width:600px">
+		    		<img src="/{{ .Params.map }}" class="map-image" height="240" width="600">
+		    		<div style="position:absolute;z-index:1;right:0;bottom:0;">
+		    			<small>
+		    				<a href="www.openstreetmap.org/copyright">© OpenStreetMap
+		    				</a>
+		    			</small>
+		    		</div>
+		    	</div>
 		    {{- end }}
 			{{ partial "micrometadata.html" . }}
 			</article>
