@@ -15,13 +15,13 @@
     <atom:link rel="hub" href="https://ascraeus.superfeedr.com/" xmlns="http://www.w3.org/2005/Atom"/>
     {{ range first 15 .Data.Pages }}
     <item>
-      <title>{{ .Title }}</title>
+      <title>{{ .Title }} 🔗</title>
       <link rel="alternate" type="text/html">{{ .Params.link }}</link>
       <link rel="related" type="text/html">{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.nick }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
-      <description>{{ .Content | html }}<a href={{ .Permalink }} rel="bookmark" title="Peramlink to {{ .Title }}">Permalink</a></description>
+      <description>{{ .Content | safeHTML }}<a href="{{ .Permalink }}" rel="bookmark" title="Peramlink to {{ .Title }}">Permalink</a></description>
     </item>
     {{ end }}
   </channel>
