@@ -12,8 +12,8 @@
   <entry>
     {{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title }}]]></title>
     {{-if .Params.link }}
-      <link rel="alternate" type="text/html">{{ .Params.link }}</link>
-      <link rel="related" type="text/html">{{ .Permalink }}</link>
+      <link rel="alternate" type="text/html" href="{{ .Params.link }}" />
+      <link rel="related" type="text/html" href="{{ .Permalink }}" />
     {{-else}}
     <link href="{{ .Permalink }}"/>
     {{-end }}
