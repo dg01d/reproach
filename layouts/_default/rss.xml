@@ -31,14 +31,13 @@
     <link>{{ .Permalink }}</link>
     <content type="html" {{ with .Site.LanguageCode }}xml:lang="{{.}}"{{end}}>
         {{ if isset .Params "photo" }}
-            <img src="{{ delimit (index .Params "photo") ""}}" class="u-photo" width="200" height="200"></img>
-            {{ .Content | html }}
-        {{ else }}
+            &lt;img src=&quot;{{ delimit (index .Params "photo") ""}}&quot; class=&quot;u-photo&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/img&gt;
+        {{ end }}
       {{ .Content | html }}
-      {{ end }}
     </content>
     {{ end }}
   </entry>
   {{ end }}
 </feed>
+
 
