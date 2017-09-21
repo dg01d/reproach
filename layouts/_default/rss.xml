@@ -8,7 +8,7 @@
     <name>{{.}}</name>{{ with $.Site.Author.email }}
     <email>{{.}}</email>{{end}}
   </author>{{end}}
-  <generator>Hugo -- gohugo.io</generator>{{ range .Data.Pages }}
+  <generator>Hugo -- gohugo.io</generator>{{ range first 50 .Data.Pages }}
   <entry>
     {{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title }}]]></title>
     {{- if .Params.link }}
