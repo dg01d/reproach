@@ -3,7 +3,6 @@
   <title>
     {{ if eq .Title .Site.Title }}{{ .Title }}{{ else }} {{ .Site.Title }} - {{ .Title | singularize }} Feed{{ end }}
   </title>
-  <link href="{{ .Permalink }}" />
   <subtitle>{{ .Site.Params.description }}</subtitle>
   <generator>Hugo -- gohugo.io</generator>
   <author>{{ with .Site.Author.email }}
@@ -12,32 +11,32 @@
   </author>{{ with .Site.Copyright }}
   <rights>{{.}}</rights>{{end}}{{ if not .Date.IsZero }}
   <updated>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</updated>{{ end }}
-  <atom:link href="{{ .Site.BaseURL }}{{.URL}}" rel="self" xmlns="http://www.w3.org/2005/Atom" />
-  <atom:link rel="hub" href="https://ascraeus.superfeedr.com/" xmlns="http://www.w3.org/2005/Atom" />
+  <link href="{{ .Site.BaseURL }}{{.URL}}" rel="self" xmlns="http://www.w3.org/2005/Atom" />
+  <link rel="hub" href="https://ascraeus.superfeedr.com/" xmlns="http://www.w3.org/2005/Atom" />
+
   {{ range first 50 .Data.Pages }}
-  <entry>
-    <title>{{ .Title }}</title>
-    <author>{{ with .Site.Author.email }}<email>{{.}}</email>{{end}}{{ with $.Site.Author.nick }}<name> ({{.}})</name>{{end}}</author>
-    <published>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</published>
-    <id>{{ .Permalink }}</id>
-    {{- if .Params.link }}
-    <link rel="alternate" type="text/html">{{ .Params.link }}</link>
-    <link rel="related" type="text/html">{{ .Permalink }}</link>
-    <content type="html" {{ with .Site.LanguageCode }}xml:lang="{{.}}"{{end}}>
-      {{ .Content | html }}
-      <a href="{{ .Permalink }}" rel="bookmark" title="Permalink to {{ .Title }}">Permalink</a>
-    </content>
-    {{- else }}
-    <link>{{ .Permalink }}</link>
-    <content type="html" {{ with .Site.LanguageCode }}xml:lang="{{.}}"{{end}}>
-        {{ if isset .Params "photo" }}
-            &lt;img src=&quot;{{ delimit (index .Params "photo") ""}}&quot; class=&quot;u-photo&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/img&gt;
-        {{ end }}
-      {{ .Content | html }}
-    </content>
-    {{ end }}
-  </entry>
+    <entry>
+      <title>{{ .Title }}</title>
+      <author>{{ with .Site.Author.email }}<email>{{.}}</email>{{end}}{{ with .Site.Author.nick }}<name> ({{.}})</name>{{end}}</author>
+      <published>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</published>
+      <id>{{ .Permalink }}</id>
+      {{- if .Params.link }}
+      <link rel="alternate" type="text/html">{{ .Params.link }}</link>
+      <link rel="related" type="text/html">{{ .Permalink }}</link>
+      <content type="html">
+        {{ .Content | html }}
+        <a href="{{ .Permalink }}" rel="bookmark" title="Permalink to {{ .Title }}">Permalink</a>
+      </content>
+      {{- else }}
+      <link>{{ .Permalink }}</link>
+      <content type="html">
+          {{- if isset .Params "photo" }}
+              &lt;img src=&quot;{{ delimit (index .Params "photo") ""}}&quot; class=&quot;u-photo&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/img&gt;
+          {{- end }}
+        {{ .Content | html }}
+      </content>
+      {{- end }}
+    </entry>
   {{ end }}
 </feed>
-
-
+<!-- ends -->
