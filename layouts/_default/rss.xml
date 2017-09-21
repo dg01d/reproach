@@ -11,12 +11,12 @@
   <generator>Hugo -- gohugo.io</generator>{{ range .Data.Pages }}
   <entry>
     {{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title }}]]></title>
-    {{-if .Params.link }}
+    {{- if .Params.link }}
       <link rel="alternate" type="text/html" href="{{ .Params.link }}" />
       <link rel="related" type="text/html" href="{{ .Permalink }}" />
-    {{-else}}
+    {{- else}}
     <link href="{{ .Permalink }}"/>
-    {{-end }}
+    {{- end }}
     <id>{{ .Permalink }}</id>{{ with .Site.Params.Author }}
     <author>
       <name>{{.}}</name>
