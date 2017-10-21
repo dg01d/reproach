@@ -6,14 +6,14 @@
     "feed_url": {{ .Permalink | jsonify  }},
     {{- end }}
     {{ if (.Site.Params.author) or (.Site.Params.author_url) -}}
-    "author": {
+    "author": [
         {{ if .Site.Params.author -}}
         "name": {{ .Site.Params.author | jsonify }},
         {{- end }}
         {{ if .Site.Params.author_url -}}
         "url": {{ .Site.Params.author_url | jsonify }}
         {{- end }}
-    },
+    ],
     {{- end }}
     {{ if .Data.Pages }}
     "items": [
