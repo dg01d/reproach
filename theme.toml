@@ -7,7 +7,7 @@ licenselink = "https://github.com/dg01d/reproach/blob/master/LICENSE.md"
 description = "Hugo Templates are driving me mad, so I decided to create my own."
 homepage = "https://ascraeus.org/"
 tags = ["barebone", "brutal"]
-features = ["none", "twittercards", "skeleton", "svg"]
+features = ["twittercards", "opengraph", "svg"]
 min_version = 0.18
 
 [author]
