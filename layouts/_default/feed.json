@@ -1,34 +1,31 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": {{ .Site.Title | jsonify  }},
-    "home_page_url": {{ .Permalink | jsonify }},
-    {{ with  .OutputFormats.Get "json" -}}
-    "feed_url": {{ .Permalink | jsonify  }},
+    "title": {{ .Site.Title | jsonify }},
+    "home_page_url": {{ .Site.BaseURL | jsonify}},
+    "feed_url": {{ .Permalink | jsonify }},
+    "icon": "{{ .Site.BaseURL }}icon440.png",
+    "favicon": "{{ .Site.BaseURL }}icon72.png",
+    {{- if isset .Site.Params "description" }}
+    "description": "{{ .Site.Params.description }}",
     {{- end }}
-    {{ if (.Site.Params.author) or (.Site.Params.author_url) -}}
-    "author": [
-        {{ if .Site.Params.author -}}
-        "name": {{ .Site.Params.author | jsonify }},
-        {{- end }}
-        {{ if .Site.Params.author_url -}}
-        "url": {{ .Site.Params.author_url | jsonify }}
-        {{- end }}
-    ],
+    {{- if isset .Site.Params "author" }}
+    "author": { "name": "{{ .Site.Params.author | jsonify }}" },
     {{- end }}
-    {{ if .Data.Pages }}
     "items": [
-        {{ range $index, $element := first 10 .Data.Pages }}
-        {{if $index }},{{end}} {
-            "title": {{ $element.Title | jsonify }},
-            "id": {{ $element.Permalink | jsonify }},
-            "url": {{ $element.Permalink | jsonify }},
-            {{- if isset .Params "link" }}
-            "_external-link": {{ $element.Params.link }},
-            {{- end }}
-            "content_text": {{ $element.Summary | jsonify }},
-            "date_published": {{ $element.Date.Format "2006-02-01T15:04:05-0700" | jsonify }}
-        }
-        {{ end }}
+    {{- range $i, $e := first 10 .Site.Pages }}
+        {{- if $i }}, {{ end }}
+            {
+            	{{- if isset .Params "title" }}
+                "title": {{ .Title | jsonify }},
+                {{- end }}
+                "date_published": {{ .Date.Format "2006-02-01T15:04:05-07:00" | jsonify }},
+                {{- if isset .Params "link" }}
+            	"_external-link": {{ .Params.link | jsonify }},
+            	{{- end }}
+                "url": {{ .Permalink | jsonify }},
+                "id": {{ .Permalink | jsonify }},
+                "content_text": {{ .Summary | jsonify }}
+            }
+        {{- end }}
     ]
-    {{ end }}
 }
