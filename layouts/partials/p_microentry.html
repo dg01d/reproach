@@ -10,9 +10,30 @@
 			{{- end }}
 		    <div class="e-content p-name">
 			{{- if isset .Params "photo" }}
-				<a href={{ delimit (index .Params "photo") ""}} >
-					<img src={{ delimit (index .Params "photo") ""}} class="u-photo" width="200" height="200">
-				</a>
-			{{- end }}
-		    {{- .Content }}
+				{{- if isset .Params "booklink" }}
+				<div class="tbr-entry">
+					<div class="tbr-img">
+						<a href={{ delimit (index .Params "booklink") ""}} alt="amazon affiliate link">
+							<img width="80" height="120" src={{ delimit (index .Params "photo") ""}}>
+						</a>
+					</div>
+					<div class="tbr-item">
+						<div class="centre">
+							<strong>
+								<em>
+					{{- else }}
+					<a href={{ delimit (index .Params "photo") ""}} >
+						<img src={{ delimit (index .Params "photo") ""}} class="u-photo" width="200" height="200">
+					</a>
+					{{- end }}
+				{{- end }}
+			    {{- .Content }}
+				{{- if isset .Params "booklink" }}
+								</em>
+							</strong>
+						</div>
+					</div>
+				</div>
+				<hr />
+				{{- end }}
 		    </div>
