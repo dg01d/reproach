@@ -13,7 +13,7 @@
 				{{- if isset .Params "booklink" }}
 				<div class="tbr-entry">
 					<div class="tbr-img">
-						<a href={{ delimit (index .Params "booklink") ""}} alt="amazon affiliate link">
+						<a href={{ .Params "booklink" }} alt="amazon affiliate link">
 							<img width="80" height="120" src={{ delimit (index .Params "photo") ""}}>
 						</a>
 					</div>
@@ -34,6 +34,5 @@
 						</div>
 					</div>
 				</div>
-				<hr />
 				{{- end }}
 		    </div>
