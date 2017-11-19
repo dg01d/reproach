@@ -396,14 +396,13 @@ article a:hover, article a:active, .webmention-author a:active, .webmention-auth
 
 article h3 a, article h3 a:visited, article h3 a:hover {
 	line-height: 1.1em;
-	background: whitesmoke;
 }
 
 p a, p a:visited {
 	line-height: inherit;
 }
 
-h1 a, h2 a, h3 a, h4 a, h6 a, a.pin-title, dt * a {
+h1 a {
 	text-decoration: none !important;
 	color: #367588;
 	border-bottom: none !important;
@@ -414,7 +413,7 @@ h1 a, h2 a, h3 a, h4 a, h6 a, a.pin-title, dt * a {
 }
 
 
-h1 a:hover, h3 a:hover, h4 a:hover, h6 a:hover, a.pin-title:hover, dt *a:hover {
+h1 a:hover {
 	text-decoration: none !important;
 	color: #367588;
 	border-bottom: 1px solid #367588;
@@ -424,7 +423,7 @@ h1 a:hover, h3 a:hover, h4 a:hover, h6 a:hover, a.pin-title:hover, dt *a:hover {
 	text-shadow: #fafafa 2px 0px 3px;
 }
 
-h1 a:visited, h3 a:visited, h4 a:visited, h6 a:visited, a.pin-title:visited, dt * a:visited {
+h1 a:visited {
 	text-decoration: none !important;
 	color: #367588;
 	border-bottom: 1px solid #367588;
@@ -434,7 +433,7 @@ h1 a:visited, h3 a:visited, h4 a:visited, h6 a:visited, a.pin-title:visited, dt 
 	text-shadow: #fafafa 2px 0px 3px;
 }
 
-h1 a:visited:hover, h3 a:visited:hover, h4 a:visited:hover, h6 a:visited:hover, a.pin-title:visited:hover, {
+h1 a:visited:hover {
 	text-decoration: none!important;
 	color: #367588;
 	border-bottom: 1px solid #367588;

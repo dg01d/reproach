@@ -77,6 +77,13 @@
                          </use>
                      </svg></a>
                 {{- end }}
+                {{- if .Site.Author.microdotblog }}
+                <a href="https://micro.blog/{{ .Site.Author.microdotblog}}" rel="me" title="keybase" class="metatag">
+                    <svg class="icon icon-microblog">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-microblog">
+                         </use>
+                     </svg></a>
+                {{- end }}
             </div>
 
 		<p class="feet h-card vcard">{{ .Site.Title }} &copy; <a href={{ .Site.BaseURL }} class="p-name u-url url author metatag" rel="me">{{ .Site.Author.name }}</a><img src="{{ .Site.BaseURL }}pictures/marvin.png" class="u-photo" style="display: none"> <a class="p-nickname u-email email metatag" rel="me" href="mailto:dgold@ascraeus.org">{{ .Site.Author.nick }}</a> 2011-{{ now.Format "2006" }} &bull; Licenced under <a href="{{ .Site.BaseURL }}page/licence" class="metatag">CC-BY-NC-SA</a> </p>
