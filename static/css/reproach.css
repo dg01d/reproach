@@ -10,68 +10,36 @@ main {
 	display: flex;
  	min-height: 100vh;
   	flex-direction: column;
-  	max-width: 1000px;
-  	margin: 0 auto;
+  	max-width: 750px;
+  	margin: 10px auto;
 	flex: 1;
 }
 
-content {
-	margin-left: 1em;
-}
-
-@media screen and (min-width: 800px) {
-	section {
-	display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: stretch;
-    -ms-flex-line-pack: stretch;
-    align-content: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
+content {	
+	margin: auto;
 	}
 
-	aside {
-	-webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
+nav ul li {
+		list-style-type: none;
+		list-style: none;
+		display: inline;
+		font-size: 32px;
 	}
 
-	content {
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-   }
+nav {
+		text-align: center;
+	}
 
-	nav {
-	background-image: url("/images/asc3.jpg");
-	background-position: top right;
-	background-repeat: no-repeat;
-	text-shadow: #fafafa 2px 0px 3px;
-	}   
-}
+.hidden {
+		display: none;
+		overflow: hidden;
+	}
+aside h1 {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+
 
 /* Footer */
 
@@ -166,9 +134,9 @@ hr, .hr {
   border: 1px solid;
   margin: -1px 0;
 }
-a, b, i, strong, em, small, code {
+/*a, b, i, strong, em, small, code {
   line-height: 0;
-}
+}*/
 sub, sup {
   line-height: 0;
   position: relative;
@@ -209,6 +177,10 @@ div.p-summary {
 	font-style: italic;
 	color: #367588;
 
+}
+
+div.e-content p {
+	text-align: justify;
 }
 
 #current {
@@ -609,7 +581,7 @@ th, tfoot {
 /* SVG Icons
 ------------------------------------------ */
 
-.icon, .icon-ascraeus, .icon-rss, .icon-drawer, .icon-link, .icon-twitter, .icon-book, .icon-google-plus, .icon-infinite, .icon-telegram, .icon-instagram {
+.icon, .icon-ascraeus, .icon-rss, .icon-drawer, .icon-link, .icon-twitter, .icon-book, .icon-google-plus, .icon-infinite, .icon-telegram, .icon-instagram, .icon-microblog {
 	display: inline-block;
 	width: 1em;
 	height: 1em;
@@ -619,6 +591,9 @@ th, tfoot {
 	transition: all 0.5s;
 }
 
+.icon-microblog {
+	stroke-width: 2;
+}
 
 .icon-ascraeus:hover {
 	fill: #367588;
@@ -736,105 +711,6 @@ th, tfoot {
 .textwrap {
 	float: left;
 	margin-right: 12px;
-}
-
-/*  #Mobile (Portrait)
-================================================== */
-
-/* Note: Design for a width of 320px */
-
-@media only screen and (max-width: 797px) {
-	nav ul li {
-		list-style-type: none;
-		list-style: none;
-		display: inline;
-		font-size: 32px;
-	}
-
-	nav {
-		text-align: center;
-	}
-
-	.hidden {
-		display: none;
-		overflow: hidden;
-	}
-	aside h1 {
-		text-align: center;
-		margin: 0;
-		padding: 0;
-	}
-
-	nav a {
-		color: #444;
-		border-bottom: 5px solid #fafafa;
-		-webkit-transition: color 0.2s;
-		-moz-transition: color 0.2s;
-		transition: color 0.2s;
-	}
-
-
-	nav a:hover {
-		color: #367588;
-		border-bottom: 5px solid #367588;
-		-webkit-transition: color 0.2s;
-		-moz-transition: color 0.2s;
-		transition: color 0.2s;
-	}
-
-}
-
-/* #Mobile (Landscape)
-================================================== */
-
-/* Note: Design for a width of 480px */
-
-@media only screen and (min-width: 480px) and (max-width: 700px) {
-	content {
-		width: 90%;
-		margin: auto;
-	}
-
-	nav {
-		text-align: center;
-	}
-
-	nav ul li {
-		list-style-type: none;
-		list-style: none;
-		display: inline;
-		font-size: 32px;
-	}
-	.hidden {
-		display: none;
-		overflow: hidden;
-	}
-
-
-	aside h1 {
-		text-align: center;
-	}
-	nav a {
-		color: #444;
-		border-bottom: 5px solid #fafafa;
-		-webkit-transition: color 0.2s;
-		-moz-transition: color 0.2s;
-		transition: color 0.2s;
-	}
-
-	article {
-		padding: 1em;
-	}
-
-
-	nav a:hover {
-		color: #367588;
-		border-bottom: 5px solid #367588;
-		-webkit-transition: color 0.2s;
-		-moz-transition: color 0.2s;
-		transition: color 0.2s;
-	}
-
 }
 
 hr { border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #367588, rgba(0, 0, 0, 0)); }
