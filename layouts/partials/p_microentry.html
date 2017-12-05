@@ -17,10 +17,7 @@
 							<img width="80" height="120" src={{ delimit (index .Params "photo") ""}}>
 						</a>
 					</div>
-					<div class="tbr-item">
-						<div class="centre">
-							<strong>
-								<em>
+					<div class="tbr-item"><div class="centre"><strong><em>
 					{{- else }}
 					<a href={{ delimit (index .Params "photo") ""}} >
 						<img src={{ delimit (index .Params "photo") ""}} class="u-photo" width="200" height="200">
@@ -29,10 +26,6 @@
 				{{- end }}
 			    {{- .Content }}
 				{{- if isset .Params "booklink" }}
-								</em>
-							</strong>
-						</div>
-					</div>
-				</div>
+					</em></strong></div></div></div>
 				{{- end }}
 		    </div>

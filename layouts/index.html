@@ -27,13 +27,14 @@
 			{{ partial "p_microentry.html" . }}
 			{{ else }}
 		    {{ .Content }}
-		    	</div>
 		    {{ end }}
 		    {{- if not .Title }}
 				{{ partial "micrometadata.html" . }}
 				</div>
-		    {{- end }}
-		</article>
+		    {{- else }}
+				</div>
+			</article>
+			{{- end }}
 		<hr />
 		  {{- end }}
 	</content>

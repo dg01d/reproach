@@ -5,13 +5,13 @@
 		{{- end }}
 		<a href="{{ .Permalink }}" class="metatag u-url u-uid p-name"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
 		{{- .Date.Format "02/01/06 15:04" }}</time></a>&nbsp;&bull;&nbsp;
-			<span rel="author" class="p-author h-card">
-				<a href="{{ .Site.BaseURL }}" class="metatag" title="Daniel Goldsmith"><svg class="icon"><title class="name">Daniel Goldsmith</title>
+				<a href="{{ .Site.BaseURL }}" class="metatag u-author" title="Daniel Goldsmith">
+					<svg class="icon">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
 						</use> 
 					</svg>
 				</a>
-			</span>&nbsp;&bull;&nbsp;
+			&nbsp;&bull;&nbsp;
 			{{- if .Params.instagram }}
 				<a href="{{ .Params.instagram }}" class="metatag" title="syndicated to instagram">
 					<svg class="icon icon-instagram">
