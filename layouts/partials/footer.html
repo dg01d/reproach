@@ -3,6 +3,13 @@
 	</main>
 	<footer>
 	<div class="footernav">
+                {{- if .Site.Author.microdotblog }}
+                <a href="https://micro.blog/{{ .Site.Author.microdotblog }}" rel="me" title="micro.blog" class="metatag">
+                    <svg class="icon icon-microblog">
+                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-microblog">
+                         </use>
+                     </svg></a>
+                {{- end }}
 				{{- if .Site.Author.twitter }}
 				<a href="https://twitter.com/{{ .Site.Author.twitter }}" rel="me" title="twitter" class="metatag">
 					<svg class="icon icon-twitter">
@@ -44,7 +51,6 @@
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-facebook">
                          </use>
                      </svg></a>
-                
 				{{- end }}
 				{{- if .Site.Author.linkedin }}
 				<a href="https://linkedin.com/in/{{ .Site.Author.linkedin }}" rel="me" title="linkedin" class="metatag">
@@ -52,7 +58,6 @@
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-linkedin">
                          </use>
                      </svg></a>
-                
 				{{- end }}
 				{{- if .Site.Author.flickr }}
 				<a href="https://flickr.com/{{ .Site.Author.flickr}}" rel="me" title="flickr" class="metatag">
@@ -60,7 +65,6 @@
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-flickr">
                          </use>
                      </svg></a>
-                
 				{{- end }}
 				{{- if .Site.Author.tumblr }}
 				<a href="https://{{ .Site.Author.tumblr }}.tumblr.com" rel="me" title="tumblr" class="metatag">
@@ -68,19 +72,11 @@
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-tumblr2">
                          </use>
                      </svg></a>
-                
                 {{- end }}
                 {{- if .Site.Author.keybase }}
-                <a href="https://keybase.io/{{ .Site.Author.keybase}}" rel="me" title="keybase" class="metatag">
+                <a href="https://keybase.io/{{ .Site.Author.keybase }}" rel="me" title="keybase" class="metatag">
                     <svg class="icon icon-key">
                          <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-key">
-                         </use>
-                     </svg></a>
-                {{- end }}
-                {{- if .Site.Author.microdotblog }}
-                <a href="https://micro.blog/{{ .Site.Author.microdotblog}}" rel="me" title="micro.blog" class="metatag">
-                    <svg class="icon icon-microblog">
-                         <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-microblog">
                          </use>
                      </svg></a>
                 {{- end }}
