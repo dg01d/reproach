@@ -5,17 +5,19 @@
 				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-blog"></use>
 			</svg>blog posts</h1>
 			<div id="#revlist">
+				<article>
 	  {{- range (.Paginate (where .Site.Pages "Section" "article")).Pages }}
-			<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-		    <div>
-		    {{- if .Params.summary }}
-		    {{- .Params.summary }}
-		    {{- else }}
-		    {{- .Summary}}
-		    {{- end }}
-		    </div>
-		    {{ partial "metadata.html" . }}
+				<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+			    <div>
+			    {{- if .Params.summary }}
+			    {{- .Params.summary }}
+			    {{- else }}
+			    {{- .Summary}}
+			    {{- end }}
+			    </div>
+			    {{ partial "metadata.html" . }}
 	  	{{- end }}
+	  		</article>
 	  		</div>
 	  	{{- partial "pagination.html" .}}
 	</content>	

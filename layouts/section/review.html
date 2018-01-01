@@ -6,7 +6,7 @@
 			</svg>reviews</h1>
 			<div id="current"></div>
 			<div id="#revlist">
-			<article class="h-entry">
+			<article>
 	  {{- range where .Site.Pages "Section" "review" }}
 		  	<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 		    <div>

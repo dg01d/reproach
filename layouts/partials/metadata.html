@@ -1,7 +1,7 @@
 {{"<!-- begin metadata partial //-->" | safeHTML}}
 	{{- if .Params.link }}
 	<div class="meta">
-		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">{{ .Date.Format "Mon 2 Jan, 2006" }}</time></a> &bull; {{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{- end }}
+		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">{{ .Date.Format "Mon, 2 Jan, 2006" }}</time></a> &bull; {{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{- end }}
 			{{- if .Params.twit }}
 				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
 					<svg class="icon icon-twitter">
