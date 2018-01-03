@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+
+	<content>
+			<h3>
+				<svg class="icon icon-loop">
+					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-loop"></use>
+				</svg> Microentry
+			</h3>
+			<article class="h-entry hentry">
+			{{ partial "p_microentry.html" . }}
+			{{ partial "micrometadata.html" . }}
+			</article>
+			{{ partial "articlepagination.html" . }}
+			{{ partial "mention.html" . }}
+			{{ partial "webmention.html" }}
+	</content>
+
+{{ partial "footer.html" . }} 

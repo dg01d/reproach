@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+	<content>{{"<!-- from section.micro.html //-->" | safeHTML}}
+	  <h1><svg class="icon icon-loop">
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-loop"></use>
+			</svg> reposts and <svg class="icon icon-star-full">
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-star-full"></use>
+			</svg> likes
+	  </h1>
+
+	  {{- range (.Paginate (where .Site.Pages "Section" "like")).Pages }}
+		<div class="indmicro">
+			<article class="h-entry hentry">	
+		{{ partial "p_microentry.html" . }}
+
+	    {{ partial "micrometadata.html" . }}
+	    	</article>  
+	  	</div>
+	  {{- end }}
+	  {{ partial "pagination.html" . }}
+	</content>	
+</div>
+{{ partial "footer.html" . }}

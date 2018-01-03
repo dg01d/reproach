@@ -3,6 +3,16 @@
 					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-talk"></use>
 				</svg> replying to a post on <a href="{{ .Params.replyto }}" class="u-in-reply-to">{{ .Params.replysite }}</a></small>
 			{{- end }}
+			{{- if .Params.like_of }}
+			<small><svg class="icon icon-star-full">
+					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-star-full"></use>
+				</svg> liked a post on <a href="{{ .Params.like_of }}" class="u-like-of">{{ .Params.like_site }}</a></small>
+			{{- end }}
+			{{- if .Params.repost_of }}
+			<small><svg class="icon icon-loop">
+					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-loop"></use>
+				</svg> reposted from <a href="{{ .Params.repost_of }}" class="u-repost-of">{{ .Params.repost_site }}</a></small>
+			{{- end }}
 			{{- if .Params.checkin }}
 			<small class="p-location h-card"><svg class="icon icon-location">
 					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-location"></use>
@@ -24,7 +34,22 @@
 					</a>
 					{{- end }}
 				{{- end }}
-			    {{- .Content }}
+		    {{- if or (.Params.like_of) (.Params.repost_of) }}
+		    	<div class="like-box h-cite repost-content">
+		    		<div class="xpost">
+			    		<div class="author p-author h-card">
+			    			<img class="u-photo author-photo" src="{{ .Params.xPhoto | safeHTML }}" width="48" height="48">
+			    			<a class="p-name u-url" href="{{ .Params.xAuthorUrl }}">{{ .Params.xAuthor }}</a>
+			    			<a class="authorUrl" href="{{ .Params.xAuthorUrl }}">{{ .Params.xAuthorUrl }}</a>
+			    		</div>
+			    		<div class="e-content p-name xContent">
+			    			{{ .Params.xContent | safeHTML }}
+			    		</div>
+			    	</div>
+		    	</div>
+		    {{- end }}
+		    {{- .Content }}
+
 				{{- if isset .Params "booklink" }}
 					</em></strong></div></div></div>
 				{{- end }}

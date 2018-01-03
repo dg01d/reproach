@@ -1,1 +1,3 @@
+.gitignore
 static/bookdb/
+static/js/bookcurrent.min.js

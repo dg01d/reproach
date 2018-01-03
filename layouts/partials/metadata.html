@@ -2,8 +2,8 @@
 	{{- if .Params.link }}
 	<div class="meta">
 		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">{{ .Date.Format "Mon, 2 Jan, 2006" }}</time></a> &bull; {{ range .Params.tags }} <a href="/tags/{{.}}" class="metatag">{{.}}</a>&nbsp;&bull;&nbsp;{{- end }}
-			{{- if .Params.twit }}
-				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
+			{{- if .Params.twitlink }}
+				<a href="{{ .Params.twitlink }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
 					<svg class="icon icon-twitter">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
 						</use>
@@ -18,8 +18,8 @@
 					</svg>
 				</a>&nbsp;&bull;&nbsp;
 			{{- end }}
-			{{- if .Params.masto }}
-				<a href="{{ .Params.masto }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
+			{{- if .Params.mastodonlink }}
+				<a href="{{ .Params.mastodonlink }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
 					<svg class="icon icon-masto">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
 						</use>
@@ -48,8 +48,8 @@
 				</svg>
 			</a>
 			&nbsp;&bull;&nbsp;
-			{{- if .Params.twit }}
-				<a href="{{ .Params.twit }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
+			{{- if .Params.twitlink }}
+				<a href="{{ .Params.twitlink }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
 					<svg class="icon icon-twitter">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
 						</use>
@@ -64,8 +64,8 @@
 					</svg>
 				</a>&nbsp;&bull;&nbsp;
 			{{- end }}
-			{{- if .Params.masto }}
-				<a href="{{ .Params.masto }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
+			{{- if .Params.mastodonlink }}
+				<a href="{{ .Params.mastodonlink }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
 					<svg class="icon icon-masto">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
 						</use>

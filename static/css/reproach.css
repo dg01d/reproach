@@ -52,8 +52,8 @@ footer {
 }
 
 html {
-	font-size: 22px;
-  	line-height: 35px;
+	font-size: 20px;
+  	line-height: 1.5em;
   	background-color: whitesmoke;
 }
 
@@ -794,4 +794,45 @@ input[type=submit]:hover, input[type=button]:hover{
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
 }
+
+/* #Likes and Reposts
+================================================== */
+
+.like-box {
+	font-family: sans-serif;
+	background-color: #fff;
+	border-radius:25px;
+	font-size: .9em;
+	line-height: 1.5em;
+}
+
+.xpost {
+	margin-left: 64px;
+}
+
+.xContent {
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+
+img.author-photo {
+	margin-left: -48px;
+	border-radius: 25%;
+	vertical-align: top;
+	padding-top: 5px;
+}
+
+a.authorUrl {
+	text-decoration: none;
+	color: #777;
+	background: #fff;
+	font-size: .90em;
+}
+a.authorUrl:hover {
+	text-decoration: none;
+	color: #777;
+	background: #fff;
+	font-size: .90em;
+}
+
 
