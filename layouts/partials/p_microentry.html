@@ -38,7 +38,9 @@
 		    	<div class="like-box h-cite repost-content">
 		    		<div class="xpost">
 			    		<div class="author p-author h-card">
+			    			{{- if isset .Params.xPhoto }}
 			    			<img class="u-photo author-photo" src="{{ .Params.xPhoto | safeHTML }}" width="48" height="48">
+			    			{{- end }}
 			    			<a class="p-name u-url" href="{{ .Params.xAuthorUrl }}">{{ .Params.xAuthor }}</a>
 			    			<a class="authorUrl" href="{{ .Params.xAuthorUrl }}">{{ .Params.xAuthorUrl }}</a>
 			    		</div>
