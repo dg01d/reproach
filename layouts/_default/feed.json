@@ -12,7 +12,7 @@
     "author": { "name": "{{ .Site.Params.author | jsonify }}" },
     {{- end }}
     "items": [
-    {{- range $i, $e := first 10 .Site.Pages }}
+    {{- range $i, $e := first 10 (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
         {{- if $i }}, {{ end }}
             {
             	{{- if isset .Params "title" }}
