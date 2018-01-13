@@ -5,12 +5,12 @@
 		{{- end }}
 		<a href="{{ .Permalink }}" class="metatag u-url u-uid p-name"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
 		{{ .Date.Format "02/01/06 15:04" }}</time></a>&nbsp;
-		{{- if .Params.like_of }}
+		{{ if .Params.like_of }}
 			(originally published on <a href="{{ .Params.like_of }}" class="metatag u-url"><time class="dt-published" datetime="{{ .Params.xPublished }}">{{ dateFormat "02/01/06 15:04" .Params.xPublished }}</time></a>)&nbsp;
-		{{- end }}
-		{{- if .Params.repost_of }}
+		{{ end }}
+		{{ if .Params.repost_of }}
 			(originally published on <a href="{{ .Params.repost_of }}" class="metatag u-url"><time class="dt-published" datetime="{{ .Params.xPublished }}">{{ dateFormat "02/01/06 15:04" .Params.xPublished }}</time></a>)&nbsp;
-		{{- end }}
+		{{ end }}
 		&bull;&nbsp;
 		{{ - if .Params.weather }}
 			<svg class="icon icon-weather" role="image">
