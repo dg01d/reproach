@@ -37,7 +37,15 @@
 	{{- else }}
 	<div class="meta">
 		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05"}}">
-		{{ .Date.Format "Mon, Jan 2, 2006" }}</time></a> &bull; 	
+		{{ .Date.Format "Mon, Jan 2, 2006" }}</time></a> &bull; 
+		{{ - if .Params.weather }}
+			<svg class="icon icon-weather" role="image">
+				<title>{{ .Params.weather }}</title>
+				<use xlink:href="{{ .Site.BaseURL }}svg/weather-defs.svg#wi-{{ .Params.wicon }}">
+				</use>
+			</svg>
+			&nbsp;{{ .Params.temp }} &deg;C&nbsp;&bull;&nbsp;
+		{{- end }}
 		{{ range .Params.tags }} 
 			<a href="/tags/{{.}}" class="metatag p-category">{{.}}</a>&nbsp;&bull;&nbsp;
 		{{- end}}

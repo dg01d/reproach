@@ -12,6 +12,14 @@
 			(originally published on <a href="{{ .Params.repost_of }}" class="metatag u-url"><time class="dt-published" datetime="{{ .Params.xPublished }}">{{ dateFormat "02/01/06 15:04" .Params.xPublished }}</time></a>)&nbsp;
 		{{- end }}
 		&bull;&nbsp;
+		{{ - if .Params.weather }}
+			<svg class="icon icon-weather" role="image">
+				<title>{{ .Params.weather }}</title>
+				<use xlink:href="{{ .Site.BaseURL }}svg/weather-defs.svg#wi-{{ .Params.wicon }}">
+				</use>
+			</svg>
+			&nbsp;{{ .Params.temp }}&deg;C&nbsp;&bull;&nbsp;
+		{{- end }}
 				<a href="{{ .Site.BaseURL }}" class="metatag u-author" title="Daniel Goldsmith">
 					<svg class="icon">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
