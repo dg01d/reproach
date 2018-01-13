@@ -45,6 +45,7 @@
 				</use>
 			</svg>
 			&nbsp;{{ .Params.temp }}&deg;C&nbsp;&bull;&nbsp;
+		{{- end }}
 		{{ range .Params.tags }} 
 			<a href="/tags/{{.}}" class="metatag p-category">{{.}}</a>&nbsp;&bull;&nbsp;
 		{{- end}}
