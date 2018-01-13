@@ -581,7 +581,7 @@ th, tfoot {
 /* SVG Icons
 ------------------------------------------ */
 
-.icon, .icon-ascraeus, .icon-rss, .icon-drawer, .icon-link, .icon-twitter, .icon-book, .icon-google-plus, .icon-infinite, .icon-telegram, .icon-instagram, .icon-microblog {
+.icon, .icon-ascraeus, .icon-rss, .icon-drawer, .icon-link, .icon-weather, .icon-twitter, .icon-book, .icon-google-plus, .icon-infinite, .icon-telegram, .icon-instagram, .icon-microblog {
 	display: inline-block;
 	width: 1em;
 	height: 1em;
@@ -667,6 +667,13 @@ th, tfoot {
 
 .icon-jsonfeed:hover {
 	fill: #497614;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-weather:hover {
+	fill: #16161d;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
