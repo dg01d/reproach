@@ -25,7 +25,7 @@
 						</use>
 					</svg>
 				</a>&nbsp;&bull;&nbsp;
-			{{ end }}
+			{{- end }}
 				<a href="{{ .Site.BaseURL }}" class="metatag u-author" title="Daniel Goldsmith">
 					<svg class="icon">
 						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
@@ -38,14 +38,13 @@
 	<div class="meta">
 		<a href="{{ .Permalink }}" class="metatag u-url u-uid"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05"}}">
 		{{ .Date.Format "Mon, Jan 2, 2006" }}</time></a> &bull; 
-		{{ - if .Params.weather }}
+		{{- if .Params.weather }}
 			<svg class="icon icon-weather" role="image">
 				<title>{{ .Params.weather }}</title>
 				<use xlink:href="{{ .Site.BaseURL }}svg/weather-defs.svg#wi-{{ .Params.wicon }}">
 				</use>
 			</svg>
-			&nbsp;{{ .Params.temp }} &deg;C&nbsp;&bull;&nbsp;
-		{{- end }}
+			&nbsp;{{ .Params.temp }}&deg;C&nbsp;&bull;&nbsp;
 		{{ range .Params.tags }} 
 			<a href="/tags/{{.}}" class="metatag p-category">{{.}}</a>&nbsp;&bull;&nbsp;
 		{{- end}}
