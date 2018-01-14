@@ -25,7 +25,7 @@
     <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
     <updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
     {{ `<content type="html"><![CDATA[` | safeHTML }}
-            {{- if isset .Params.checkurl }}
+            {{- if .Params.checkurl }}
             <p>📍 Checked in at {{ .Params.checkloc }}</p>
             {{- end }}
             {{- if .Params.link }}🔗 {{- end}}
