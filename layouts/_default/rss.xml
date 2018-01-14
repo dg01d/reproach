@@ -11,7 +11,7 @@
   </author>{{end}}
   <generator>Hugo -- gohugo.io</generator>{{ range first 50 (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
   <entry>
-    {{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title }}]]></title>
+    {{ `<title type="html"><![CDATA[` | safeHTML }}{{- if .Params.link }}🔗 {{- end}}{{ .Title }}]]></title>
     {{- if .Params.link }}
       <link rel="alternate" type="text/html" href="{{ .Params.link }}" />
       <link rel="related" type="text/html" href="{{ .Permalink }}" />
@@ -28,7 +28,6 @@
             {{- if .Params.checkurl }}
             <p>📍 Checked in at {{ .Params.checkloc }}</p>
             {{- end }}
-            {{- if .Params.link }}🔗 {{- end}}
             {{- if isset .Params "photo" }}
             <img src="{{ delimit (index .Params "photo") ""}}" class="u-photo" width="200" height="200"></img>
             {{- end }}
