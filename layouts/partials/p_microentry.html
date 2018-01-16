@@ -1,7 +1,7 @@
-		    {{- if .Params.replyto }}
+		    {{- if .Params.replytourl }}
 			<small><svg class="icon icon-talk">
 					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-talk"></use>
-				</svg> replying to a post on <a href="{{ .Params.replyto }}" class="u-in-reply-to">{{ .Params.replysite }}</a></small>
+				</svg> replying to a post on <a href="{{ .Params.replytourl }}" class="u-in-reply-to">{{ .Params.replysite }}</a></small>
 			{{- end }}
 			{{- if .Params.like_of }}
 			<small><svg class="icon icon-star-full">
