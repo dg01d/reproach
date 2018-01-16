@@ -1,35 +1,25 @@
 
-   <!-- Twittercard Metadata
+   <!-- Twitter Opengraph Metadata
     ================================================== -->
     <link rel="canonical" href="{{ .Permalink }}" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="{{ .Permalink }}" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    {{- if .Params.summary }}
-    <meta name="twitter:description" content="{{ .Params.summary }}" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:url" property="og:url" content="{{ .Permalink }}" />
+    {{- if .Params.title }}
+    <meta name="twitter:title" property="og:title" content="{{ .Title }}" />
     {{- else }}
-     <meta name="twitter:description" content="{{ .Summary }}" />
+    <meta name="twitter:title" property="og:title" content="A microentry" />
+    {{- end }}
+    {{- if .Params.summary }}
+    <meta name="twitter:description" property="og:description" content="{{ .Params.summary }}" />
+    {{- else }}
+    <meta name="twitter:description" property="og:description" content="{{ .Summary }}" />
     {{- end }}
     <meta name="twitter:site" content="@AscraeusOrg" />
     <meta name="twitter:creator" content="@_dgoldsmith" />
-    {{- if .Params.image }}
-    <meta name="twitter:image" content="{{ .Params.image}}" />
-    {{- else }}
-    <meta name="twitter:image" content="icon440.png" />
-    {{- end }}
-   <!-- Open Graph Metadata
-    ================================================== -->
-    <meta property="og:title" content="{{ .Title }}" />
-    <meta property="og:type" content="article" />
-    {{- if .Params.summary }}
-    <meta property="og:description" content="{{ .Params.summary }}" />
-    {{- else }}
-    <meta property="og:description" content="{{ .Summary }}" />
-    {{- end }}
-    <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:site_name" content="View from Ascraeus" />
     {{- if .Params.image }}
-    <meta property="og:image" content="{{ .Params.image }}" />
+    <meta name="twitter:image" property="og:image" content="{{ .Params.image}}" />
     {{- else }}
-    <meta property="og:image" content="icon440.png" />
+    <meta name="twitter:image" property="og:image" content="icon440.png" />
     {{- end }}
