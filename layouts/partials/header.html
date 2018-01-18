@@ -35,10 +35,6 @@
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/webmention.css" />
   <!-- indieweb components -->
   <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
-  <!-- rss feeds -->
-  <link rel="alternate" type="application/atom+xml" title="Ascraeus Main Feed" href="{{ .Site.BaseURL }}index.xml" />
-  <link rel="alternate" type="application/atom+xml" title="Ascraeus Micropost Feed" href="{{ .Site.BaseURL }}micro/index.xml" />
-  <link rel="alternate" type="application/json" title="Ascraeus JSON feed" href="{{ .Site.BaseURL}}jsonfeed/index.json" />
 
   <!-- Metadata for Twitter and OpenGraph -->
   {{ partial "twittergraph.html" . }}
