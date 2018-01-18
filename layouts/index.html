@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ partial "indexheader.html" . }}
 {{ partial "sidebar.html" . }}
 	<content>{{"<!-- from index.html //-->" | safeHTML}}	
 		  {{- range first 20 (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
@@ -38,4 +38,4 @@
 		<hr />
 		  {{- end }}
 	</content>
-{{ partial "footer.html" . }}
+{{ partial "indexfooter.html" . }}
