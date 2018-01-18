@@ -829,17 +829,9 @@ img.author-photo {
 	padding-top: 5px;
 }
 
-a.authorUrl {
+a.authorUrl, a.authorUrl:hover, a.authorUrl:visited {
 	text-decoration: none;
 	color: #777;
 	background: #fff;
 	font-size: .90em;
 }
-a.authorUrl:hover {
-	text-decoration: none;
-	color: #777;
-	background: #fff;
-	font-size: .90em;
-}
-
-
