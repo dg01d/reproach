@@ -137,6 +137,15 @@ hr, .hr {
 /*a, b, i, strong, em, small, code {
   line-height: 0;
 }*/
+
+code {
+	padding: 0 5px 2px;
+	border: 1px solid #ddd;
+	font-size: 0.9em;
+	color: whitesmoke;
+	background-color: #16161d;
+}
+
 sub, sup {
   line-height: 0;
   position: relative;
@@ -149,13 +158,6 @@ sub {
   bottom: -0.25em;
 }
 
-pre {
-	display: block;
-    font-family: menlo, monospace;
-    white-space: pre;
-    margin: 1em 0;
-    font-size: 75%;
-}
 
 div.meta {
 	font-size: 75%;
@@ -591,10 +593,6 @@ th, tfoot {
 	transition: all 0.5s;
 }
 
-.icon-microblog {
-	stroke-width: 2;
-}
-
 .icon-ascraeus:hover {
 	fill: #367588;
 	-webkit-transition: all 0.5s;
@@ -660,6 +658,20 @@ th, tfoot {
 
 .icon-masto:hover {
 	fill: #189efc;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-microblog:hover {
+	fill: #fd8308;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-keybase:hover {
+	fill: #33a0ff;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
