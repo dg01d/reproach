@@ -24,7 +24,7 @@
             	{{- end }}
                 "url": {{ .Permalink | jsonify }},
                 "id": {{ .Permalink | jsonify }},
-                "content_text": {{ .Summary | jsonify }}
+                "content_text": {{ .Content | jsonify }}
             }
         {{- end }}
     ]
