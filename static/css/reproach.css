@@ -1,9 +1,9 @@
 /*
-                                _        
-    ___ ___ ___ ___ ___ ___ ___| |_      
-   |  _| -_| . |  _| . | .'|  _|   |     
-   |_| |___|  _|_| |___|__,|___|_|_|     
-           |_|                           
+                                _
+    ___ ___ ___ ___ ___ ___ ___| |
+   |  _| -_| . |  _| . | .'|  _|   |
+   |_| |___|  _|_| |___|__,|___|_|_|
+           |_|
                                          */
 
 main {
@@ -71,7 +71,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #181818;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Futura Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -182,7 +182,7 @@ div.p-summary {
 }
 
 div.e-content p {
-	text-align: justify;
+	text-align: left;
 }
 
 #current {
