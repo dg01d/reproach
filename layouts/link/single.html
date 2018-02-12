@@ -5,7 +5,7 @@
 		{{ if .Params.link}}
 		  	<h3 class="p-name"><a href={{ .Params.link }} class="u-bookmark-of"><svg class="icon icon-link">
                 <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-link">
-                </use></svg>{{ .Title }}
+                </use></svg> {{ .Title }}
 				{{- if .Params.gplus }}
 					<svg class="icon icon-google-plus">
 					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#google-plus">
