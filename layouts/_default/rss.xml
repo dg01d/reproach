@@ -26,7 +26,7 @@
     <updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
     {{ `<content type="html"><![CDATA[` | safeHTML }}
             {{- if .Params.checkurl }}
-            <p>📍 Checked in at {{ .Params.checkloc }}</p>
+            <p>Checked in at {{ .Params.checkloc }}</p>
             {{- end }}
             {{- if isset .Params "photo" }}
             <img src="{{ delimit (index .Params "photo") ""}}" class="u-photo" width="200" height="200"></img>
