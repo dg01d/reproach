@@ -15,43 +15,39 @@
 			{{- end }}
 			{{- if .Params.checkin }}
 			<small class="p-location h-card"><svg class="icon icon-location">
-					<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-location"></use>
-				</svg> at <a href="{{ .Params.checkurl }}" class="u-url p-name">{{ .Params.checkloc }}</a></small>
+				<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-location"></use>
+			</svg> at <a href="{{ .Params.checkurl }}" class="u-url p-name">{{ .Params.checkloc }}</a></small>
 			{{- end }}
-		    <div class="e-content p-name">
 			{{- if isset .Params "photo" }}
-				{{- if isset .Params "booklink" }}
-				<div class="tbr-entry">
-					<div class="tbr-img">
-						<a href="{{ .Params.booklink }}" alt="amazon affiliate link">
-							<img width="80" height="120" src={{ delimit (index .Params "photo") ""}}>
-						</a>
-					</div>
-					<div class="tbr-item"><div class="centre"><strong><em>
+			{{- if isset .Params "booklink" }}
+			<div class="tbr-entry">
+				<div class="tbr-img">
+					<a href="{{ .Params.booklink }}" alt="amazon affiliate link">
+						<img width="80" height="120" src={{ delimit (index .Params "photo") ""}}>
+					</a>
+				</div>
+				<div class="tbr-item"><div class="centre"><strong><em>
 					{{- else }}
 					<a href={{ delimit (index .Params "photo") ""}} >
 						<img src={{ delimit (index .Params "photo") ""}} class="u-photo" width="200" height="200">
 					</a>
 					{{- end }}
-				{{- end }}
-		    {{- if or (.Params.like_of) (.Params.repost_of) }}
-		    	<div class="like-box h-cite repost-content">
-		    		<div class="xpost">
-			    		<div class="author p-author h-card">
-			    			{{- if .Params.xPhoto }}
-			    			<img class="u-photo author-photo" src="{{ .Params.xPhoto | safeHTML }}" width="48" height="48">
-			    			{{- end }}
-			    			<a class="p-name u-url" href="{{ .Params.xAuthorUrl }}">{{ .Params.xAuthor }}</a>
-			    			<a class="authorUrl" href="{{ .Params.xAuthorUrl }}">{{ .Params.xAuthorUrl }}</a>
-			    		</div>
-			    		<div class="e-content p-name xContent">
-			    			{{ .Params.xContent | safeHTML }}
-			    		</div>
-			    	</div>
-		    	</div>
-		    {{- end }}
-		    {{- .Content }}
-
+				    {{- end }}
+		            {{- if or (.Params.like_of) (.Params.repost_of) }}
+		    	    <div class="like-box h-cite repost-content">
+		    		    <div class="xpost">
+			    		    <div class="author p-author h-card">
+			    			    {{- if .Params.xPhoto }}
+			    			    <img class="u-photo author-photo" src="{{ .Params.xPhoto | safeHTML }}" width="48" height="48">
+			    			    {{- end }}
+			    			    <a class="p-name u-url" href="{{ .Params.xAuthorUrl }}">{{ .Params.xAuthor }}</a>
+			    			    <a class="authorUrl" href="{{ .Params.xAuthorUrl }}">{{ .Params.xAuthorUrl }}</a>
+			    		    </div>
+			    		    <div class="e-content p-name xContent">{{ .Params.xContent | safeHTML }}</div>
+			    	    </div>
+		    	    </div>
+		            {{- end }}
+		    <div class="e-content p-name">{{- .Content }}</div>
 				{{- if isset .Params "booklink" }}
 					</em></strong></div></div></div>
 				{{- end }}

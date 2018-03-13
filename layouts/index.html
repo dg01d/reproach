@@ -2,7 +2,6 @@
 {{ partial "sidebar.html" . }}
 	<content>{{"<!-- from index.html //-->" | safeHTML}}	
 		  {{- range first 20 (where .Data.Pages "Type" "in" (slice "article" "micro" "review" "link" )) }}
-
 			{{- if .Params.link }}
 			<article class="h-entry hentry">
 				<h3 class="p-name entry-title">
@@ -18,19 +17,20 @@
 			<article class="h-entry hentry">
 		    	<h3 class="p-name entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 			{{- end }}
-			{{ partial "metadata.html" . }}
-			{{- if not .Title }}	
-			{{- else }}
+			    {{- if not .Title }}
+			    {{- else }}
+			    {{ partial "metadata.html" . }}
 				<div class="e-content">
-			{{- end }}
-			{{ if not .Title }}
+			    {{- end }}
+			{{- if not .Title }}
 			{{ partial "p_microentry.html" . }}
-			{{ else }}
+			{{- else }}
 		    {{ .Content }}
-		    {{ end }}
+		    {{- end }}
 		    {{- if not .Title }}
-				{{ partial "micrometadata.html" . }}
-				</div>
+		    {{ partial "micrometadata.html" . }}
+                </article>
+            </div>
 		    {{- else }}
 				</div>
 			</article>
