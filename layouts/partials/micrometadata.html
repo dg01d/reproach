@@ -1,73 +1,70 @@
-{{"<!-- begin micrometadata partial //-->" | safeHTML}}
-<div class="meta">
-		{{- if .Params.checkin }}
-		<span class="p-location">{{ .Params.checkadd }}</span>
-		{{- end }}
-		<a href="{{ .Permalink }}" class="metatag u-url u-uid p-name"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
-		{{ .Date.Format "02/01/06 15:04" }}</time></a>&nbsp;
-		{{ if .Params.like_of }}
-			(originally published on <a href="{{ .Params.like_of }}" class="metatag u-url"><time class="dt-published" datetime="{{ .Params.xPublished }}">{{ dateFormat "02/01/06 15:04" .Params.xPublished }}</time></a>)&nbsp;
-		{{ end }}
-		{{ if .Params.repost_of }}
-			(originally published on <a href="{{ .Params.repost_of }}" class="metatag u-url"><time class="dt-published" datetime="{{ .Params.xPublished }}">{{ dateFormat "02/01/06 15:04" .Params.xPublished }}</time></a>)&nbsp;
-		{{ end }}
-		&bull;&nbsp;
-		{{- if .Params.weather }}
-			<svg class="icon icon-weather" role="image">
-				<title>{{ .Params.weather }}</title>
-				<use xlink:href="{{ .Site.BaseURL }}svg/weather-defs.svg#wi-{{ .Params.wicon }}">
-				</use>
-			</svg>
-			&nbsp;{{ .Params.temp }}&deg;C&nbsp;&bull;&nbsp;
-		{{- end }}
-				<a href="{{ .Site.BaseURL }}" class="metatag u-author" title="Daniel Goldsmith">
-					<svg class="icon">
-						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
-						</use>
-					</svg>
-				</a>
-			&nbsp;&bull;&nbsp;
-			{{- if .Params.instagram }}
-				<a href="{{ .Params.instagram }}" class="metatag" title="syndicated to instagram">
-					<svg class="icon icon-instagram">
-						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
-						</use>
-					</svg>
-				</a>&nbsp;&bull;&nbsp;
-			{{- end }}
-			{{- if .Params.twitlink }}
-				<a href="{{ .Params.twitlink }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
-					<svg class="icon icon-twitter">
-						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
-						</use>
-					</svg>
-				</a>&nbsp;&bull;&nbsp;
-			{{- end }}
-			{{- if .Params.plus }}
-				<a href="{{ .Params.plus }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to googleplus">
-					<svg class="icon icon-google-plus">
-						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus2">
-						</use>
-					</svg>
-				</a>
-			{{- end }}
-			{{- if .Params.mastodonlink }}
-				<a href="{{ .Params.mastodonlink }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
-					<svg class="icon icon-masto">
-						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
-						</use>
-					</svg>
-				</a>&nbsp;&bull;&nbsp;
-			{{- end }}
-			{{- if .Params.checkin }}
-				<a href="{{ .Params.checkurl }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to swarm">
-					<svg class="icon icon-swarm">
-						<use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-swarm">
-						</use>
-					</svg>
-				</a>&nbsp;&bull;&nbsp;
-			{{- end }}
-			<a href="https://brid.gy/publish/twitter"></a>
-</div>
-
-
+                        {{"<!-- begin micrometadata partial //-->" | safeHTML}}
+                        <div class="meta">
+                            {{- if .Params.checkin }}
+                            <span class="p-location">{{ .Params.checkadd }}</span>
+                            {{- end }}
+                            <a href="{{ .Permalink }}" class="metatag u-url u-uid p-name"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+                            {{ .Date.Format "02/01/06 15:04" }}</time></a>&nbsp;
+                            {{- if .Params.like_of }}
+                                (originally published on <a href="{{ .Params.like_of }}" class="metatag u-url"><time class="dt-published" datetime="{{ .Params.xPublished }}">{{ dateFormat "02/01/06 15:04" .Params.xPublished }}</time></a>)&nbsp;
+                            {{- end }}
+                            {{- if .Params.repost_of }}
+                                (originally published on <a href="{{ .Params.repost_of }}" class="metatag u-url"><time class="dt-published" datetime="{{ .Params.xPublished }}">{{ dateFormat "02/01/06 15:04" .Params.xPublished }}</time></a>)&nbsp;
+                            {{- end }}
+                            &bull;&nbsp;
+                            {{- if .Params.weather }}
+                                <svg class="icon icon-weather" role="image">
+                                    <title>{{ .Params.weather }}</title>
+                                    <use xlink:href="{{ .Site.BaseURL }}svg/weather-defs.svg#wi-{{ .Params.wicon }}">
+                                    </use>
+                                </svg>
+                                &nbsp;{{ .Params.temp }}&deg;C&nbsp;&bull;&nbsp;
+                            {{- end }}
+                                <a href="{{ .Site.BaseURL }}" class="metatag u-author" title="Daniel Goldsmith">
+                                    <svg class="icon">
+                                        <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-ascraeus">
+                                        </use>
+                                    </svg>
+                                </a>
+                            &nbsp;&bull;&nbsp;
+                            {{- if .Params.instagram }}
+                                <a href="{{ .Params.instagram }}" class="metatag" title="syndicated to instagram">
+                                    <svg class="icon icon-instagram">
+                                        <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-instagram">
+                                        </use>
+                                    </svg>
+                                </a>&nbsp;&bull;&nbsp;
+                            {{- end }}
+                            {{- if .Params.twitlink }}
+                                <a href="{{ .Params.twitlink }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to twitter">
+                                    <svg class="icon icon-twitter">
+                                        <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-twitter">
+                                        </use>
+                                    </svg>
+                                </a>&nbsp;&bull;&nbsp;
+                            {{- end }}
+                            {{- if .Params.plus }}
+                                <a href="{{ .Params.plus }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to googleplus">
+                                    <svg class="icon icon-google-plus">
+                                        <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-google-plus2">
+                                        </use>
+                                    </svg>
+                                </a>
+                            {{- end }}
+                            {{- if .Params.mastodonlink }}
+                                <a href="{{ .Params.mastodonlink }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to mastodon">
+                                    <svg class="icon icon-masto">
+                                        <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-masto">
+                                        </use>
+                                    </svg>
+                                </a>&nbsp;&bull;&nbsp;
+                            {{- end }}
+                            {{- if .Params.checkin }}
+                                <a href="{{ .Params.checkurl }}" class="metatag u-syndication" rel="syndication" title="this post was syndicated to swarm">
+                                    <svg class="icon icon-swarm">
+                                        <use xlink:href="{{ .Site.BaseURL }}svg/symbol-defs.svg#icon-swarm">
+                                        </use>
+                                    </svg>
+                                </a>&nbsp;&bull;
+                            {{- end }}
+                        </div>
