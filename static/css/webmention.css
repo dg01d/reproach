@@ -3,10 +3,9 @@
 .webmention-mention, .page-mentions .h-entry, .page-mentions .u-comment {
   padding-left: 9%;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-.webmention-name, .webmention-summary,
-.page-mentions .h-entry .p-name, .page-mentions .h-entry .p-summary,
+.webmention-name, .page-mentions .h-entry .p-name, .page-mentions .h-entry .p-summary,
 .page-mentions .u-comment .p-name, .page-mentions .u-comment .p-summary {
   margin: 10px 0;
 }
@@ -20,7 +19,6 @@
 }
 .webmention-author img, .page-mentions .h-card img {
   position: absolute;
-  top: -5px;
   left: 0;
   width: 7%;
   border-radius: 240px;
