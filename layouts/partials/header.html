@@ -20,7 +20,7 @@
   <script type="text/javascript" src="{{ .Site.BaseURL }}js/sorttable.min.js"></script>
   {{- end }}
   <!-- Favicons
-  ================================================== -->
+       ================================================== -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
@@ -29,12 +29,13 @@
   <meta name="theme-color" content="#f5f5f5">
 
   <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/reproach.min.css" />
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/bigfoot-default.css" />
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/webmention.css" />
   <!-- indieweb components -->
-  <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
+  <link rel="pingback" href="https://webmention.io/ascraeus.org/xmlrpc" />
+  <link rel="webmention" href="https://webmention.io/ascraeus.org/webmention" />
 
   <!-- Metadata for Twitter and OpenGraph -->
   {{ partial "twittergraph.html" . }}
