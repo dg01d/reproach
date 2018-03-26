@@ -58,7 +58,15 @@ html {
 }
 
 body {
-    font-family: Georgia, serif;
+    font-family: -apple-system, 
+                 BlinkMacSystemFont, 
+                 "Segoe UI", 
+                 Roboto, 
+                 Oxygen-Sans, 
+                 Ubuntu, 
+                 Cantarell, 
+                 "Helvetica Neue", 
+                 sans-serif;
 	font-size: 1em;
   	line-height: 1.6111em;
  	margin: auto;
@@ -71,7 +79,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #181818;
-	font-family: 'Futura Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;;
 }
 
 h1 {
@@ -160,9 +168,8 @@ sub {
 
 div.meta {
 	font-size: 75%;
-	font-family: Georgia, serif;
 	font-style: italic;
-	color: #999;
+	color: #666;
 }
 
 div.floatright {
@@ -304,7 +311,7 @@ div.tbr-item {
 nav li {
 	font-family: Georgia, serif;
 	font-style: italic;
-	color: #999;
+	color: #888;
 }
 
 nav ul {
@@ -312,11 +319,11 @@ nav ul {
 }
 nav a {
 	text-decoration: none!important;
-	color: #999;
+	color: #888;
 }
 
 nav a:visited {
-	color: #999;
+	color: #888;
 }
 
 nav a:hover {
@@ -330,7 +337,7 @@ nav ul {
 
 nav li {
 	font-style: italic;
-	color: #999;
+	color: #888;
 }
 
 nav h1 a {
@@ -423,14 +430,14 @@ h1 a:visited:hover {
 a.metatag {
 	text-decoration: none !important;
 	border-bottom: none !important;
-	color: #777;
+	color: #666;
 	background: whitesmoke;
 }
 
 a.metatag:link {
 	text-decoration: none !important;
 	border-bottom: none !important;
-	color: #777;
+	color: #666;
 	background: whitesmoke;
 }
 
@@ -444,7 +451,7 @@ a.metatag:hover {
 a.metatag:visited {
 	text-decoration: none !important;
 	border-bottom: none !important;
-	color: #777;
+	color: #666;
 	background: whitesmoke;
 }
 
@@ -545,7 +552,6 @@ li.active a {
 
 a[rel="next"], a[rel="prev"] {
 	text-decoration: none !important;
-	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	color: whitesmoke;
 	line-height: 1;
 	padding: 0.2em 0.5em 0.2em;
@@ -558,7 +564,6 @@ a[rel="next"], a[rel="prev"] {
 
 a:hover[rel="next"], a:hover[rel="prev"] {
 	text-decoration: none !important;
-	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	color: #367588;
 	background-color: whitesmoke;
 	padding: 0.2em 0.5em 0.2em;
