@@ -555,6 +555,15 @@ li.active a {
 
 a[rel="next"], a[rel="prev"] {
 	text-decoration: none !important;
+    font-family:  -apple-system,
+                  BlinkMacSystemFont,
+                  "Segoe UI",
+                  Roboto,
+                  Oxygen-Sans,
+                  Ubuntu,
+                  Cantarell,
+                  "Helvetica Neue",
+                  sans-serif;
 	color: whitesmoke;
 	line-height: 1;
 	padding: 0.2em 0.5em 0.2em;
@@ -567,6 +576,15 @@ a[rel="next"], a[rel="prev"] {
 
 a:hover[rel="next"], a:hover[rel="prev"] {
 	text-decoration: none !important;
+    font-family:  -apple-system,
+                  BlinkMacSystemFont,
+                  "Segoe UI",
+                  Roboto,
+                  Oxygen-Sans,
+                  Ubuntu,
+                  Cantarell,
+                  "Helvetica Neue",
+                  sans-serif;
 	color: #367588;
 	background-color: whitesmoke;
 	padding: 0.2em 0.5em 0.2em;
