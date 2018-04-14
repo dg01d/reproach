@@ -148,7 +148,7 @@ hr, .hr {
   line-height: 0;
 }*/
 
-code {
+p code {
 	padding: 0 5px 2px;	
 	font-size: 0.9em;
 	color: whitesmoke;
@@ -304,6 +304,7 @@ div.tbr-item {
 
 #sitetitle a {
 	color: #367588;
+    letter-spacing: -0.05em;
 }
 
 #sitetitle a .ochre {
