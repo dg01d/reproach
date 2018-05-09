@@ -1,0 +1,16 @@
+<div class="webmention-mention">
+  <div class="webmention-author">
+    <a href="{{ .author.url }}">
+      <img class="avatar" src="{{ .author.photo }}" alt="{{ .author.name }}" t
+itle="{{ .author.name }}"/>{{ .author.name }}
+    </a>
+  </div>
+  <div class="webmention-summary">
+    <blockquote>
+      {{ .content.text }}
+    </blockquote>
+  </div>
+  <div class="webmention-footer">
+      <a class="webmention-published" href="{{ .url }}">{{ dateFormat "02/01/06 15:04" .published }}</a>
+  </div>
+</div>

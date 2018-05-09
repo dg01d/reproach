@@ -31,6 +31,9 @@
             {{- if isset .Params "photo" }}
             <img src="{{ delimit (index .Params "photo") ""}}" class="u-photo" width="200" height="200"></img>
             {{- end }}
+            {{- if .Params.replytourl }}
+            <p>Replying to a post on <a href="{{ .Params.replytourl}}">{{ .Params.replysite }}</a></p>
+            {{- end }}
     {{ .Content }}]]></content>
   </entry>{{ end }}
 </feed>

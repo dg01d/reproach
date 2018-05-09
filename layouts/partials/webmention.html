@@ -1,10 +1,19 @@
-<script id="webmention-hosted">
-(function () {
-var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
-url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
-url = url && url[0] ? url[0].href : false;
-sn.type = "text/javascript"; sn.async = true;
-sn.src = "//webmention.herokuapp.com/api/embed?url=" + encodeURIComponent(url || window.location) + "&version=cutting-edge";
-s.parentNode.insertBefore(sn, s);
-}());
-</script>
+{{ $mention_ids := index $.Site.Data.wm_io.index .URL }}
+{{ $mentions := apply $mention_ids "index" $.Site.Data.wm_io.mentions "." }}
+{{ $mentions := sort $mentions "wm-received" }}
+{{ $likes := where $mentions "wm-property" in (slice "like-of" "repost-of") }}
+{{ $mentions := where $mentions "wm-property" not in (slice "like-of" "repost-of") }}
+<div class="webmention-container">
+{{- if $likes }}
+{{ range $likes }}
+<ul class="webmention-facepile">
+{{ partial "wm_like.html" . }}
+</ul>
+{{ end }}
+{{- end }}
+{{ if $mentions }}
+{{ range $mentions }}
+{{ partial "wm_mention.html" . }}
+{{ end}}
+{{- end }}
+</div>
