@@ -1,0 +1,4 @@
+<li class="webmention-interaction-repost">
+    <a class="webmention-interaction-presentation" href="{{ .url }}" title="{{ .author.name }} reposted this on {{ dateFormat "2006-01-02" (time .published) }}">
+        <span><img class="avatar" src="{{ .author.photo }}">{{ .author.name }} reposted this on {{dateFormat "2006-01-02" (time .published) }}</span></a>
+</li>

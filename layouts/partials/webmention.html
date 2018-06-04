@@ -1,18 +1,22 @@
 {{ $mention_ids := index $.Site.Data.wm_io.index .URL }}
 {{ $mentions := apply $mention_ids "index" $.Site.Data.wm_io.mentions "." }}
 {{ $mentions := sort $mentions "wm-received" }}
-{{ $likes := where $mentions "wm-property" in (slice "like-of" "repost-of") }}
-{{ $mentions := where $mentions "wm-property" not in (slice "like-of" "repost-of") }}
+{{ $likes := where $mentions "wm-property" "in" (slice "like-of") }}
+{{ $reposts := where $mentions "wm-property" "in" (slice "repost-of") }}
+{{ $inter := where $mentions "wm-property" "not in" (slice "like-of" "repost-of") }}
 <div class="webmention-container">
 {{- if $likes }}
-{{ range $likes }}
 <ul class="webmention-facepile">
+{{ range $likes }}
 {{ partial "wm_like.html" . }}
-</ul>
 {{ end }}
+{{ range $reposts }}
+{{ partial "wm_repost.html" . }}
+{{ end }}
+</ul>
 {{- end }}
-{{ if $mentions }}
-{{ range $mentions }}
+{{ if $inter }}
+{{ range $inter }}
 {{ partial "wm_mention.html" . }}
 {{ end}}
 {{- end }}

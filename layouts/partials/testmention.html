@@ -1,0 +1,45 @@
+<script id="webmention-hosted">
+ (function () {
+     var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
+     url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
+     url = url && url[0] ? url[0].href : false;
+     sn.type = "text/javascript"; sn.async = true;
+     sn.src = "//webmention.herokuapp.com/api/embed?url=" + encodeURIComponent(url || window.location) + "&version=cutting-edge";
+     s.parentNode.insertBefore(sn, s);
+ }());
+</script>
+
+<div id="mentions" class="mentions">
+{{ $mentions := index $.Site.Data.wm_io.index .URL }}
+  {{ if $mentions }}
+    {{ $.Scratch.Add "mention_ids" $mentions }}
+  {{ end }}
+  {{ $mention_ids := $.Scratch.Get "mention_ids" }}
+  {{ $mentions := apply $mention_ids "index" $.Site.Data.wm_io.mentions "." }}
+  {{ $mentions := sort $mentions "wm-received" }}
+  {{ $likes := where $mentions "wm-property" "like-of" }}
+  {{ $reposts := where $mentions "wm-property" "in" (slice "repost-of" "in-reply-to") }}
+  {{ $mentions := where $mentions "wm-property" "not in" (slice "like-of" "repost-of" "in-reply-to" ) }}
+  {{ if $likes }}
+    <h3>Likes</h3>
+    <div class="likes">
+      {{ range $likes }}
+        {{ partial "wm_like.html" . }}
+      {{ end }}
+    </div>
+  {{ end }}
+  {{ if $reposts }}
+    <h3>Reposts</h3>
+    {{ range $reposts }}
+      {{ partial "wm_repost.html" . }}
+    {{ end }}
+  {{ end }}
+  {{ if $mentions }}
+    <h3>Mentions</h3>
+    {{ range $mentions }}
+      {{ partial "wm_repost.html" . }}
+    {{ end }}
+  {{ end }}
+</div>
+
+</div>

@@ -11,6 +11,6 @@ itle="{{ .author.name }}"/>{{ .author.name }}
     </blockquote>
   </div>
   <div class="webmention-footer">
-      <a class="webmention-published" href="{{ .url }}">{{ dateFormat "02/01/06 15:04" .published }}</a>
+      <a class="webmention-published" href="{{ .url }}">{{ dateFormat "2006-01-02" (time .published) }}</a>
   </div>
 </div>
